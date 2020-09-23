@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+	<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+
+	<div id="lps">
+		<script type="text/javascript" src="../js/jquery.ibutton.js"></script> 
+		<link type="text/css" href="../css/jquery.ibutton.css" rel="stylesheet" media="all" />
+		<script type="text/javascript" src="../js/functions.js"></script>
+		<script type="text/javascript" src="../js/check.js"></script>
+
+		<h3 id="feed_back_tip"></h3>
+		
+		<div id="tab">
+			<li class="tb1">&nbsp;</li>
+			<li id="time_settings_li" class="tbg"></li>
+			<li class="tb2">&nbsp;</li>
+		</div>
+
+		<!-- content begin -->
+		<table width="100%" class="tedit" >
+			<tr>
+				<th>
+					<div class='helptooltips'>
+						<span id="lang_system_time"></span>:
+						<span id="lang_system_time_help" class='showhelp'></span>
+					</div>
+				</th>
+				<td>
+					<span id='currenttime'></span>
+				</td>
+			</tr>
+				
+			<tr>
+				<th>
+					<div class='helptooltips'>
+						<span id="lang_time_zone"></span>:
+						<span id="lang_time_zone_help" class='showhelp'></span>
+					</div>
+				</th>
+				<td>
+					<select id='system_timezone' style='width: 253px;' name='system_timezone' onchange='modechange(this)'>
+						<optgroup id="lang_australia" label="">
+							<option id="lang_melbourna_" value='Australia/Melbourne@EST-10EST,M10.5.0,M3.5.0/3'></option>
+							<option id="lang_perth" value='Australia/Perth@WST-8'></option>
+							<option id="lang_brisbane" value='Australia/Brisbane@EST-10'></option>
+							<option id="lang_adelaide" value='Australia/Adelaide@CST-9:30CST,M10.5.0,M3.5.0/3'></option>
+							<option id="lang_darwin" value='Australia/Darwin@CST-9:30'></option>
+							<option id="lang_hobart" value='Australia/Hobart@EST-10EST,M10.1.0,M3.5.0/3'></option>
+						</optgroup>
+						<optgroup id="lang_europe" label="">
+							<option id="lang_amsterdam" value='Europe/Amsterdam@CET-1CEST,M3.5.0,M10.5.0/3'></option>
+							<option id="lang_athens" value='Europe/Athens@EET-2EEST,M3.5.0/3,M10.5.0/4'></option>
+							<option id="lang_berlin" value='Europe/Berlin@CET-1CEST,M3.5.0,M10.5.0/3'></option>
+							<option id="lang_brussels" value='Europe/Brussels@CET-1CEST,M3.5.0,M10.5.0/3'></option>
+							<option id="lang_bratislava" value='Europe/Bratislava@CET-1CEST,M3.5.0,M10.5.0/3'></option>
+							<option id="lang_budapest" value='Europe/Budapest@CET-1CEST,M3.5.0,M10.5.0/3'></option>
+							<option id="lang_copenhagen" value='Europe/Copenhagen@CET-1CEST,M3.5.0,M10.5.0/3'></option>
+							<option id="lang_dublin" value='Europe/Dublin@GMT0IST,M3.5.0/1,M10.5.0'></option>
+							<option id="lang_helsinki" value='Europe/Helsinki@EET-2EEST,M3.5.0/3,M10.5.0/4'></option>
+							<option id="lang_kyiv" value='Europe/Kiev@EET-2EEST,M3.5.0/3,M10.5.0/4'></option>
+							<option id="lang_lisbon" value='Europe/Lisbon@WET0WEST,M3.5.0/1,M10.5.0'></option>
+							<option id="lang_london" value='Europe/London@GMT0BST,M3.5.0/1,M10.5.0'></option>
+							<option id="lang_madrid" value='Europe/Madrid@CET-1CEST,M3.5.0,M10.5.0/3'></option>
+							<option id="lang_oslo" value='Europe/Oslo@CET-1CEST,M3.5.0,M10.5.0/3'></option>
+							<option id="lang_paris" value='Europe/Paris@CET-1CEST,M3.5.0,M10.5.0/3'></option>
+							<option id="lang_prague" value='Europe/Prague@CET-1CEST,M3.5.0,M10.5.0/3'></option>
+							<option id="lang_roma" value='Europe/Rome@CET-1CEST,M3.5.0,M10.5.0/3'></option>
+							<option id="lang_moscow" value='Europe/Moscow@MSK-3'></option>
+							<option id="lang_stockholm" value='Europe/Stockholm@CET-1CEST,M3.5.0,M10.5.0/3'></option>
+							<option id="lang_zurich" value='Europe/Zurich@CET-1CEST,M3.5.0,M10.5.0/3'></option>
+						</optgroup>
+						<optgroup id="lang_new_zealand" label="">
+							<option id="lang_auckland" value='Pacific/Auckland@NZST-12NZDT,M10.1.0,M3.3.0/3'></option>
+						</optgroup>
+						<optgroup id="lang_usa_and_canada" label="">
+							<option id="lang_hawaii" value='Pacific/Honolulu@HST10'></option>
+							<option id="lang_alaska_time" value='America/Anchorage@AKST9AKDT,M3.2.0,M11.1.0'></option>
+							<option id="lang_pacific_time" value='America/Los_Angeles@PST8PDT,M3.2.0,M11.1.0'></option>
+							<option id="lang_mountain_time" value='America/Denver@MST7MDT,M3.2.0,M11.1.0'></option>
+							<option id="lang_mountain_time_no_dst" value='America/Phoenix@MST7'></option>
+							<option id="lang_central_time" value='America/Chicago@CST6CDT,M3.2.0,M11.1.0'></option>
+							<option id="lang_eastern_time" value='America/New_York@EST5EDT,M3.2.0,M11.1.0'></option>
+						</optgroup>
+						<optgroup id="lang_atlantic" label="">
+							<option id="lang_bermuda" value='Atlantic/Bermuda@AST4ADT,M3.2.0,M11.1.0'></option>
+						</optgroup>
+						<optgroup id="lang_asia_1" label="">
+							<option id="lang_anadyr" value='Asia/Anadyr@ANAT-12ANAST,M3.5.0,M10.5.0/3'></option>
+						</optgroup>
+						<optgroup id="lang_asia_2" label="">
+							<option id="lang_amman" value='Asia/Amman@EET-2EEST,M3.5.4/0,M10.5.5/1'></option>
+							<option id="lang_beirut" value='Asia/Beirut@EET-2EEST,M3.5.0/0,M10.5.0/0'></option>
+							<option id="lang_damascus" value='Asia/Damascus@EET-2EEST,J91/0,J274/0'></option>
+							<option id="lang_gaza" value='Asia/Gaza@EET-2EEST,J91/0,M10.3.5/0'></option>
+							<option id="lang_jerusalem" value='Asia/Jerusalem@GMT-2'></option>
+							<option id="lang_nicosia" value='Asia/Nicosia@EET-2EEST,M3.5.0/3,M10.5.0/4'></option>
+						</optgroup>
+						<optgroup id="lang_asia_3" label="">
+							<option id="lang_aden" value='Asia/Aden@AST-3'></option>
+							<option id="lang_baghdad" value='Asia/Baghdad@AST-3ADT,J91/3,J274/4'></option>
+							<option id="lang_bahrain" value='Asia/Bahrain@AST-3'></option>
+							<option id="lang_kuwait" value='Asia/Kuwait@AST-3'></option>
+							<option id="lang_qatar" value='Asia/Qatar@AST-3'></option>
+							<option id="lang_riyadh" value='Asia/Riyadh@AST-3'></option>
+						</optgroup>
+						<optgroup id="lang_asia_3_1" label="">
+							<option id="lang_tehran" value='Asia/Tehran@IRST-3:30'></option>
+						</optgroup>
+						<optgroup id="lang_asia_4" label="">
+							<option id="lang_baku" value='Asia/Baku@AZT-4AZST,M3.5.0/4,M10.5.0/5'></option>
+							<option id="lang_dubai" value='Asia/Dubai@GST-4'></option>
+							<option id="lang_muscat" value='Asia/Muscat@GST-4'></option>
+							<option id="lang_tbilisi" value='Asia/Tbilisi@GET-4'></option>
+							<option id="lang_yerevan" value='Asia/Yerevan@AMT-4AMST,M3.5.0,M10.5.0/3'></option>
+						</optgroup>
+						<optgroup id="lang_asia_4_1" label="">
+							<option id="lang_kabul" value='Asia/Kabul@AFT-4:30'></option>
+						</optgroup>
+						<optgroup id="lang_asia_5" label="">
+							<option id="lang_aqtobe" value='Asia/Aqtobe@AQTT-5'></option>
+							<option id="lang_ashgabat" value='Asia/Ashgabat@TMT-5'></option>
+							<option id="lang_dushanbe" value='Asia/Dushanbe@TJT-5'></option>
+							<option id="lang_karachi" value='Asia/Karachi@PKT-5'></option>
+							<option id="lang_oral" value='Asia/Oral@ORAT-5'></option>
+							<option id="lang_samarkand" value='Asia/Samarkand@UZT-5'></option>
+							<option id="lang_tashkent" value='Asia/Tashkent@UZT-5'></option>
+							<option id="lang_yekaterinburg" value='Asia/Yekaterinburg@YEKT-5'></option>
+						</optgroup>
+						<optgroup id="lang_asia_5_1" label="">
+							<option id="lang_calcutta" value='Asia/Calcutta@IST-5:30'></option>
+							<option id="lang_colombo" value='Asia/Colombo@IST-5:30'></option>
+						</optgroup>
+						<optgroup id="lang_asia_6" label="">
+							<option id="lang_almaty" value='Asia/Almaty@ALMT-6'></option>
+							<option id="lang_bishkek" value='Asia/Bishkek@KGT-6'></option>
+							<option id="lang_dhaka" value='Asia/Dhaka@BDT-6'></option>
+							<option id="lang_novosibirsk" value='Asia/Novosibirsk@NOVT-6'></option>
+							<option id="lang_omsk" value='Asia/Omsk@OMST-6'></option>
+							<option id="lang_qyzylorda" value='Asia/Qyzylorda@QYZT-6'></option>
+							<option id="lang_thimphu" value='Asia/Thimphu@BTT-6'></option>
+						</optgroup>
+						<optgroup id="lang_asia_7" label="">
+							<option id="lang_jakarta" value='Asia/Jakarta@WIT-7'></option>
+							<option id="lang_bangkok" value='Asia/Bangkok@ICT-7'></option>
+							<option id="lang_vientiane" value='Asia/Vientiane@ICT-7'></option>
+							<option id="lang_phnom_penh" value='Asia/Phnom_Penh@ICT-7'></option>
+						</optgroup>
+						<optgroup id="lang_asia_8" label="">
+							<option id="lang_chongqing" value='Asia/Chongqing@CST-8'></option>
+							<option id="lang_hong_kong" value='Asia/Hong_Kong@HKT-8'></option>
+							<option id="lang_shanghai" value='Asia/Shanghai@CST-8'></option>
+							<option id="lang_singapore" value='Asia/Singapore@SGT-8'></option>
+							<option id="lang_urumqi" value='Asia/Urumqi@CST-8'></option>
+							<option id="lang_taiwan" value='Asia/Taipei@CST-8'></option>
+							<option id="lang_ulaanbaatar" value='Asia/Ulaanbaatar@ULAT-8ULAST,M3.5.6,M9.5.6/0'></option>
+						</optgroup>
+						<optgroup id="lang_asia_9" label="">
+							<option id="lang_dili" value='Asia/Dili@TLT-9'></option>
+							<option id="lang_jayapura" value='Asia/Jayapura@EIT-9'></option>
+							<option id="lang_pyongyang" value='Asia/Pyongyang@KST-8:30'></option>
+							<option id="lang_seoul" value='Asia/Seoul@KST-9'></option>
+							<option id="lang_tokyo" value='Asia/Tokyo@JST-9'></option>
+							<option id="lang_yakutsk" value='Asia/Yakutsk@YAKT-9YAKST,M3.5.0,M10.5.0/3'></option>
+						</optgroup>
+						<optgroup id="lang_central_and_south_america" label="">
+							<option id="lang_sao_paulo" value='America/Sao_Paulo@BRT3BRST,M11.1.0/0,M2.5.0/0'></option>
+							<option id="lang_buenos_aires" value='America/Buenos_Aires@ART3'></option>
+							<option id="lang_central_america" value='America/Guatemala@CST6'></option>
+							<option id="lang_caracas" value='America/Caracas@VET4:30'></option>
+						</optgroup>
+						<optgroup id="lang_unkonwn" label="">
+							<option id="lang_user_defined" value='-@UTC+0'></option>
+						</optgroup>
+					</select>
+				</td>
+			</tr>
+			
+			<tr id="for_ntp_server">
+				<th>
+					<div class='helptooltips'>
+						<span id="lang_posix_tz_string"></span>:
+						<span id="lang_posix_tz_string_help" class='showhelp'></span>
+					</div>
+				</th>
+				<td>
+					<input id='show_TZ' type='text' style='width: 250px; height: 1.2em; color: #2f2f2f; background: #ececec;' name='show_TZ' readonly='readonly' value='This field requires the JavaScript support.' />
+				</td>
+			</tr>
+			
+			<tbody id="ntp_html">
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_net_server1"></span>
+							<span id="lang_net_server1_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input id='ntp_server1' type='text' name='ntp_server1' style='width: 250px;' value='' />
+						<span id='cntp_server1' class='number_tip'></span>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_net_server2"></span>
+							<span id="lang_net_server2_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input id='ntp_server2' type='text' name='ntp_server2' style='width: 250px;' value='' />
+						<span id='cntp_server2' class='number_tip'></span>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_net_server3"></span>
+							<span id="lang_net_server3_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input id='ntp_server3' type='text' name='ntp_server3' style='width: 250px;' value='' />
+						<span id='cntp_server3' class='number_tip'></span>
+					</td>
+				</tr>
+			</tbody>
+				
+			<tr>
+				<th>
+					<div class='helptooltips'>
+						<span id="lang_auto_sync_from_ntp"></span>:
+						<span id="lang_auto_sync_from_ntp_help" class='showhelp'></span>
+					</div>
+				</th>
+				<td>
+					<input type='checkbox' id='auto_sw' name='auto_sw'/>
+				</td>
+			</tr>
+			
+			<input type='hidden' name='local_yea' id='local_yea' value='' />
+			<input type='hidden' name='local_mon' id='local_mon' value='' />
+			<input type='hidden' name='local_dat' id='local_dat' value='' />
+			<input type='hidden' name='local_hou' id='local_hou' value='' />
+			<input type='hidden' name='local_min' id='local_min' value='' />
+			<input type='hidden' name='local_sec' id='local_sec' value='' />
+		</table>
+		<!-- content end -->		
+		
+		<br>
+			
+		<input type="button" class="sync_from_ntp_input sync_input save_input" value="" />
+		<input type="button" class="sync_from_client_input sync_input save_input" value="" />
+		<br>
+		
+		<div id="report_info" style='display:none;margin-top:15px;'>
+			<b id="report_b"></b>
+			<table style='width:100%;font-size:12px;border:1px solid rgb(59,112,162);'>
+				<tr style='background-color:#D0E0EE;height:26px;'>
+					<td align='center' style='width:100%'>
+						<b id="time_synchronize_b"></b>
+					</td>
+				</tr>
+				<tr align='left' style='background-color: rgb(232, 239, 247);'>
+					<td id="sync_info">
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	<script src="../js/page/system-time.js?v=1.0"></script>
+	</div>
+</body>
+</html>

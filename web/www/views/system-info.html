@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+			<table width="100%" class="tedit" >
+				<tr>
+					<th>
+						<span id="lang_model_name"></span>:
+					</th>
+					<td id="modelname"></td>
+				</tr>
+				<tr>
+					<th>
+						<span id="lang_software_version"></span>:
+					</th>
+					<td id="_version"></td>
+				</tr>
+				<tr>
+					<th>
+						<span id="lang_hardware_version"></span>:
+					</th>
+					<td>1.0.0</td>
+				</tr>
+				<tr>
+					<th>
+						<span id="lang_slot_number"></span>:
+					</th>
+					<td id="stacknum"></td>
+				</tr>
+				<tr>
+					<th>
+						<span id="lang_storage_usage"></span>:
+					</th>
+					<td id="printdata"></td>
+				</tr>
+				<tr>
+					<th>
+						<span id="lang_memory_usage"></span>:
+					</th>
+					<td>
+						<table>
+							<tr>
+								<td id="printmen" style='border:0px;padding:0px'></td>
+								<td style='border:0px;'><a id='memory_clean' href='javascript:void(0)'></a></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<span id="lang_build_time"></span>:
+					</th>
+					<td id="build_time"></td>
+				</tr>
+				<tbody id="html_str">
+					<tr id="contact_address_tr">
+						<th id="lang_contact_address"></th>
+						<td id="contact_address"></td>
+					</tr>
+					
+					<tr id="tel_tr">
+						<th id="lang_tel"></th>
+						<td id="tel"></td>
+					</tr>
+					
+					<tr id="fax_tr">
+						<th id="lang_fax"></th>
+						<td id="fax"></td>
+					</tr>
+					
+					<tr id="email_tr">
+						<th id="lang_email"></th>
+						<td id="email"></td>
+					</tr>
+					
+					<tr id="web_site_tr">
+						<th id="lang_web_site"></th>
+						<td id="web_site"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<script src="../js/page/system-info.js?v=1.1"></script>
+	</div>
+</body>
+</html>

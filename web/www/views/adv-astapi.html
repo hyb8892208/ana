@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+			<script type="text/javascript" src="../js/jquery.ibutton.js"></script> 
+			<link type="text/css" href="../css/jquery.ibutton.css" rel="stylesheet" media="all" />
+			<script type="text/javascript" src="../js/functions.js"></script>
+			<script type="text/javascript" src="../js/check.js"></script>
+
+			<h3 id="feed_back_tip"></h3>
+			
+			<!-- General begin -->
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="general_li" class="tbg">General</li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			<table width="100%" class="tedit" id="adv_general" >
+				<tr>
+					<th><span id="lang_enable"></span>:</th>
+					<td>
+						<input type='checkbox' name='enable_ami' id='enable_ami' onchange='enable_ami_change()' >
+					</td>
+				</tr>
+					
+				<tr id='field_port', style='display: none;'>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_port"></span>:
+							<span id="lang_port_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input id='port' type='hidden' name='port' value='5038'>5038 
+					</td>
+				</tr>
+			</table>
+			<!-- General end -->
+			
+			</br>
+
+			<!-- Manager begin -->
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="manager_li" class="tbg">Manager</li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			<table width="100%" class="tedit">
+				<tbody id="field_manager" style="display:none" >
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_manager_name"></span>:
+								<span id="lang_manager_name_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input id='name' type='text' name='name' style='width: 250px;' value='' /><span id='cname'></span>
+						</td>
+					</tr>
+						
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_manager_secret" ></span>:
+								<span id="lang_manager_secret_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input id='secret' type='password' name='secret' style='width: 250px;' value='' />
+							<span style="vertical-align:middle;display:inline-block;"><input type="checkbox" id="show_secret" /></span>
+							<span id='csecret' class='number_tip'></span>
+						</td>
+					</tr>
+						
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_deny"></span>:
+								<span id="lang_deny_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input id='deny' type='text' name='deny' style='width: 250px;' value='' />
+						</td>
+					</tr>
+						
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_permit"></span>:
+								<span id="lang_permit_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input id='permit' type='text' name='permit' style='width: 250px;' value='' />
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- Manager end -->
+
+			<br>
+
+			<!-- Rights begin -->
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="rights_li" class="tbg">Rights</li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			<table width="100%" class="tedit" width="100%" class="tedit">
+				<tbody id="field_rights" style="display: none" >
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_system"></span>:
+								<span id="lang_system_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<span class="lang_read"></span>:
+							<input type=checkbox name='system_r' id='system_r'  >
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="lang_write"></span>:
+							<input type=checkbox name='system_w' id='system_w'  >
+						</td>
+					</tr>
+							
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_call"></span>:
+								<span id="lang_call_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<span class="lang_read"></span>:
+							<input type=checkbox name='call_r' id='call_r'  >
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="lang_write"></span>:
+							<input type=checkbox name='call_w' id='call_w'  >
+						</td>
+					</tr>
+							
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_log"></span>:
+								<span id="lang_log_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<span class="lang_read"></span>:
+							<input type=checkbox name='log_r' id='log_r'  >
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="lang_write"></span>:
+							<input type=checkbox name='log_w' id='log_w'  >
+						</td>
+					</tr>
+							
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_verbose"></span>:
+								<span id="lang_verbose_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<span class="lang_read"></span>:
+							<input type=checkbox name='verbose_r' id='verbose_r'  >
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="lang_write"></span>:
+							<input type=checkbox name='verbose_w' id='verbose_w'  >
+						</td>
+					</tr>
+							
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_command"></span>:
+								<span id="lang_command_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<span class="lang_read"></span>:
+							<input type=checkbox name='command_r' id='command_r' disabled>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="lang_write"></span>:
+							<input type=checkbox name='command_w' id='command_w'  >
+						</td>
+					</tr>
+							
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_agent"></span>:
+								<span id="lang_agent_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<span class="lang_read"></span>:
+							<input type=checkbox name='agent_r' id='agent_r' >
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="lang_write"></span>:
+							<input type=checkbox name='agent_w' id='agent_w'  >
+						</td>
+					</tr>
+							
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_user"></span>:
+								<span id="lang_user_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<span class="lang_read"></span>:
+							<input type=checkbox name='user_r' id='user_r'  >
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="lang_write"></span>:
+							<input type=checkbox name='user_w' id='user_w'  >
+						</td>
+					</tr>
+							
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_config"></span>:
+								<span id="lang_config_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<span class="lang_read"></span>:
+							<input type=checkbox name='config_r' id='config_r'  >
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="lang_write"></span>:
+							<input type=checkbox name='config_w' id='config_w'  >
+						</td>
+					</tr>
+							
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_dtmf"></span>:
+								<span id="lang_dtmf_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<span class="lang_read"></span>:
+							<input type=checkbox name='dtmf_r' id='dtmf_r'  >
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="lang_write"></span>:
+							<input type=checkbox name='dtmf_w' id='dtmf_w' disabled>
+						</td>
+					</tr>
+							
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_reporting"></span>:
+								<span id="lang_reporting_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<span class="lang_read"></span>:
+							<input type=checkbox name='reporting_r' id='reporting_r'  >
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="lang_write"></span>:
+							<input type=checkbox name='reporting_w' id='reporting_w'  >
+						</td>
+					</tr>
+							
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_cdr"></span>:
+								<span id="lang_cdr_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<span class="lang_read"></span>:
+							<input type=checkbox name='cdr_r' id='cdr_r' read['cdr'] >
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="lang_write"></span>:
+							<input type=checkbox name='cdr_w' id='cdr_w' disabled>
+						</td>
+					</tr>
+							
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_dialplan"></span>:
+								<span id="lang_dialplan_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<span class="lang_read"></span>:
+							<input type=checkbox name='dialplan_r' id='dialplan_r'  >
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="lang_write"></span>:
+							<input type=checkbox name='dialplan_w' id='dialplan_w' disabled>
+						</td>
+					</tr>
+							
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_originate"></span>:
+								<span id="lang_originate_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<span class="lang_read"></span>:
+							<input type=checkbox name='originate_r' id='originate_r' disabled>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="lang_write"></span>:
+							<input type=checkbox name='originate_w' id='originate_w'  >
+						</td>
+					</tr>
+							
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_all"></span>:
+								<span id="lang_all_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<span class="lang_read"></span>:
+							<input type=checkbox name='all_r' id='all_r'  onclick='selAllRead(this.checked)' >
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="lang_write"></span>:
+							<input type=checkbox name='all_w' id='all_w'  onclick='selAllWrite(this.checked)' >
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- Rights end -->
+			
+			<br>
+
+			<input type="submit" class="save_input" value="Save" />
+			<img src="/images/loading1.gif" id="loading_image" style="margin-left:10px;vertical-align: middle;display:none;"/>
+
+		</div>
+	
+		<script src="../js/page/adv-astapi.js?v=1.1"></script>
+	</div>
+</body>
+</html>

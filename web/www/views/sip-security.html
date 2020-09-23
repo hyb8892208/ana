@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+			<script type="text/javascript" src="../js/jquery.ibutton.js"></script>
+			<link type="text/css" href="../css/jquery.ibutton.css" rel="stylesheet" media="all" />
+			<script type="text/javascript" src="../js/float_btn.js"></script>
+			<script type="text/javascript" src="../js/check.js"></script>
+			<script type="text/javascript" src="../js/functions.js"></script>
+		
+			<h3 id="feed_back_tip"></h3>
+		
+			<div id="tab">
+				<li class="tb_unfold" onclick="lud(this,'tab_tls_settings')" id="tab_tls_settings_li">&nbsp;</li>
+				<li id="tls_setting_li" class="tbg_fold" onclick="lud(this,'tab_tls_settings')"></li>
+				<li class="tb2_fold" onclick="lud(this,'tab_tls_settings')">&nbsp;</li>
+				<li class="tb_end">&nbsp;</li>
+			</div>
+			<!-- TLS Setting begin -->
+			<div id="tab_tls_settings">
+				<table width="98%" class="tedit" align="right">
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_tls_enable"></span>:
+								<span id="lang_tls_enable_help" class="showhelp"></span>
+							</div>
+						</th>
+						<td>
+							<input type="checkbox" name="tls_enable" id="tls_enable" /><span id="ctls_enable"></span>
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_tls_verify_server"></span>:
+								<span id="lang_tls_verify_server_help" class="showhelp"></span>
+							</div>
+						</th>
+						<td>
+							<input type="checkbox" name="tls_verify_server" id="tls_verify_server"	onchange="busydetect_click()"/><span id="ctls_verify_server"></span>
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_port"></span>:
+								<span id="lang_port_help" class="showhelp"></span>
+							</div>
+						</th>
+						<td>
+							<input type="text" id="port" name="port" value="" />
+							<span id="cport" class="number_tip"></span>
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_tls_client_method"></span>:
+								<span id="lang_tls_client_method_help" class="showhelp"></span>
+							</div>
+						</th>
+						<td>
+							<select size=1 name="tls_client_method" id="tls_client_method">
+								<option id="lang_tlsv1" value="tlsv1"></option>
+								<option id="lang_sslv2" value="sslv2"></option>
+								<option id="lang_sslv3" value="sslv3"></option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			<div id="tls_html_str"></div>
+			<!-- TLS Setting end -->
+			
+			<div id="newline"></div>
+			<div id="tab">
+				<li class="tb_unfold" onclick="lud(this,'tab_show_files')" id="tab_show_files_li">&nbsp;</li>
+				<li id="key_files_li" class="tbg_fold" onclick="lud(this,'tab_show_files')"></li>
+				<li class="tb2_fold" onclick="lud(this,'tab_show_files')">&nbsp;</li>
+				<li class="tb_end">&nbsp;</li>
+			</div>
+			
+			<div id="tab_show_files" style="display:block;clear:both;min-height:150px;">
+				<form action="/service" method="post" enctype="multipart/form-data" >
+					<table width="98%" class="tctl" align="right">
+						<tr>
+							<th>
+								<span id="lang_upload_the_pem_file"></span>:
+								<input type="file" name="uploadfile1" onchange=" check_pem_file_format(this)"> <br/>
+								<span id="lang_upload_the_crt_file"></span>:
+								<input type="file" name="uploadfile2" onchange="check_crt_file_format(this)">
+							</th>
+							<td>
+								<input type="hidden" name="action" value="upload" />
+								<input type="hidden" name="type" value="upload" />
+								<input type="hidden" name="page_name" value="sip-security" />
+								<input type="submit" id="lang_file_upload" class="save_input" value="" onclick="return check_file_format();" />
+							</td>
+						</tr>
+					</table>
+				</form>
+					
+				<br/>
+				<table width="98%" class="tshow" align="right" >
+					<thead>
+						<tr>
+							<th id="lang_file_name"></th>
+							<th id="lang_file_size"></th>
+							<th id="lang_operation" width="2%"></th>
+						</tr>
+					</thead>
+					<tbody id="key_filename"></tbody>
+				</table>
+			</div>
+			
+			<table id="float_btn" class="float_btn">
+				<tr id="float_btn_tr" class="float_btn_tr" >
+					<td>
+						<input type="button" class="save_input save_click" value="" />
+						<img src="/images/loading1.gif" id="loading_image" style="margin-left:10px;vertical-align: middle;display:none;"/>
+					</td>
+				</tr>
+			</table>
+			<table id="float_btn2" style="border:none;" class="float_btn2">
+				<tr id="float_btn_tr2" class="float_btn_tr2" >
+					<td style="width:51px;">
+						<input type="button" id="float_button_1" class="float_short_button save_input save_click" value="" />
+					</td>
+				</tr>
+			</table>
+		</div>
+		<script src="../js/page/sip-security.js?v=1.5"></script>
+	</div>
+</body>
+<div id="to_top"></div>
+<div id="float_btn1" class="sec_float_btn1">
+</div>
+<div  class="float_close" onclick="close_btn()" >
+</div>
+</html>

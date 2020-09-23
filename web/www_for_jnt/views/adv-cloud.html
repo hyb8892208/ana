@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+			<script type="text/javascript" src="../js/jquery.ibutton.js"></script> 
+			<link type="text/css" href="../css/jquery.ibutton.css" rel="stylesheet" media="all" />
+			<script type="text/javascript" src="../js/functions.js"></script>
+			<script type="text/javascript" src="../js/check.js"></script>
+
+			<h3 id="feed_back_tip"></h3>
+			
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li class="tbg" id="lang_cloud"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			
+			<table width="100%" class="tedit">
+				<tr>
+					<th>
+						<span id="lang_enable_cloud_service"></span>:
+					</th>
+					<td>
+						<input type="checkbox" name="enable" id="enable_ami" />
+					</td>
+				</tr>
+				
+				<tr>
+					<th>
+						<div class="helptooltips">
+							<span id="lang_choose_service"></span>:
+							<span class="showhelp" id="lang_choose_service_help"></span>
+						</div>
+					</th>
+					<td>
+						<select id="service_mode" onchange="mode_change()">
+							<option value="china" id="lang_china"></option>
+							<option value="america" id="lang_america"></option>
+							<option value="europe" id="lang_europe"></option>
+							<option value="customize" id="lang_customize"></option>
+						</select>
+						<input class="server_url" size="30px" type="text" id="customize_server" />
+					</td>
+				</tr>
+				
+				<tr>
+					<th>
+						<div class="helptooltips">
+							<span id="lang_account"></span>:
+							<span class="showhelp" id="lang_account_help"></span>
+						</div>
+					</th>
+					<td>		
+						<input type="text" id="username" />
+					</td>
+				</tr>
+				
+				<tr>
+					<th>
+						<div class="helptooltips">
+							<span style="color:red">* &nbsp;</span>
+							<span id="lang_password"></span>:
+							<span class="showhelp" id="lang_password_help"></span>
+						</div>
+					</th>
+					<td>		
+						<input type="password" id="password" />
+						<span style="vertical-align:middle;display:inline-block;">
+							<input type="checkbox" id="show_password" />
+						</span>
+					</td>
+				</tr>
+				
+				<tr class="connect2">
+					<th>
+						<div class="helptooltips">
+							<span style="color:red">* &nbsp;</span>
+							<span id="lang_connection_status"></span>:
+							<span class="showhelp" id="lang_connection_status_help"></span>
+						</div>
+					</th>
+					<td class="connect">		
+							
+					</td>
+				</tr>
+				
+				<tr>
+					<th>
+					</th>
+					<td>
+						<input type="button" id="lang_save" class="save_input" style="margin-top:6px;"/>
+						<img src="/images/loading1.gif" id="loading_image" style="margin-left:10px;vertical-align: middle;display:none;"/>
+						<p style="float:right;margin-right:40%;" id="lang_cloud_signmessage_help" >&nbsp;&nbsp;</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+	
+		<script src="../js/page/adv-cloud.js"></script>
+	</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+
+			<h4 id="modify_a_group_h4"></h4>
+			<script type="text/javascript" src="../js/check.js"></script>
+			<script type="text/javascript" src="../js/functions.js"></script>
+
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="routing_groups_li" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+
+			<table width="100%" class="tedit" >
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_group_number"></span>:
+							<span id="lang_group_number_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input type='text' name='group_number' id='group_number' value='' />
+						<span id='cgroup_number'></span>
+					</td>
+				</tr>
+				
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_timeout"></span>:
+							<span id="lang_timeout_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input type="text" name="timeout" id="timeout" value="" />
+						<span id='ctimeout'></span>
+					</td>
+				</tr>
+					
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_members"></span>:
+							<span id="lang_members_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<span id='span_fxs_members'></span>
+						<span id="members_tip" style="margin-top:10px;display:inline-block;"></span>
+					</td>
+				</tr>
+			</table>
+
+			<br/>
+			<input type="submit" class="save_input" value="Save" />
+			&nbsp;
+			<input type="button" class="cancel_input" value="Cancel" onclick="window.location.href='routing-groups-dial.html'" />
+			<img src="/images/loading1.gif" id="loading_image" style="margin-left:10px;vertical-align: middle;display:none;"/>
+		</div>
+		
+		<script src="../js/page/routing-ring-groups-edit.js?v=1.0"></script>
+	</div>
+</body>
+</html>

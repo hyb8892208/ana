@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+			<script type="text/javascript" src="../js/jquery.ibutton.js"></script>
+			<link type="text/css" href="../css/jquery.ibutton.css" rel="stylesheet" media="all">
+			<script type="text/javascript" src="../js/check.js"></script>
+			
+			<h3 id="feed_back_tip"></h3>
+			
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="driver_settings_li" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			
+			<!-- General begin -->
+			<div id="tab">
+				<li class="tb_unfold" onclick="lud(this,'tab_general')" id="tab_general_li">&nbsp;</li>
+				<li class="tbg_fold" id="general_li" onclick="lud(this,'tab_general')"></li>
+				<li class="tb2_fold" onclick="lud(this,'tab_general')">&nbsp;</li>
+				<li class="tb_end">&nbsp;</li>
+			</div>
+			
+			<div id="tab_general" style="display:block">
+				<table width="98%" class="tedit" align="right" >
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_codec"></span>:
+								<span id="lang_codec_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<select name="codec" id="codec">
+								<option value="mulaw">Ulaw</option>
+								<option value="alaw">Alaw</option>
+							</select>
+							<span id='ccodec'></span>
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_impedance"></span>:
+								<span id="lang_impedance_help" class='showhelp'></span>
+							</div>
+							<div id='impedance_dg' title='Confirm Reboot System' style='display:none'>
+								<div id='help_info' style='display: block;width: 470px;margin: 0 auto;' contenteditable='false'></div>
+								<div id='timemsg' style='display: block;width: 470px;margin: 0 auto;' contenteditable='false'></div>
+							</div>
+						</th>
+						<td id="impedance_select"></td>
+					</tr>
+					
+					<tr id="current_threshold_tr" style="display:none;">
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_current_threshold"></span>:
+								<span id="lang_current_threshold_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type="text" name="current_threshold" id="current_threshold" value="" />mA
+							<span id='ccurrent_threshold'></span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- General end -->
+			
+			<div id="newline"></div>
+			
+			<!-- CallerID detect begin -->
+			<div id="tab">
+				<li class="tb_unfold" onclick="lud(this,'tab_calleriddetect')" id="tab_calleriddetect_li">&nbsp;</li>
+				<li class="tbg_fold" id="lang_callerid_detect" onclick="lud(this,'tab_calleriddetect')"></li>
+				<li class="tb2_fold" onclick="lud(this,'tab_calleriddetect')">&nbsp;</li>
+				<li class="tb_end">&nbsp;</li>
+			</div>
+
+			<div id="tab_calleriddetect" >
+				<table width="98%" class="tedit" align="right">
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_cidbeforering"></span>:
+								<span class="showhelp" id="lang_cidbeforering_help"></span>
+							</div>
+						</th>
+						<td>
+							<input type="checkbox" name="cidbeforering" id="cidbeforering" onchange="detect_cidbeforering()"/>
+							<span id="ccidbeforering"></span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<div class="helptooltips">
+								 <span id="lang_cidbuflen"></span>:
+								 <span class="showhelp" id="lang_cidbuflen_help"></span>
+							</div>  
+						</th>
+						<td>
+							<input type="text" name="cidbuflen" id="cidbuflen" value="" disabled="">ms
+							<span id="ccidbuflen"></span>
+						</td>	
+					</tr>
+					<tr>
+						<th>
+							<div class="helptooltips">
+								 <span id="lang_cutcidbufheadlen"></span>:
+								 <span class="showhelp" id="lang_cutcidbufheadlen_help"></span>
+							</div>  
+						</th>
+						<td>
+							<input type="text" name="cutcidbufheadlen" id="cutcidbufheadlen" value="" disabled="">ms
+							<span id="ccutcidbufheadlen"></span>
+						</td>	
+					</tr>
+					<tr>
+						<th>
+							<div class="helptooltips">
+								 <span id="lang_fixedtimepolarity"></span>:
+								 <span class="showhelp" id="lang_fixedtimepolarity_help"></span>
+							</div>  
+						</th>
+						<td>
+							<input type="text" name="fixedtimepolarity" id="fixedtimepolarity" value="" disabled="">ms
+							<span id="cfixedtimepolarity"></span>
+						</td>	
+					</tr>
+				</table>
+			</div>
+			<!-- CallerID detect end -->
+			
+			<div id="newline"></div>
+			
+			<!-- Hardware gain begin -->
+			<div id="tab">
+				<li class="tb_unfold" onclick="lud(this,'tab_hardwaregain')" id="tab_hardwaregain_li">&nbsp;</li>
+				<li class="tbg_fold" id="lang_hardware_gain" onclick="lud(this,'tab_hardwaregain')"></li>
+				<li class="tb2_fold" onclick="lud(this,'tab_hardwaregain')">&nbsp;</li>
+				<li class="tb_end">&nbsp;</li>
+			</div>
+
+			<div id="tab_hardwaregain" >
+				<table width="98%" class="tedit" align="right">
+					<tr class="fxo_type">
+						<th>
+							<div class="helptooltips">
+								<span id="lang_fxo_rx_gain"></span>:
+								<span class="showhelp" id="lang_fxo_rx_gain_help"></span>
+							</div>
+						</th>
+						<td>
+							<input type="text" name="fxorxgain" id="fxorxgain" value="">dB*10
+							<span id="cfxorxgain"></span>
+						</td>
+					</tr>
+
+					<tr class="fxo_type">
+						<th>
+							<div class="helptooltips">
+								<span id="lang_fxo_tx_gain"></span>:
+								<span class="showhelp" id="lang_fxo_tx_gain_help"></span>
+							</div>
+						</th>
+						<td>
+							<input type="text" name="fxotxgain" id="fxotxgain" value="">dB*10
+							<span id="cfxotxgain"></span>					
+						</td>
+					</tr>
+					
+					<tr class="fxs_type">
+						<th>
+							<div class="helptooltips">
+								<span id="lang_fxs_rx_gain"></span>:
+								<span class="showhelp" id="lang_fxs_rx_gain_help"></span>
+							</div>
+						</th>
+						<td>
+							<select name="fxsrxgain" id="fxsrxgain">
+								<option value="-35">-35</option>
+								<option value="0" selected="">0</option>
+								<option value="35">35</option>
+							</select>
+							<span id="cfxsrxgain"></span>dB*10		
+						</td>
+					</tr>
+
+					<tr class="fxs_type">
+						<th>
+							<div class="helptooltips">
+								<span id="lang_fxs_tx_gain"></span>:
+								<span class="showhelp" id="lang_fxs_tx_gain_help"></span>
+							</div>
+						</th>
+						<td>
+							<select name="fxstxgain" id="fxstxgain">
+								<option value="-35">-35</option>
+								<option value="0" selected="">0</option>
+								<option value="35">35</option>
+							</select>
+							<span id="cfxstxgain"></span> dB*10	
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- Hardware gain end -->
+			
+			<div id="newline"></div>
+			
+			<table id="float_btn" class="float_btn" style="border:none;">
+				<tr id="float_btn_tr" class="float_btn_tr" >
+					<td>
+						<input type="button" class="lang_save save_input" value="" >
+					</td>
+					<td>
+						<input type="button" class="lang_cancel cancel_input" value="" onclick="location.reload()">
+						<img src="/images/loading1.gif" id="loading_image" style="margin-left:10px;vertical-align: middle;display:none;"/>
+					</td>
+				</tr>
+			</table>
+			
+		</div>
+		<script src="../js/page/alg-driver.js?v=1.3"></script>
+	</div>
+</body>
+</html>

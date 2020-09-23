@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+	
+	<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+	
+	<div id="lps">
+		<!-- Filter begin -->
+		<div id="port_select" style="zoom:1">
+			<input type="text" id="port_filter" name="port_filter" style="100px;margin-right:10px;" value="all" readonly />
+			<input type="button" id="do_filter" onclick="click_filter();" style="margin-right:10px;" value=""/>
+			<input type="button" id="clean_filter" onclick="clean_filter();" value=""/>
+			<div>
+				<table id="port_table" class="tsort" style="display:none;background:#FFFFFF;" >
+					<tr id="filter_tr"></tr>
+					<tr><td colspan=8><input type="Checkbox" id="check_all" ><span id="lang_check_all"></span></td></tr>
+				</table>
+			</div>
+		</div>
+		<!-- Filter end -->
+		
+		<br/>
+
+		<!-- Port Information begin -->
+		<div id="tab">
+			<li class="tb1">&nbsp;</li>
+			<li id="port_information_li" class="tbg"></li>
+			<li class="tb2">&nbsp;</li>
+		</div>
+		<table width="100%" class="tshow" >
+			<thead>
+				<th width="16%" id="lang_port"></th>
+				<th width="16%" class="lang_name"></th>
+				<th width="16%" id="lang_type"></th>
+				<th width="16%" id="lang_line_status"></th>
+				<th width="16%" id="lang_port_status"></th>
+				<th width="16%" id="lang_voltage"></th>
+			</thead>
+			<tbody id="analog_table"></tbody>
+		</table>
+		<!-- Port Information end -->
+		
+		<br>
+		
+		<!-- SIP Information begin -->
+		<div id="tab">
+			<li class="tb1">&nbsp;</li>
+			<li id="sip_information_li" class="tbg"></li>
+			<li class="tb2">&nbsp;</li>
+		</div>
+		<table width="100%" class="tshow">
+			<thead>
+				<th id="lang_endpoint_name" width="200px"></th>
+				<th id="lang_user_name" width="200px"></th>
+				<th id="lang_host" width="200px"></th>
+				<th id="lang_registration" width="80px"></th>
+				<th id="lang_sip_status" width="200px"></th>
+				<th id="lang_response_code"></th>
+			</thead>
+			<tbody id="sip_table" ></tbody>
+		</table>
+		<!-- SIP Information end -->
+		
+		<br>
+		
+		<!-- Routing Information begin -->
+		<div id="tab" class="routing_info_div">
+			<li class="tb1"></li>
+			<li id="routing_information" class="tbg"></li>
+			<li class="tb2"></li>
+		</div>
+		<table width="100%" class="tshow routing_info_div">
+			<thead>
+				<th id="lang_rule_name" width="200px"></th>
+				<th id="lang_from" width="200px"></th>
+				<th id="lang_to"></th>
+			</thead>
+			<tbody id="routing_table"></tbody>
+		</table>
+		<!-- Routing Information end -->
+		
+		<br>
+		
+		<!-- Network Information begin -->
+		<div id="tab">
+			<li class="tb1"></li>
+			<li id="network_information" class="tbg"></li>
+			<li class="tb2"></li>
+		</div>
+		<table width="100%" class="tshow">
+			<thead>
+				<th class="lang_name"></th>
+				<th id="lang_mac_address"></th>
+				<th id="lang_ip_address"></th>
+				<th id="lang_mask"></th>
+				<th id="lang_gateway"></th>
+				<th id="lang_rx_packets"></th>
+				<th id="lang_tx_packets"></th>
+			</thead>
+			<tbody id="network_table"></tbody>
+		</table>
+		<div id="vpn_html"></div>
+		<!-- Network Information end -->
+		
+		<br>
+		
+		<script src="../js/page/system-status.js?v=2.0"></script>
+	</div>
+	
+</div>
+</body>
+</html>

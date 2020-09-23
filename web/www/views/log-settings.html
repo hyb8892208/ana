@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+			<script type="text/javascript" src="../js/jquery.ibutton.js"></script> 
+			<link type="text/css" href="../css/jquery.ibutton.css" rel="stylesheet" media="all" />
+
+			<h3 id="feed_back_tip"></h3>
+			
+			<!-- System Logs begin -->
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="system_logs_li" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			<table width="100%" class="tedit" id="system_logs" >
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_system_logs"></span>:
+							<span id="lang_system_logs_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input type=checkbox id='sys_log_sw' name='sys_log_sw' >
+					</td>
+				</tr>
+					
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span class="lang_auto_clean"></span>:
+							<span class='showhelp'>
+								<span class="lang_auto_clean_help"></span>
+								<span class="lang_auto_clean_default"></span>
+							</span>
+						</div>
+					</th>
+					<td>
+						<table style='margin:0px;padding:0px;border:0'>
+							<tr>
+								<td style='margin:0;padding:0;border:0'>
+									<input type="checkbox" id='sys_log_autoclean_sw' name='sys_log_autoclean_sw' >
+								</td>
+								<td style='border:0'>
+									<span class="lang_maxsize"></span>:
+									<select id="sys_log_maxsize" name="sys_log_maxsize">
+										<option value="20KB">20KB</option>
+										<option value="50KB">50KB</option>
+										<option value="100KB">100KB</option>
+										<option value="200KB">200KB</option>
+										<option value="500KB">500KB</option>
+										<option value="1MB">1MB</option>
+										<option value="2MB">2MB</option>						
+									</select>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!-- System Logs end -->
+
+			<br>
+
+			<!-- Asterisk Logs begin -->
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="asterisk_logs_li" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			<table width="100%" class="tedit" id="asterisk_logs" >
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_verbose"></span>:
+							<span id="lang_verbose_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input type="checkbox" name='verbose_sw' id='verbose_sw' >
+					</td>
+				</tr>
+					
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_notice"></span>:
+							<span id="lang_notice_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input type="checkbox" name='notice_sw' id='notice_sw' >
+					</td>
+				</tr>
+					
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_warning"></span>:
+							<span id="lang_warning_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input type="checkbox" name='warning_sw' id='warning_sw' >
+					</td>
+				</tr>
+					
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_debug"></span>:
+							<span id="lang_debug_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input type="checkbox" name='debug_sw' id='debug_sw' >
+					</td>
+				</tr>
+					
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_error" ></span>:
+							<span id="lang_error_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input type="checkbox" name='error_sw' id='error_sw' >
+					</td>
+				</tr>
+					
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_dtmf"></span>:
+							<span id="lang_dtmf_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input type="checkbox" name='dtmf_sw' id='dtmf_sw' >
+					</td>
+				</tr>
+					
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span class="lang_auto_clean"></span>:
+							<span class='showhelp'>
+								<span class="lang_auto_clean_help"></span>
+								<span class="lang_auto_clean_default_asterisk"></span>
+							</span>
+						</div>
+					</th>
+					<td>
+						<table>
+							<tr>
+								<td style='margin:0px;padding:0px;border:0'>
+									<input type="checkbox" id='ast_log_autoclean_sw' name='ast_log_autoclean_sw' >
+								</td>
+								<td style='border:0'>
+									<span class="lang_maxsize"></span>:
+									<select id="ast_log_maxsize" name="ast_log_maxsize">
+										<option value="20KB">20KB</option>
+										<option value="50KB">50KB</option>
+										<option value="100KB">100KB</option>
+										<option value="200KB">200KB</option>
+										<option value="500KB">500KB</option>
+										<option value="1MB">1MB</option>
+										<option value="2MB">2MB</option>
+									</select>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!-- Asterisk Logs end -->
+
+			<br>
+
+			<!-- SIP Logs begin -->
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="sip_logs_lli" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			<table width="100%" class="tedit" id="sip_logs" >
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_sip_logs"></span>:
+							<span id="lang_sip_logs_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input type="checkbox" id='sip_log_sw' name='sip_log_sw' >
+					</td>
+				</tr>
+					
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span class="lang_auto_clean"></span>:
+							<span class='showhelp'>
+								<span class="lang_auto_clean_help"></span>
+								<span class="lang_auto_clean_default_sip"></span>
+							</span>
+						</div>
+					</th>
+					<td>
+						<table>
+							<tr>
+								<td style='margin:0px;padding:0px;border:0'>
+									<input type="checkbox" id='sip_log_autoclean_sw' name='sip_log_autoclean_sw' >
+								</td>
+								<td style='border:0'>
+									<span class="lang_maxsize"></span>:
+									<select id="sip_log_maxsize" name="sip_log_maxsize">
+										<option value="20KB">20KB</option>
+										<option value="50KB">50KB</option>
+										<option value="100KB">100KB</option>
+										<option value="200KB">200KB</option>
+										<option value="500KB">500KB</option>
+										<option value="1MB">1MB</option>
+										<option value="2MB">2MB</option>
+									</select>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!-- SIP Logs end -->
+			
+			<br>
+			
+			<!-- DAHDI Logs begin -->
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li class="tbg lang_dahdi_logs" ></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			<table width="100%" class="tedit">
+				<tr>
+					<th>
+						<div class="helptooltips">
+							<span class="lang_dahdi_logs"></span>: 
+							<span class="showhelp" id="lang_dahdi_logs_help"></span> 
+						</div>
+					</th>
+					<td>
+						<input type="checkbox" id="dahdi_log_sw" name="dahdi_log_sw" >
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<div class="helptooltips">
+							<span class="lang_auto_clean"></span>:
+							<span class="showhelp">
+								<span class="lang_auto_clean_help"></span>
+								<span id="lang_auto_clean_dahdi"></span>
+							</span>
+						</div>
+					</th>
+					<td>
+						<table>
+							<tr>
+								<td style="margin:0px;padding:0px;border:0">
+									<input type="checkbox" id="dahdi_log_autoclean_sw" name="dahdi_log_autoclean_sw" >
+								</td>
+								<td style="border:0">
+									<span class="lang_maxsize"></span>: 
+									<select id="dahdi_log_maxsize" name="dahdi_log_maxsize">
+										<option value="20KB">20KB</option>
+										<option value="50KB">50KB</option>
+										<option value="100KB">100KB</option>
+										<option value="200KB">200KB</option>
+										<option value="500KB">500KB</option>
+										<option value="1MB">1MB</option>
+										<option value="2MB">2MB</option>
+										<option value="5MB">5MB</option>						
+									</select>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!-- DAHDI Logs end -->
+			
+			<!-- CDR Logs begin -->
+			<br>
+			
+			<div id='tab'>
+				<li class='tb1'>&nbsp;</li>
+				<li class='tbg lang_cdr'></li>
+				<li class='tb2'>&nbsp;</li>
+			</div>
+			
+			<table width='100%' class='tedit' >
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span class="lang_cdr"></span>:
+							<span class='showhelp' id="lang_cdr_help"></span>
+						</div>
+					</th>
+					<td>
+						<input type="checkbox" id='cdr_sw' name='cdr_sw' >
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span class="lang_auto_clean"></span>:
+							<span class='showhelp'>
+								<span class="lang_auto_clean_help"></span>
+								<span class="lang_auto_clean_default_cdr"></span>
+							</span>
+						</div>
+					</th>
+					<td>
+						<table>
+							<tr>
+								<td style='margin:0px;padding:0px;border:0'>
+									<input type='checkbox' id='cdr_log_autoclean_sw' name='cdr_log_autoclean_sw' > 
+								</td>
+								<td style='border:0'>
+									<span class="lang_maxsize"></span>:
+									<select id="cdr_log_maxsize" name="cdr_log_maxsize">
+										<option value="1MB">1MB</option>
+										<option value="5MB">5MB</option>
+										<!-- <option value="10MB">10MB</option> -->
+										<!-- <option value="15MB">15MB</option> -->
+										<!-- <option value="20MB">20MB</option> -->
+									</select>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			
+			<br>
+			<!-- CDR Logs end -->
+			
+			<!-- SYSLOG begin -->
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li class="tbg lang_syslog"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			
+			<table width="100%" class="tedit">
+				<tr>
+					<th>
+						<div class="helptooltips">
+							<span id="lang_local_syslog"></span>:
+							<span class="showhelp">
+								<span id="lang_local_syslog_help"></span>
+							</span>
+						</div>
+					</th>
+					<td>
+						<input type="checkbox" id="local_sys" name="local_sys" />
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<div class="helptooltips">
+							<span id="lang_server_address"></span>:
+							<span class="showhelp">
+								<span id="lang_server_address_help"></span>
+							</span>
+						</div>
+					</th>
+					<td>
+						<input type="text" id="serverip" name="serverip" />
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<div class="helptooltips">
+							<span id="lang_server_port"></span>:
+							<span class="showhelp">
+								<span id="lang_server_port_help"></span>
+							</span>
+						</div>
+					</th>
+					<td>
+						<input type="text" id="serverport" name="serverport" />
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<div class="helptooltips">
+							<span id="lang_klog_level"></span>:
+							<span class="showhelp">
+								<span id="lang_klog_level_help"></span>
+							</span>
+						</div>
+					</th>
+					<td>
+						<select name="sysloglevel" id="sysloglevel">
+							<option value="emerg" >EMERG</option>
+							<option value="alert" >ALERT</option>
+							<option value="crit" >CRIT</option>
+							<option value="error" >ERROR</option>
+							<option value="warning" >WARNING</option>
+							<option value="notice" >NOTICE</option>
+							<option value="info" >INFO</option>
+							<option value="debug" >DEBUG</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>
+						<div class="helptooltips">
+							<span id="lang_cdr_level"></span>:
+							<span class="showhelp">
+								<span id="lang_cdr_level_help"></span>
+							</span>
+						</div>
+					</th>
+					<td>
+						<select name="cdrlevel" id="cdrlevel">
+							<option value="off" >OFF</option>
+							<option value="emerg" >EMERG</option>
+							<option value="alert" >ALERT</option>
+							<option value="crit" >CRIT</option>
+							<option value="error" >ERROR</option>
+							<option value="warning" >WARNING</option>
+							<option value="notice" >NOTICE</option>
+							<option value="info" >INFO</option>
+							<option value="debug" >DEBUG</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+			
+			<br/>
+			<!-- SYSLOG end -->
+
+			<input type="button" class="save_input" value="Save" />
+			<img src="/images/loading1.gif" id="loading_image" style="margin-left:10px;vertical-align: middle;display:none;"/>
+
+		</div>
+		
+		<script src="../js/page/log-settings.js?v=1.3"></script>
+	</div>
+</body>
+</html>

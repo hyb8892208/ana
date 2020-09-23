@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		<script type="text/javascript" src="../js/check.js"></script>
+		<div id="lps">
+			
+			<h3 id="feed_back_tip"></h3>
+			
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li class="tbg" id="lang_lan_ipv4"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			
+			<table width="100%" class="tedit">
+				<tr>
+					<th>
+						<div class="helptooltips">
+							<span class="lang_interface"></span>:
+							<span class="showhelp" class="lang_interface_help"></span>
+						</div>
+					</th>
+					<td>
+						Lan
+					</td>
+				</tr>
+				
+				<tr>
+					<th>
+						<div class="helptooltips">
+							<span class="lang_mac"></span>:
+							<span class="showhelp lang_mac_help"></span>
+						</div>
+					</th>
+					<td>
+						<input id="lan_mac" type="text" value="" />
+						<span id="clan_mac"></span>
+					</td>
+				</tr>
+			</table>
+		
+			<br/>
+			
+			<div id="show_wan">
+				<div id="tab">
+					<li class="tb1">&nbsp;</li>
+					<li class="tbg" id="lang_wan_ipv4"></li>
+					<li class="tb2">&nbsp;</li>
+				</div>
+				
+				<table width="100%" class="tedit">
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span class="lang_interface"></span>:
+								<span class="showhelp" class="lang_interface_help"></span>
+							</div>
+						</th>
+						<td>
+							Wan
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span class="lang_mac"></span>:
+								<span class="showhelp lang_mac_help"></span>
+							</div>
+						</th>
+						<td>
+							<input id="wan_mac" type="text" value="" />
+							<span id="cwan_mac"></span>
+						</td>
+					</tr>
+				</table>
+				
+				<br/>
+			</div>
+			
+			<input type="button" id="burn_submit" value="" />
+		</div>
+		
+		<script src="../js/page/network-mac.js?v=1.5"></script>
+	</div>
+</body>
+</html>

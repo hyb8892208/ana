@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+			<script type="text/javascript" src="../js/layer/layer.min.js"></script>
+			<script type="text/javascript" src="../js/functions.js"></script>
+			<script type="text/javascript" src="../js/float_btn.js"></script>
+			<h3 id="feed_back_tip"></h3>
+			<table width="100%" class="tshow">
+				<thead>
+					<tr>
+						<th style="width:03%" class="nosort">
+							<input type="checkbox" name="selall" onclick="selectAll(this.checked,'log[]')" />
+						</th>
+						<th id="endpoint_name"></th>
+						<th id="registration"></th>
+						<th id="credentials"></th>
+						<th id="actions" width="80px"></th>
+					</tr>
+				</thead>
+				<tbody id="htmlstr">
+				</tbody>
+			</table>
+			
+			<div id="newline"></div>
+			<table id="float_btn" class="float_btn">
+				<tr id="float_btn_tr" class="float_btn_tr" style="">
+					<td>
+						<a>
+							<input class="add_input save_input" type="button" />
+						</a>
+					</td>
+					<td>
+						<input class="delete_input save_input" type="button" />
+					</td>
+				</tr>
+			</table>
+			<table id="float_btn2" style="border:none;" class="float_btn2">
+				<tr id="float_btn_tr2" class="float_btn_tr2" style="">
+					<td style="width:157px;">
+						<a>
+							<input type="button" id="float_button_1" class="float_short_button add_input save_input" />
+						</a>
+					</td>
+					<td>
+						<input type="button" id="float_button_2" class="float_short_button delete_input save_input" />
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<script src="../js/page/sip-endpoints.js"></script>
+	</div>
+</body>
+</html>
+<div id="to_top"></div>
+<div id="float_btn1" class="sec_float_btn1">
+</div>
+<div class="float_close" onclick="close_btn()" >
+</div>

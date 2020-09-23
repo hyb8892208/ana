@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+
+			<div class="modal fade in" id="modal-51" style="display:none;">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title"></h4>
+						</div>
+						
+						<div class="modal-body" style="min-height:200px;">
+						</div>
+					</div>
+				</div>
+			</div>
+			<img src='/images/loading.gif' style="display:none;"/>
+			<div class="modal-backdrop fade_in" style="display:none;"></div>
+
+
+			<!-- Reboot Tools begin -->
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="reboot_tools_li" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			<table width="100%" class="tctl" id="reboot_tools_1" >
+				<tr>
+					<th id="lang_system_reboot_help"></th>
+					<td>
+						<input type='button' class="save_input" id='system_reboot' value="" />
+					</td>
+				</tr>
+			</table>
+			<br/>
+			<table width="100%" class="tctl" id="reboot_tools_2" >
+				<tr>
+					<th id="lang_asterisk_reboot_help"></th>
+					<td>
+						<input type='button' class="save_input" id='asterisk_reboot' value="" />
+					</td>
+				</tr>
+			</table>
+			<br/>
+			<table width="100%" class="tctl" id="reboot_tools_3" style="display:none;">
+				<tr>
+					<th id="lang_system_switch_help"></th>
+					<td>
+						<input type='button' class="save_input" id="system_switch" value="" />
+					</td>
+				</tr>
+			</table>
+			<!-- Reboot Tools end -->
+			
+			<br/>
+
+			<!-- Update Firmware begin -->
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="update_firmware_li" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+
+			<form action='/service' method='post' enctype='multipart/form-data' >
+				<table width="100%" class="tctl" id="update_firmware_1" >
+					<tr>
+						<th>
+							<span id="lang_new_system_file"></span>:
+							<input type='file' name='uploadfile1' onchange='return checkFileChange(this)' id='update_sys_file'/>
+						</th>
+						<td>
+							<input type='hidden' name='action' value='upload' />
+							<input type='hidden' name='type' value='system_update' />
+							<input type='hidden' name='page_name' value='system-tools' />
+							<input type='submit' class="save_input" id='update_system' value="" />
+						</td>
+					</tr>
+				</table>
+			</form>
+			
+			<br>
+
+			<link type="text/css" href="../css/jquery-ui-1.10.2.custom.all.css" rel="stylesheet" media="all"/>
+			<script type="text/javascript" src="../js/jquery-ui-1.10.2.custom.all.min.js"></script>
+
+			<div id="update_online_dg" title="Update Online Information" style="display:none">
+				<center>
+					<textarea id="showmsg" style="height:280px;width:460px;" readonly></textarea>
+				</center>
+			</div>
+			<!-- Update Firmware end -->
+
+			<br/>
+
+			<!-- Upload Configuration begin -->
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="upload_configuration_li" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+
+			<form action='/service' method='post' enctype='multipart/form-data' >
+				<table width="100%" class="tctl" id="upload_configuration">
+					<tr>
+						<th>
+							<span id="lang_new_configuration_file"></span>:
+							<input type='file' name='uploadfile1' onchange='return checkFileChange(this)' id='upload_cfg_file'/>
+						</th>
+						<td>
+							<input type='hidden' name='action' value='upload' />
+							<input type='hidden' name='type' value='file_upload' />
+							<input type='hidden' name='page_name' value='system-tools' />
+							<input type='submit' class="save_input" id='file_upload' />
+						</td>
+					</tr>
+				</table>
+			</form>
+			<!-- Upload Configuration end -->
+
+			<br/>
+
+			<!-- Backup Configuration begin -->
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="backup_configuration_li" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			
+			<table width="100%" class="tctl" id="backup_configuration">
+				<tr>
+					<th>
+						<span id="lang_current_configuration_file_version"></span>: 
+						<span id="cfg_version" ></span>
+					</th>
+					<td>
+						<form action='/service' method='post' wnctype='multipart/form-data' >
+							<input type='hidden' name='action' value='download' />
+							<input type='hidden' name='downloadfile' value='config' />
+							<input type='hidden' name='page_name' value='system-tools' />
+							<input type='submit' class="save_input" id="lang_download_backup" value="" />
+						</form>
+					</td>
+				</tr>
+			</table>
+			<!-- Backup Configuration end -->
+			
+			<br/>
+			
+			<!-- Voice Recode begin -->
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="voice_recode_li" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			
+			<table width="100%" class="tctl" id="voice_recode">
+				<tr>
+					<th>
+						<span id='lang_voice_select_channel'></span>
+						<select name='voice_port' id='voice_port' style='margin-left:10px;'>
+						</select>
+					</th>
+					<td>
+						<input type='button' class="save_input" id='voice_start' value='' onclick='preview_dialog();'/>
+						<div id='preview_dg' id='voice_recode_title' title='' style='display:none;width:470px;height:100px;' >
+							<div>
+								<div id='timemsg' style='display:block;width:470px;height:100px;margin:0;' contenteditable='false'>
+									<div id='time'></div>
+									<div id='prompt_info'></div>
+								</div>
+							</div>
+							<form id="voice_form" action="/service" method="post">
+								<input type="hidden" name="action" value="download" />
+								<input type="hidden" id="voice_channel" name="channel" value="" />
+								<input type="hidden" name="downloadfile" value="sound" />
+								<input type="hidden" name="page_name" value="system-tools" />
+							</form>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<!-- Voice Recode end -->
+			
+			<br/>
+			
+			<!-- Restore Configuration begin -->
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="restore_configuration_li" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+
+			<table width="100%" class="tctl" >
+				<tr>
+					<th id="lang_factory_reset_help"></th>
+					<td>
+						<input type='button' class="save_input" id='factory_reset' value='' />
+					</td>
+				</tr>
+			</table>
+			<!-- Restore Configuration end -->
+			
+			<br/>
+			
+			<!-- Restore System begin -->
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="restore_system_li" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+
+			<table width="100%" class="tctl" id="restore_configuration" >
+				<tr>
+					<th id="lang_restore_system_help"></th>
+					<td>
+						<input type='button' class="save_input" id='restore_system' value='' />
+					</td>
+				</tr>
+			</table>
+			<!-- Restore System end -->
+		
+		</div>
+		<script src="../js/page/system-tools.js?v=2.2"></script>
+	</div>
+</body>
+</html>

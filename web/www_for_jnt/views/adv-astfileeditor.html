@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+			<script type="text/javascript" src="../js/functions.js"></script>
+			<script type="text/javascript" src="../js/check.js"></script>
+			
+			<h3 id="feed_back_tip"></h3>
+			
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="config_file_li" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			
+			<table width="100%" class="tshow" >
+				<tr>
+					<th id="lang_file_name"></th>
+					<th id="lang_file_size"></th>
+				</tr>
+			</table>
+			
+			<br/>
+			<div class="pg"></div>
+			
+			<div id="newline"></div>
+			<br/>
+			<input type="button" class="new_file_input save_input" value="New Configuration File" />
+			<input type="button" class="reload_asterisk_input cancel_input" value="Reload Asterisk" />
+			
+		</div>
+		
+		<script src="../js/page/adv-astfileeditor.js"></script>
+	</div>
+</body>
+</html>

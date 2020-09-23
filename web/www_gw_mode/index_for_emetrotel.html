@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>E-MetroTel Administration Console</title>
+<style type="text/css">
+	*{color:#CCC;background:#ffffff;font-family:Verdana,Helvetica,sans-serif}
+    p{position:absolute;width:99%;top:50%;margin-top:-3em;line-height:3em;text-align:center}
+</style>
+</head>
+<body>
+<center>
+    <h3><a href="">Entry</a></h3>
+	<div><img src="/images/index_loading.jpg" /></div>
+	<input type="hidden" id="getsn_url" value="/service?action=get_uuid" />
+</center>
+<script type="text/javascript">
+    var _protocol = window.location.protocol;
+    var url_host = window.location.host;
+    var index_url = _protocol+'//'+url_host+'/views/system-status.html';
+    document.getElementsByTagName('a')[0].setAttribute('href', index_url);
+    
+    window.location.href = index_url;
+    /*if(navigator.userAgent.toLowerCase().indexOf("chrome") != -1){
+        window.location.href='cgi-bin/php/system-status.php';
+    }else{
+        document.write('Make sure to use Chrome web browerss');
+    }*/
+</script>
+</body>
+</html>

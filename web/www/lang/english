@@ -1,0 +1,2459 @@
+language#english#English
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;     Language Package Description
+;
+;     Format:
+;          key="value"
+;
+;     Notice:
+;          1.Package head line format: language#xxx#XXXX
+;            xxx is the Internal identification.
+;            XXX is the web view.
+;          2.Package must save format: UTF-8(No BOM)
+;          3.If there is ["] in value, please use [\"]. For example: 
+;            language help="This is \"Portuguese\""
+;
+;     2013.8.23, OpenVox Co.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Must Set="Must Set"
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;    general
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[general]
+Name="Name"
+User Name="User Name"
+Password="Password"
+Port="Port"
+Port Name="Port Name"
+From="From"
+Type="Type"
+To="To"
+Enable="Enable"
+Enable help="ON(enabled),OFF(disabled)"
+All="All"
+All help="Select all or deselect all."
+
+Report="Report"
+new failed="new failed"
+Save Successfully="Save Successfully"
+Delete Successfully="Delete Successfully"
+Create Successfully="Create Successfully"
+Copyright="Copyright"
+OpenVox Copyright="OpenVox Analog Gateway All Rights Reserved.<br>TEL:+86-755-82535461 FAX:+86-755-83823074"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;    special
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[special]
+_On="On"
+_None="None"
+_No="No"
+_Yes="Yes"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;    title
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[title]
+;system
+System Status="System Status"
+Time Settings="Time Settings"
+Login Settings="Login Settings"
+General="General"
+Cluster="Cluster"
+System Tools="System Tools"
+Information="Information"
+Config Record="Config Record"
+Config Label="Config Label"
+
+;alg
+Channel Settings="Channel Settings"
+Dial Matching Table="Dial Matching Table"
+Global Settings="Global Settings"
+Pickup Settings="Pickup Settings"
+Pickup="Pickup"
+Advanced Settings="Advanced settings"
+Analog feature Batch="Analog feature Batch"
+Special Function Keys="Special function keys"
+
+;sip
+SIP Endpoints="SIP Endpoints"
+Batch SIP Endpoints="Batch SIP Endpoints"
+Advanced SIP Settings="Advanced SIP Settings"
+;Call Routing Rules="Call Routing Rules"
+
+;routing
+Call Routing Rules="Call Routing Rules"
+Groups="Groups"
+;network
+Netowrk Settings="Network Settings"
+DDNS Settings="DDNS Settings"
+Network Toolkit="Network Toolkit"
+
+;adv
+Asterisk API="Asterisk API"
+Asterisk CLI="Asterisk CLI"
+Asterisk File Editor="Asterisk File Editor"
+
+;log
+Logs Settings="Logs Settings"
+System Logs="System Logs"
+Asterisk Logs="Asterisk Logs"
+SIP Logs="SIP Logs"
+CDR="CDR"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;    menu
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[menu]
+system="system"
+analog="analog"
+sip="SIP"
+network="network"
+advanced="advanced"
+logs="logs"
+
+;system
+Status="Status"
+Time="Time"
+;Login Settings="Login Settings"
+;General="General"
+Tools="Tools"
+routing="routing"
+;Information="Information"
+
+;alg
+Channel Settings="Channel Settings"
+Dial Matching Table="Dial Matching Table"
+Global Settings="Global Settings"
+
+;sip
+SIP Endpoints="SIP Endpoints"
+Batch SIP Endpoints="Batch SIP Endpoints"
+Advanced SIP Settings="Advanced SIP Settings"
+
+;routing
+;Call Routing Rules="Call Routing Rules"
+;Groups="Groups"
+
+;network
+Network Settings="Network Settings"
+;DDNS Settings="DDNS Settings"
+Toolkit="Toolkit"
+
+;advanced
+;Asterisk API="Asterisk API"
+;Asterisk CLI="Asterisk CLI"
+;Asterisk File Editor="Asterisk File Editor"
+
+;logs
+Log Settings="Log Settings"
+System="System"
+Asterisk="Asterisk"
+SIP="SIP"
+;CDR="CDR"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;    button
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[button]
+Save="Save"
+Cancel="Cancel"
+
+Action="Action"
+Actions="Actions"
+Manual="Manual"
+Send="Send"
+Stop="Stop"
+Add="Add"
+
+Download="Download"
+Modify="Modify"
+
+Filter="Filter"
+Clean Filter="Clean Filter"
+
+Delete="Delete"
+Delete confirm="Are you sure to delete you selected ?"
+Clean Up="Clean Up"
+Clean Up confirm="Are you sure to delete all logs ?"
+Export="Export"
+
+Apply="Apply"
+Apply Bar help="Settings have been changed. Calls may be terminated when you apply these changes. Do you want to apply now ? "
+Close="Close"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;    pages
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[pages]
+Previous page="Previous page"
+Next page="Next page"
+input page help="Please input your page number, and press [Enter] to skip to."
+total pages="total pages"
+goto input page="goto input page"
+go="go"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	system-status.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[system-status]
+;Port status
+Port Information="Port Information"
+;Port="Port"
+;Type="Type"
+Caller ID="Caller ID"
+Sip Account="Sip Account"
+Port Status="Port Status"
+Line Status/Sip Account="Line Status/Sip Account"
+
+;SIP status
+SIP Information="SIP Information"
+Endpoint Name="Endpoint Name"
+;User Name="User Name"
+Host="Host"
+Registration="Registration"
+SIP Status="SIP Status"
+Response Code="Response Code"
+Network Information="Network Information"
+;Name="Name"
+MAC Address="MAC Address"
+IP Address="IP Address"
+Mask="Mask"
+Gateway="Gateway"
+RX Packets="RX Packets"
+TX Packets="TX Packets"
+
+PPPoE Information="PPPoE Information"
+;IP Address="IP Address"
+Server IP="Server IP"
+Server IP help="Server IP"
+Subnet Mask="Subnet Mask"
+RX packets="RX packets"
+TX packets="TX packets"
+Routing Information="Routing Information"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	system-time.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[system-time]
+;Time Settings="Time Settings"
+System Time="System Time"
+System Time help@system-time="Your gateway system time."
+Time Zone="Time Zone"
+Time Zone help@system-time="The world time zone. Please select the one which is the same as or the closest to your city."
+POSIX TZ String="POSIX TZ String"
+POSIX TZ String help="Posix timezone strings."
+NTP Server 1="NTP Server 1"
+NTP Server 1 help="Time server domain or hostname.For example, [time.asia.apple.com] "
+NTP Server 2="NTP Server 2"
+NTP Server 2 help="The first reserved NTP server.For example, [time.windows.com] "
+NTP Server 3="NTP Server 3"
+NTP Server 3 help="The second reserved NTP server.For example, [time.nist.gov] "
+Auto-Sync from NTP="Auto-Sync from NTP"
+Auto-Sync from NTP help="Whether enable automatically synchronize from NTP server or not. On(enabled),OFF(disabled)."
+
+Sync from NTP="Sync from NTP"
+Sync from Client="Sync from Client"
+Save Data="Save Data"
+
+;Report="Report"
+Time Synchronize="Time Synchronize"
+Synchronize Succeeded="Synchronize Succeeded"
+Synchronize Failed="Synchronize Failed"
+Client Synchronize Succeeded="Client Synchronize Succeeded"
+Client Synchronize Failed="Client Synchronize Failed"
+
+;Time Zone
+Australia="Australia"
+Melbourne,Canberra,Sydney="Melbourne,Canberra,Sydney"
+Perth="Perth"
+Brisbane="Brisbane"
+Adelaide="Adelaide"
+Darwin="Darwin"
+Hobart="Hobart"
+
+Europe="Europe"
+Amsterdam,Netherlands="Amsterdam,Netherlands"
+Athens,Greece="Athens,Greece"
+Berlin,Germany="Berlin,Germany"
+Brussels,Belgium="Brussels,Belgium"
+Bratislava,Slovakia="Bratislava,Slovakia"
+Budapest,Hungary="Budapest,Hungary"
+Copenhagen,Denmark="Copenhagen,Denmark"
+Dublin,Ireland="Dublin,Ireland"
+Helsinki,Finland="Helsinki,Finland"
+Kyiv,Ukraine="Kyiv,Ukraine"
+Lisbon,Portugal="Lisbon,Portugal"
+London,GreatBritain="London,GreatBritain"
+Madrid,Spain="Madrid,Spain"
+Oslo,Norway="Oslo,Norway"
+Paris,France="Paris,France"
+Prague,CzechRepublic="Prague,CzechRepublic"
+Roma,Italy="Roma,Italy"
+Moscow,Russia="Moscow,Russia"
+Stockholm,Sweden="Stockholm,Sweden"
+Zurich,Switzerland="Zurich,Switzerland"
+
+New Zealand="New Zealand"
+Auckland, Wellington="Auckland, Wellington"
+
+USA and Canada="USA & Canada"
+Hawaii Time="Hawaii Time"
+Alaska Time="Alaska Time"
+Pacific Time="Pacific Time"
+Mountain Time="Mountain Time"
+Mountain Time @Arizona, no DST="Mountain Time (Arizona, no DST)"
+Central Time="Central Time"
+Eastern Time="Eastern Time"
+
+Atlantic="Atlantic"
+Bermuda="Bermuda"
+
+Asia="Asia"
+;Asia (UTC+1)
+Anadyr="Anadyr"
+
+;Asia (UTC+2)
+Amman="Amman"
+Beirut="Beirut"
+Damascus="Damascus"
+Gaza="Gaza"
+Jerusalem="Jerusalem"
+Nicosia="Nicosia"
+
+;Asia (UTC+3)
+Aden="Aden"
+Baghdad="Baghdad"
+Bahrain="Bahrain"
+Kuwait="Kuwait"
+Qatar="Qatar"
+Riyadh="Riyadh"
+
+;Asia (UTC+3:30)
+Tehran="Tehran"
+
+;Asia (UTC+4)
+Baku="Baku"
+Dubai="Dubai"
+Muscat="Muscat"
+Tbilisi="Tbilisi"
+Yerevan="Yerevan"
+
+;Asia (UTC+4:30)
+Kabul="Kabul"
+
+;Asia (UTC+5)
+Aqtobe="Aqtobe"
+Ashgabat="Ashgabat"
+Dushanbe="Dushanbe"
+Karachi="Karachi"
+Oral="Oral"
+Samarkand="Samarkand"
+Tashkent="Tashkent"
+Yekaterinburg="Yekaterinburg"
+
+;Asia (UTC+5:30)
+Calcutta="Calcutta"
+Colombo="Colombo"
+Almaty="Almaty"
+Bishkek="Bishkek"
+Dhaka="Dhaka"
+Novosibirsk="Novosibirsk"
+Omsk="Omsk"
+Qyzylorda="Qyzylorda"
+Thimphu="Thimphu"
+
+;Asia (UTC+7)
+Jakarta="Jakarta"
+Bangkok="Bangkok"
+Vientiane="Vientiane"
+Phnom Penh="Phnom Penh"
+
+;Asia (UTC+8)
+Chongqing="Chongqing"
+Hong Kong="Hong Kong"
+Shanghai="Shanghai"
+Singapore="Singapore"
+Urumqi="Urumqi"
+Taiwan="Taiwan"
+Ulaanbaatar="Ulaanbaatar"
+
+;Asia (UTC+9)
+Dili="Dili"
+Jayapura="Jayapura"
+Pyongyang="Pyongyang"
+Seoul="Seoul"
+Tokyo="Tokyo"
+Yakutsk="Yakutsk"
+
+Central and South America="Central and South America"
+Sao Paulo,Brazil="Sao Paulo,Brazil"
+Argentina="Argentina"
+Central America @no DST="Central America (no DST)"
+Venezuela="Venezuela"
+
+Unknown="Unknown"
+User defined @or out of date="User defined (or out of date)"
+sync from client failed="sync from client failed"
+sync from NTP failed="sync from NTP failed"
+NTP running tip="Sync from NTP is running"
+Client running tip="Sync from Client is running"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	system-login.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[system-login]
+Web Login Settings="Web Login Settings"
+;User Name="User Name"
+User Name help@system-login web="NOTES: Your gateway doesn't have administration role. <br/>All you can do here is defining the username and password to manage your gateway.<br/>And it has all privileges to operate your gateway.<br/>User Name: Allowed characters \"-_+.<>&0-9a-zA-Z\".Length: 1-32 characters."
+;Password="Password"
+Password help@system-login web="Characters: Allowed characters \"-_+.&lt;&gt;&amp;0-9a-zA-Z\".Length: 4-32 characters."
+Confirm Password="Confirm Password"
+Confirm Password help@system-login web="Please input the same password as 'Password' above."
+Confirm Password warning@system-login web="This password must match the password above."
+SSH Login Settings="SSH Login Settings"
+;User Name="User Name"
+User Name help@system-login ssh="User Name: Allowed characters \"-_+.&lt;&gt;&amp;0-9a-zA-Z\".Length: 1-25 characters.</br>Can't use 'root'."
+User Name warning@system-login ssh="Can't use 'root'"
+;Password="Password"
+Password help@system-login ssh="Characters: Allowed characters \"-_+.&lt;&gt;&amp;0-9a-zA-Z\".Length: 4-32 characters."
+Login Mode="Login Mode"
+Login Mode help="Select the mode of login."
+HTTP Port="HTTP Port"
+HTTPS Port="HTTPS Port"
+web server port help="Specify the web server port number."
+Port help@system-login ssh="SSH login port number."
+js webserver http port help="Range: 1024-65535, Default 80. Some ports are forbidding."
+js webserver https port help="Range: 1024-65535, Default 443. Some ports are forbidding."
+
+;Save="Save"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	system-general.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[system-general]
+Language Debug="Language Debug"
+TURN ON="TURN ON"
+TURN OFF="TURN OFF"
+Scheduled Reboot="Scheduled Reboot"
+Reboot Type="Reboot Type"
+Reboot Type help="By Day: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reboot everyday at xx:xx(time). <br>By Week: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reboot everyweek on XXX(week day) at xx:xx(time). <br>By Month: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reboot everymonth on XXX(Month day) at xx:xx(time). <br>By Running Time: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reboot periodically by the run time."
+By Day="By Day"
+By Week="By Week"
+By Month="By Month"
+By Running Time="By Running Time"
+;Time="Time"
+Running Time="Running Time"
+Month="Month"
+Week="Week"
+Day="Day"
+Hour="Hour"
+Minute="Minute"
+
+Sun="Sun"
+Mon="Mon"
+Tue="Tue"
+Wed="Wed"
+Thu="Thu"
+Fri="Fri"
+Sat="Sat"
+
+Language Settings="Language Settings"
+Language="Language"
+Language Package="Language Package"
+Advanced="Advanced"
+
+;Download="Download"
+Language Download help="Download selected language package."
+Language Download error="Can not find Your select language package."
+
+Add New Language="Add New Language"
+New language Package="New language Package"
+Language Package Upload Filesize error="Your uploaded file was larger than 1MB!<br>Uploading language package was failed.<br>"
+Language Package Upload Move Failed="Language Package Upload Move Failed"
+Language Package Upload Failed="Language Package Upload Failed"
+Language Package Format error="Language Package Format error"
+Add Language overwrite alert="Language already exists!\nReadyonly Language cannot be overwrite!"
+Add Language overwrite confirm="Language already exists!\nDo you want to overwrite it?"
+
+Delete language help="Delete selected language."
+Delete Language alert="Sorry, you can not delete the default language."
+Delete Language confirm="Are you sure to delete the selected language package?"
+Select File alert="Please select your file first!"
+Language Package Size alert="Uploaded max file is 1MB!"
+
+Snmp Agent="Snmp Agent"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	system-cluster.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[system-cluster]
+Manual Cluster="Manual Cluster"
+Automatic Cluster="Automatic Cluster"
+Working Mode="Working Mode"
+Image build time="Image build time"
+Image version="Image version"
+Mode="Mode"
+Detail="Detail"
+Mode help@system-cluster="Stand-alone Mode: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Run alone, total 4 ports<br>Master Mode: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Run as master with two different IP, controlling up to four slaves. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The master can be accessed by the original IP. The target IP is used to communicate with the slaves. <br>Slave Mode: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Run as slave with two different IP, controlled by the master. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the original IP is forbidden, the slave can be accessed by the master with inward IP only. <br>"
+Stand-alone="Stand-alone"
+Basis="Basis"
+Master="Master"
+Slave="Slave"
+Set Default="Set Default"
+;Password="Password"
+slave number="slave number"
+slave number help@system-cluster="The number of slave board"
+Password help@system-cluster master mode="The Master Mode password. <br>Must be 4~16bits digital 0-9."
+Password elp@system-cluster slave mode="The slave's Master Mode password. <br>Must be the same as the master."
+Master IP="Master IP"
+Master IP help@system-cluster master mode="The master's target IP. <br>Must be set in the subnet different from external subnet, <br>so that the external subnet couldn't access internal subnet."
+Master IP help@system-cluster slave mode="The master's target IP. <br>You must set the master's target IP first."
+Slave IP="Slave IP"
+Slave IP help@system-cluster slave mode="The slave's target IP. <br>Must be set in the same subnet as the master."
+Slaves IP List help@system-cluster master mode="Set the slaves's original and target IP. <br>The original IP is outward IP, and the target IP is inward IP. <br>Up to four slaves."
+Local IP="Local IP"
+Original IP="Original IP"
+Board-="Board-"
+port-="port-"
+Target IP="Target IP"
+Slaves IP List="Slaves IP List"
+Remain Origianl IP address="Remain Origianl IP address"
+
+Master Mode warning 1="Please input valid password number 0-9 ,min:4 max:16"
+Master Mode warning 2="Please input valid Master IP address."
+Master Mode warning 3="Please input valid Master IP address,can't confilct with user IP address"
+Slave Mode warning 1="Please input valid password number 0-9 ,min:4 max:16"
+Slave Mode warning 2="Please input valid Slave IP address."
+Slave Mode warning 3="Please input valid Master IP address."
+slave list warning 1="Please input valid target IP address of board."
+slave list warning 2="Please input valid original IP address of board."
+
+;Apply="Apply"
+Apply Master Mode="Apply Master Mode"
+
+4 slave="4 slave"
+1 master + 1 slave="1 master + 1 slave"
+1 master + 2 slave="1 master + 2 slave"
+1 master + 3 slave="1 master + 3 slave"
+1 master + 4 slave="1 master + 4 slave"
+cluster fail, not found="cluster fail, not found"
+cluster success="cluster success"
+cluster fail="cluster fail"
+device mode="device mode"
+Please turn off the other gateways while scanning the network="Please turn off the other gateways while scanning the network."
+Not found gateway="Not found gateway"
+Automatic cluster failed="Automatic cluster failed"
+Automatic cluster successful="Automatic cluster successful"
+List gateways failed="List gateways failed"
+Get master slot number failed="Get master slot number failed"
+not online="not online"
+have some slave board not online, please check it first,boardlist:="have some slave board not online, please check it first,boardlist:"
+DND="DND"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	system-tools.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[system-tools]
+Reboot Tools="Reboot Tools"
+System Reboot="System Reboot"
+System Reboot help="Reboot the gateway and all the current calls will be dropped."
+System Reboot confirm="Are you sure to reboot your gateway now?\nYou will lose all data in memory!"
+Asterisk Reboot="Asterisk Reboot"
+Asterisk Reboot help="Reboot the asterisk and all the current calls will be dropped."
+Asterisk Reboot confirm="Are you sure to reboot Asterisk now?"
+
+Update Firmware="Update Firmware"
+System Update="System Update"
+System Update filesize alert="Uploaded max file is 40M!"
+System Update IE alert="Please allow ActiveX Scripting File System Object!"
+System Update confirm="Are you sure to update your system?\\nUse caution, please!This might damage the structure of your original configuration files."
+New system file="New system file"
+System Online Update="System Online Update"
+System Online Update help="New system file is downloaded from official website and update system. "
+System Online Update Download error="Download system file failed. Please check the network connection is correct!"
+System Online Update fopen error="Save system file failed!"
+System version help 1="Your system current version is :"
+System version help 2="The newest system version is :"
+System Online Update confirm="Use caution, please : This might damage the structure of your original configuration files.\n\nDo you want to update your system?\n"
+System Online Update version error="Get remote version failed. Please check the network connection is correct!"
+
+Upload Configuration="Upload Configuration"
+File Upload="File Upload"
+File Upload confirm="Are you sure to upload configuration files?\nThis will damage the structure of your original configuration files."
+New configuration file="New configuration file"
+
+Backup Configuration="Backup Configuration"
+Download Backup="Download Backup"
+Current configuration file version="Current configuration file version"
+
+Restore Configuration="Restore Configuration"
+Channel Recording="Channel Recording"
+Choose Channel="Choose Channel"
+Factory Reset="Factory Reset"
+Factory Reset help="This will cause all the configuration files to back to default factory values! And reboot your gateway once it finishes."
+Factory Reset confirm="Are you sure to restore configuration file now?"
+
+;output
+;Report="Report"
+;Slave="Slave"
+Result="Result"
+
+;system reboot
+;System Reboot="System Reboot"
+System Rebooting="System Rebooting"
+System Reboot wait="System Rebooting...<br>Please wait for about 180s, system will be rebooting."
+Starting capture the message from channel="Starting capture the message from channel"
+
+;asterisk reboot
+;Asterisk Reboot="Asterisk Reboot"
+Asterisk Rebooting="Asterisk Rebooting"
+Asterisk Reboot Succeeded="Asterisk Reboot Succeeded"
+Asterisk Reboot Failed="Asterisk Reboot Failed"
+
+;system update
+;System Update="System Update"
+System Update Filesize error="Your updated file was larger than 40M!<br>Updating system was failed."
+System Update Move error="Moving your updated file was failed!<br>Updating system was failed."
+System Updating="System Updating"
+fork error="fork error"
+Error code="Error code"
+Error ="Error"
+System Update Succeeded="System Update Succeeded"
+System Update Succeeded help="You must reboot system to entry the newer system."
+System Update error 1="The file was larger than the server space 40M!"
+System Update error 2="The file was larger than the browser's limit!"
+System Update error 3="The file was only partially uploaded!"
+System Update error 4="Can not find uploaded file!"
+System Update error 5="The server temporarily lost folder!"
+System Update error 6="Failed to write to the temporary folder!"
+System Update Failed="System Update Failed"
+
+Downloading="Downloading"
+;System Online Update="System Online Update"
+Updating system="Updating system"
+Update failed="Update failed"
+update failed output="Updating system was failed.<br>Error code: "
+update succeed output="Successfully update your system!<br>You must reboot system to entry the newer system."
+;fork error="fork error"
+
+Updating system was failed="Updating system was failed"
+
+;upload cfg file
+Configuration Files Upload="Configuration Files Upload"
+Configuration Files Upload Filesize error="Uploaded configuration files exceed 40M!<br>Configuration file upload failed."
+Configuration Files Upload Move error="Mobile update file failed!<br>Configuration file upload failed."
+Configuration Files Uploading="Configuration Files Uploading"
+Configuration Files Upload="Configuration Files Upload"
+Configuration Files Upload Filesize error="Your uploaded file was larger than 40M!<br>Uploading configuration files was failed."
+Configuration Files Upload Move error="Moving your updated file was failed!<br>Uploading configuration files was failed."
+Configuration Files Uploading="Configuration Files Uploading"
+Configuration Files Upload Failed="Configuration Files Upload Failed"
+Configuration Files Upload Succeeded="Configuration Files Upload Succeeded"
+Configuration Files Upload version error 1="</br>Can not find configration file!</br>Can not find asterisk/cfg_version!<br>"
+Configuration Files Upload version error 2="</br>Unknown configuration version!"
+Configuration Files Upload version error 3="</br>Your current system does not support this configuration version!</br>"
+Configuration Files Upload check="Checking configuration version....<br>"
+Configuration Files Upload update="Updating configuration files....<br>"
+Configuration Files Upload error 1="The file was larger than the server space 40M!"
+Configuration Files Upload error 2="The file was larger than the browser's limit!"
+Configuration Files Upload error 3="The file was only partially uploaded!"
+Configuration Files Upload error 4="Can not find uploaded file!"
+Configuration Files Upload error 5="The server temporarily lost folder!"
+Configuration Files Upload error 6="Failed to write to the temporary folder!"
+Stop Asterisk="stopping asterisk....<br>"
+Start Asterisk="Starting asterisk....<br>"
+
+;downlad cfg files
+Packing was failed="Packing was failed"
+;Error code="Error code"
+Can not find="Can not find"
+
+;Configuration Restore
+Configuration Restore="Configuration Restore"
+Configuration Restore wait="Default Configuration Files Restoring...<br>Please wait for about 60s, system will be rebooting."
+Configuration Restoring="Configuration Restoring"
+Configuration Restore Failed="Configuration Restore Failed"
+Change Log="Change Log"
+Detailed="Detailed"
+Update Online Now="Update Online Now"
+Update Online Information="Update Online Information"
+
+;Voice Record
+Voice Record="Voice Record"
+Voice Record help="Select a module to recode voice.："
+Start Recording="Start Recording"
+
+System Switch="System Switch"
+System Switching="System Switching"
+System Switch Succeeded="System Switch Succeeded"
+System Switch Failed="System Switch Failed"
+System Switch confirm="Are you sure to switch System now?"
+System Count Dowm="The system will be restarted automatically after 10 seconds countdown."
+Second="Second"
+
+Restore System="Restore System"
+Restore System help="Restoring the system will cause all configuration files to be restored to the default factory value. CDR logs and system logs can be selected to clear!And reboot your gateway once it finishes."
+Restore System clear="Please select the data to be cleaned up:"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	system-info.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[system-info]
+Model Name="Model Name"
+GSM Modem Description="GSM Modem Description"
+Software Version="Software Version"
+Hardware Version="Hardware Version"
+Slot Number="Slot Number"
+Storage Usage="Storage Usage"
+Memory Usage="Memory Usage"
+Memory Clean="Memory Clean"
+Build Time="Build Time"
+Contact Address="Contact Address"
+Contact Address content="10/F, Building 6-A, Baoneng Science and Technology Industrial Park, Longhua New District, Shenzhen, Guangdong, China 518109"
+Contact Address YFree="Rm.3007,No.1 Building,No.2875,YangGao Rd.,Shanghai.China"
+Tel="Tel"
+Fax="Fax"
+E-Mail="E-Mail"
+Web Site="Web Site"
+Rebooting Counts="Rebooting Counts"
+;System Time="System Time"
+System Uptime="System Uptime"
+clean failed="clean failed"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	system-record.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[system-record]
+Record Message="Record Message"
+Date="Date"
+backup tip="Back will cause call interruption. Are you sure you want to return to this record?"
+back failed="back failed!"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	system-label.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[system-label]
+New Label="New Label"
+New Label help="New Label help"
+Labels="Labels"
+Label Name="Label Name"
+label save tip="Label Name can not be null!"
+label back tip="Are you sure return to label name"
+label delete tip="Are you sure delete this label?"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	alg-chnsettings.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[alg-chnsettings]
+;Port="Port"
+;Type="Type"
+;Caller ID="Caller ID"
+;Sip Account="Sip Account"
+;Port Status="Port Status"
+;Actions="Actions"
+
+Line Status="Line Status"
+
+Port Name help="Port Name"
+
+Port type="Port type"
+Port type help="The port type <br/>Read only, auto-detected by gateway."
+
+Rx gain="Rx gain"
+Rx gain help="Set the rx gain (dB). Range: from -20.0dB to 6dB, in 0.1 dB increments. The default is 0. <br/>"
+Tx gain="Tx gain"
+Tx gain help="Set the tx gain (dB). Range: from -20.0dB to 6dB, in 0.1 dB increments.<br/>"
+Ring timeout="Ring timeout"
+Ring timeout help="Set the ring timeout (seconds). <br/>"
+Sip Account help="The channel after receiving the user's call request,<br/>on behalf of the user to initiate a new call to the<br/>associated SIP request. <br/>"
+Failover fxo="Failover fxo"
+Failover fxo help="When the SIP server registered with the gateway or gateway has a network failure, <br/>the SIP trunking or SIP relay that is registered on the gateway is not available and can be output directly from the PSTN line on the FXO<br/>"
+
+;Caller ID
+Caller ID help="Set the caller ID <br/>"
+Full name help="Set the full name of caller<br/>"
+Hide callerid="Hide callerid"
+Hide callerid help="Whether or not to hide outgoing caller ID. <br/>"
+Use callerid help="Use callerid or not<br/>"
+CID signalling help="Type of caller ID signalling in use. <br/>"
+Use callerid="Use callerid"
+Use callerid help="Use callerid or not<br/>"
+CID signalling="CID signalling"
+CID signalling help="Type of caller ID signalling in use. <br/>"
+bell="bell"
+v23="v23"
+dtmf="dtmf"
+smdi="smdi"
+v32_jp="v32_jp"
+CID start signal="CID start signal"
+CID start signal help="Set the signals of start of caller ID<br/>ring = a ring signals the start (default)<br/>polarity = polarity reversal signals the start<br/>polarity_IN = polarity reversal signals the start, for India<br/>"
+CID start signal help="Set the signals of start of caller ID<br/>ring        = a ring signals the start (default)<br/>polarity    = polarity reversal signals the start<br/>polarity_IN = polarity reversal signals the start, for India<br/>"
+ring="ring"
+polarity="polarity"
+polarity_IN="polarity_IN"
+;dtmf="dtmf"
+Answer on polarity switch="Answer on polarity switch"
+Answer on polarity switch help="Use a polarity reversal to mark when a outgoing call is answered by the remote party.<br/>"
+Hangup on polarity switch="Hangup on polarity switch"
+Hangup on polarity switch help="In some countries, a polarity reversal is used to signal the disconnect of a<br/>phone line.  If this option is selected, the call will be considered \"hung up\" <br/>on a polarity reversal. <br/>"
+Polarity on answer delay="Polarity on answer delay"
+Polarity on answer delay help="Minimal time period (ms) between the answer polarity switch and hangup polarity switch. <br/>(default: 600ms)<br/>"
+
+Delay reply 200 OK switch="Delay reply 200 OK switch"
+Delay reply 200 OK switch help="It is invalid when start polarity; <br/>On: delay timer to reply 200 ok; <br/>Off: immediately reply 200 ok. <br/>default is off. <br/>"
+Delay reply 200 OK timer="Delay reply 200 OK timer"
+Delay reply 200 OK timer help="Delayed 200 OK time, default value is 8 seconds.<br/>"
+
+Save To Other Channels="Save To Other Channels"
+Save To Other Channels help="Saving channel param to other channels synchronously."
+Sync All Settings="Sync All Settings"
+Sync All Settings help="AG Sync All settings"
+Select all settings="Select all settings"
+Save To Other Channles help="Save channel parameters to other channels at the same time."
+;Call feature
+Call feature="Call feature"
+Call waiting="Call waiting"
+Call waiting help="Turn on/off call waiting function. <br/>"
+Three way calling="Three way calling"
+Three way calling help="Turn on/off three way calling function. <br/>"
+Call transfer="Call transfer"
+Call transfer help="Turn on/off call transfer function. <br/>"
+Call forward="Call forward"
+Call forward help="Turn on/off call forward function. <br/>"
+Call forward number="Call forward number"
+Call forward number help="Set the call forward number. <br/>"
+SIP out="Synchronous SIP is out of scope"
+Save To Other Channels="Save To Other Channels"
+dnd help="Do not disturb."
+
+;Call limit
+Call Limit Switch="Call Limit Switch"
+Call Limit Switch help="Call Limit Switch"
+Limit Call Time="Limit Call Time"
+Limit Call TIme help="Limit Call Time"
+Limit Daily Call Times="Limit Daily Call Times"
+Limit Daily Call Times help="Limit Daily Call Times"
+Limit Daily Answer Times="Limit Daily Answer Times"
+Limit Daily Answer Times help="Limit Daily Answer Times"
+Limit Hour Call Times="Limit Hour Call Times"
+Limit Hour Call Times help="Limit Hour Call Times"
+Call Status="Call Status"
+Hour Call Count="Hour Call Count"
+Daily Call Count="Daily Call Count"
+Daily Answer Count="Daily Answer Count"
+Limited="Limited"
+Unlimited="Unlimited"
+Unlimit Tip="Are you sure you want to unlimit it?"
+Port Status Unlimit="Port Status:Unlimit."
+Extension Number="Extension Number"
+Extension Number help="Extension Number"
+
+Internal Exten Number="Internal Exten Number"
+Internal Exten Number help="Internal Exten Number"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	alg_fxoparam.php and alg_fxsparam.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Driver="Driver"
+Dahdi Restart help="Setting the driver parameters will restart dahdi, which takes about three minutes. Calls will be interrupted during the restart. Are you sure you need to restart?"
+Fxo Parameters="Fxo Parameters"
+Fxs Parameters="Fxs Parameters"
+FXO settings="FXO settings"
+FXS settings="FXS settings"
+Tone interval="Tone interval"
+Tone interval help="How long between tone and tone will be played on the channel.<br/>(in milliseconds)."
+FXO Rx gain="FXO Rx gain"
+FXO Tx gain="FXO Tx gain"
+CallerID detect="CallerID detect"
+Immediate Send Cid="\"#\" is sent out immediately"
+Immediate Send Cid help="\"#\" is sent out immediately"
+Callout Min Interval="Callout Min interval"
+Callout Min Interval help="Callout Min interval (range: 400-10000ms, default: 2000ms)"
+Current Threshold="Current threshold"
+Current Threshold help="Range:1-65535"
+
+Use Callerid="Use Callerid"
+
+Hide Callerid="Hide Callerid"
+
+callerid=""
+
+cidsignalling="cidsignalling"
+
+cidstart="cidstart"
+Busy detect="Busy detect"
+Busy count="Busy count"
+Busy country="Busy country"
+
+Silence detect="Silence detect"
+Silence threshold="Silence threshold"
+Max silence="Max silence"
+Rx threshold="Rx threshold"
+Tx threshold="Tx threshold"
+
+cidbeforering="cidbeforering"
+cidbeforering help="Swith to handle irregular CID function."
+
+cidbuflen="cidbuflen"
+cidbuflen help="CID media stream length byte size."
+offhook-antishake="offhook-antishake"
+offhook-antishake help="The anti-jitter delay value when the gateway FXS port detects the off-hook signal. The setting value is from 32ms to 2048ms (multiple of 32) and the default value is 64ms."
+
+cutcidbufheadlen="cutcidbufheadlen"
+cutcidbufheadlen help="CID media stream header length byte size."
+
+fixedtimepolarity="fixedtimepolarity"
+fixedtimepolarity help="Transmit polarity line reversal signal delay time."
+
+cidtimeout="cidtimeout"
+cidtimeout help="Detecting the first ring of a call, the maximum interval between two rings in a call. In order to detect the first ringing in a call, the time interval between two calls is larger than this time. <br/> unit ms, range: from 4000ms to 2000ms, default value is 7000ms. <br/>"
+js check parameters data type="parameters data type must be int."
+
+js empty-check fxotxgain="fxotxgain can not be null"
+js check fxorxgain="Allowed range: -150 ~ 120."
+js empty-check fxorxgain="fxorxgain can not be null"
+js check fxorxgain="Allowed range: -150 ~ 120."
+js empty-check polaritydebounce="polaritydebounce can not be null"
+js check polaritydebounce="Allowed range: 0 ~ 2048ms"
+js empty-check ringdebounce="ringdebounce can not be null"
+js check ringdebounce="Allowed range: 0 ~ 2048ms"
+js empty-check ringoncount="ringoncount can not be null"
+js check ringoncount="Allowed range: 0 ~ 128"
+js empty-check ringoffcount="ringoffcount can not be null"
+js check ringoffcount="Allowed range: 0 ~ 128"
+
+js check fxsringfreq="Allowed range: 15 ~ 50Hz"
+js check fxsringamp="Allowed range: 45 ~ 85V"
+js check dialdebounce="Allowed range: 32 ~ 2048ms (multiple of 32)"
+js empty-check dialdebounce="dialdebounce can not be null"
+
+js empty-check cidbuflen="cidbuflen can not be null"
+js check cidbuflen="Invalid value!Allowed range: 1 ~ 4000ms"
+js empty-check cutcidbufheadlen="cutcidbufheadlen can not be null"
+js check cutcidbufhendlen="Invalid value!Allowed range: 1 ~ 2000ms, And less than or equal to CID media length value cidbuflen."
+js empty-check fixedtimepolarity="fixedtimepolarity can not be null"
+js check fixedtimepolarity="Invalid value!Allowed range: -1 ~ 2000ms"
+js check cidtimeout="Invalid value!Allowed range: 4000 ~ 20000ms"
+
+Flexible Routing Switch="Flexible Routing Switch"
+Flexible Routing Switch help="Flexible Routing Switch"
+Flex Routing Switch Open help="This operation clears all fxs-bound SIP extension information.Need to continue?"
+Flex Routing Switch Close help="This operation clears all fxs-related routing information.Need to continue?"
+
+ringdebouncetime="ringdebouncetime"
+ringdebouncetime help="Minimum interval between the last hang-up of FXO and the next DAHDI_RINGON event.Range:100-3000ms.default:2000ms."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	alg-dialtable.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Dial Matching Rule="Dial Matching Rule"
+Add New Dial Matching Rule="Add New Dial Matching Rule"
+Edit Dial Matching Rule="Edit Dial Matching Rule"
+Rule="Rule"
+Dial Matching Rule help="Dial Matching rule may be numbers, letters, or combinations thereof. If an rule is prefixed by a '_' character, it is interpreted as a pattern rather than a literal.  In patterns, some characters have special meanings: &#10;&#10;     X - any digit from 0-9 &#10;     Z - any digit from 1-9 &#10;     N - any digit from 2-9 &#10;     [1235-9] - any digit in the brackets (in this example, 1,2,3,5,6,7,8,9) &#10;     ! - wildcard, causes the matching process to complete as soon as ;it can unambiguously determine that no other matches are possible&#10;&#10;For example, the rule _NXXXXXX would match normal 7 digit dialings, while _1NXXNXXXXXX would represent an area code plus phone number preceded by a one."
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	alg-pickupsettings.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Time Out="Time Out"
+Number="Number"
+Disabled="Disabled"
+Enabled="Enabled"
+Status Settings="Status Settings"
+Time Out help="Set the timeout, in milliseconds (ms).Note: You can only enter numbers."
+Number help="Pickup number"
+Save Interrupt Call help="Save will interrupt the call. Are you sure you want to save it?"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	alg_funkeys.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+None Special Characters Blind Transfer="None Special Characters Blind Transfer"
+Blind Transfer="Blind Transfer"
+Blind Transfer help="When turn on the Blind Transfer, configure the dialplan before transferring the call (*38 by default)."
+Asked Transfer="Asked Transfer"
+Asked Transfer help="When turn on the Asked Transfer, configure the dialplan before transferring the call (*38 by default)."
+Function Keys="Function Keys"
+None Keys Blind Transfer="None Keys Blind Transfer"
+None Keys Blind Transfer help="Turn on the switch: A calls B, A press *38(can be customized) and calls C phone number, C picks up and talk with A.<br/>Turn off the switch: A calls B, A press *38(can be customized) and calls C phone number, A hangs up,C picks up and talk with B."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	wctdmc1k_param.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Dahdi parameters="Dahdi parameters"
+Wctdmc1k parameters="Dahdi parameters"
+Polaritydebounce="Polaritydebounce"
+Polaritydebounce help="The time of Polaritydebounce. Range: from 0 ms to 2048 ms, the default is 64 ms. <br/>"
+Time of Polaritydebounce="Time of Polaritydebounce"
+ringdebounce="ringdebounce"
+ringdebounce help="The time of ringdebounce. Range: from 0 ms to 2048 ms, the default is 64 ms. <br/>"
+Time of ringdebounce="Time of ringdebounce"
+ringoncount="ringoncount"
+ringoncount help="Counting the times of ring on. Range: from 0 to 128, the default is 16. <br/>"
+Counting the ring on="Counting the ring on"
+ringoffcount="ringoffcount"
+ringoffcount help="Counting the times of ring off. Range: from 0 to 128, the default is 0. <br/>"
+Counting the ring off="Counting the ring off"
+ringonincrement="ringonincrement"
+Increment of ring on="Increment of ring on"
+times="times"
+fastringer="fastringer"
+ing Amplitude="Set the ringing frequency. 20 Hz for 0 and 25 Hz for 1. "
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	register_param.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Reading Regiter Value="Reading Regiter Value"
+Channel="Channel"
+Channel help="Current channel number."
+Register Number="Register Number"
+Register Value="Register Value"
+Read="Read"
+Setting Register="Setting Register"
+Register="Register"
+Register help="Current register number"
+Value="Value"
+Value help="Current register value."
+
+js check channel register number = "the register number you input is not exist, the range of reg is : 0 ~ 59!"
+js check channel register value = "the register value you input out of the range :(0 ~ 255)"
+
+Other Parameters="Other Parameters"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	alg-glbsettings
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[alg-glbsettings]
+
+Global settings="Global settings"
+;General="General"
+Tone duration="Tone duration"
+Tone duration help="How long generated tones (DTMF and MF) will be played on the channel.<br/>(in milliseconds)."
+Dial timeout="Dial timeout"
+Dial timeout help="Specifies the number of seconds we attempt to dial the specified devices. <br/>"
+Codec="Codec"
+Codec help="Set the global encoding:mulaw,alaw<br/>"
+Ulaw="Ulaw"
+Alaw="Alaw"
+Impedance="Impedance"
+Impedance help="Configuration for impedance. <br/>"
+Echo cancel tap length="Echo cancel tap length"
+Echo cancel tap length help="Hardware echo canceler tap length. <br/>"
+Pulse dial="Pulse dial"
+Pulse dial help="Turn on/off pulse dial. <br/>"
+Flash/Wink="Flash/Wink"
+Flash/Wink help="Turn on/off Flash/Wink. <br/>"
+Min flash time="Min flash time"
+Min flash time help="Min flash time. (in milliseconds). Range:1-100.<br/>"
+Max flash time="Max flash time"
+Max flash time help="Max flash time. (in milliseconds). Range:100-3000.<br/>"
+as Ending Dial Key="as Ending Dial Key"
+as Ending Dial Key help="Turn on/off Ending Dial Key. <br/>"
+Checking SIP Status="Checking SIP Status"
+Checking SIP Status help="Turn on/off SIP Account registration status checking. <br/>"
+The pattern of sending CID="The pattern of sending CID"
+The pattern of sending CID help="Some countries(UK) have ring tones with different ring tones(ring-ring), which means the caller ID needs to be set later on, and not just after the first ring, as per the default(1).<br/>"
+Waiting time before sending CID="Waiting time before sending CID"
+Waiting time before sending CID help="How long we will waiting before sending the CID on the channel.(in milliseconds)."
+MOH pattern of transfer="MOH pattern of transfer"
+MOH pattern of transfer help="Choose the MOH pattern of transfer.<br>If selected it will gives the waiting side a music, Otherwise it will be a ringback tone."
+Send polarity reversal="Send polarity reversal(DTMF Only)"
+Send polarity reversal help="Send polarity reversal before sending the CID on the channel."
+Start code="Start code(DTMF Only)"
+Start code help="Start code."
+Stop code="Stop code(DTMF Only)"
+Stop code help="Stop code."
+Display extension number="Display extension number"
+Display extension number help="Turn on/off display extension number. <br/>"
+send CID before ringing="send CID before ringing"
+send CID after first ring="send CID after first ring"
+send CID after second ring="send CID after second ring"
+send CID after third ring="send CID after third ring"
+FXS Signaling="FXS Signaling"
+FXS Signaling help="FXS Signaling"
+FXS Signaling change="Modifying the FXS signaling parameter will clear all channel bound sip, which must be restarted to take effect."
+
+;Hardware gain
+Hardware gain="Hardware gain"
+FXO Rx gain="FXO Rx gain"
+FXO Rx gain help="Set FXO to terminal gain. Range: from -150 to 120, the default is 0. <br/>"
+FXO Tx gain="FXO Tx gain"
+FXO Tx gain help="Set FXO to IP gain. Range: from -150 to 120, the default is 0. <br/>"
+FXS Rx gain="FXS Rx gain"
+FXS Rx gain help="Set FXS to terminal gain. Range: -35, 0 or 35. the default is 0. <br/>"
+FXS Tx gain="FXS Tx gain"
+FXS Tx gain help="Set FXS to IP gain. Range: -35, 0 or 35. the default is 0. <br/>"
+
+;Busy detect
+Busy detect="Busy detect"
+Busy detect help="Busy Detection is used for detecting busy signal or far end hang-up. <br/>"
+Busy count="Busy count"
+Busy count help="Configure the number of busy tones the user will hear before hanging up the call when Busy Detect is enabled. <br/>"
+Busy country="Busy country"
+Busy country help="Select country for tone settings. <br/>"
+;China="China"
+;Taiwan="Taiwan"
+;Japan="Japan"
+Korea="Korea"
+USA="USA"
+;Germany="Germany"
+Fxo Monitor="Fxo Monitor"
+Fxo Monitor help="Turn on/off fxo monitor function. <br/>"
+Busy tone pattern="Busy tone pattern"
+Busy tone pattern help="Set the busy tone pattern. <br/> eg: 550/250,0/250 <br/>"
+Add More Busy Pattern Fields="Add More Busy Pattern Fields"
+Silence detect="Silence detect"
+Silence detect help="Turn on/off silence detect function. <br/>"
+Silence threshold="Silence threshold"
+Silence threshold help="What we consider silence: the lower, the more sensitive, eg: 250 is 250ms.<br/>Range: 100 to 500(100 to 500ms), default: 250<br/>"
+Max silence="Max silence"
+Max silence help="How many silencethreshold of silence before hanging up(eg: 16 is 250ms * 16 = 4s).<br/>Range: 2 to 1020(200ms to 512s), default: 80(20s)<br/>"
+Rx threshold="Rx threshold"
+Rx threshold help="Range: -20 dBm0 to -40 dBm0, default: 20 (-20 dBm0), all values are understood to be negative.<br/>"
+Tx threshold="Tx threshold"
+Tx threshold help="Range: -20 dBm0 to -40 dBm0, default: 20 (-20 dBm0), all values are understood to be negative.<br/>"
+
+;Fax="Fax"
+Mode="Mode"
+Mode help="Set the transmission mode."
+Rate="Rate"
+Rate help@alg-glbsettings="Set the rate of sending and receiving."
+No speed limit="No speed limit"
+Ecm="Ecm"
+Ecm help="Enable/disable T.30 ECM (error correction mode) by default.<br/>"
+
+;Country
+Country="Country"
+Country help@alg-glbsettings="Configuration for location specific tone indications. <br/>"
+Ring cadence="Ring cadence"
+Ring cadence help="List of durations the physical bell rings.<br/>"
+Dial tone="Dial tone"
+Dial tone help="Set of tones to be played when one picks up the hook.<br/>"
+Ring tone="Ring tone"
+Ring tone help="Set of tones to be played when the receiving end is ringing.<br/>"
+Busy tone="Busy tone"
+Busy tone help="Set of tones played when the receiving end is busy.<br/>"
+Call waiting tone="Call waiting tone"
+Call waiting tone help="Set of tones played when there is a call waiting in the background.<br/>"
+Congestion tone="Congestion tone"
+Congestion tone help="Set of tones played when there is some congestion<br/>"
+Dial recall tone="Dial recall tone"
+Dial recall tone help="Many phone systems play a recall dial tone after hook flash. <br/>"
+Record tone="Record tone"
+Record tone help="Set of tones played when call recording is in progress.<br/>"
+Info tone="Info tone"
+Info tone help="Set of tones played with special information messages (e.g., \"number is out of service\")<br/>"
+Stutter tone="Stutter tone"
+Stutter tone help="Stutter tone"
+
+Adaptive="Adaptive"
+T.38="T.38"
+Pass-through="Pass-through"
+
+Fcc="Fcc"
+Tbr21="Tbr21"
+;^Argentina="^Argentina"
+;^Australia="^Australia"
+Austria="Austria"
+;^Bahrain="^Bahrain"
+Belgium="Belgium"
+Brazil="Brazil"
+Bulgaria="Bulgaria"
+Canada="Canada"
+Chile="Chile"
+China="China"
+Colombia="Colombia"
+Croatia="Croatia"
+Cyprus="Cyprus"
+Czech="Czech"
+Denmark="Denmark"
+Ecuador="Ecuador"
+Egypt="Egypt"
+Elsalvador="Elsalvador"
+Finland="Finland"
+France="France"
+Germany="Germany"
+Greece="Greece"
+Guam="Guam"
+Hongkong="Hongkong"
+Hungary="Hungary"
+Iceland="Iceland"
+India="India"
+Indonesia="Indonesia"
+Ireland="Ireland"
+Israel="Israel"
+Italy="Italy"
+Japan="Japan"
+Jordan="Jordan"
+Kazakhstan="Kazakhstan"
+;^Kuwait="^Kuwait"
+Latvia="Latvia"
+Lebanon="Lebanon"
+Luxembourg="Luxembourg"
+Macao="Macao"
+Malaysia="Malaysia"
+Malta="Malta"
+Mexico="Mexico"
+Morocco="Morocco"
+Netherlands="Netherlands"
+Newzealand="Newzealand"
+Nigeria="Nigeria"
+Norway="Norway"
+Oman="Oman"
+Pakistan="Pakistan"
+Peru="Peru"
+Philippines="Philippines"
+Poland="Poland"
+Portugal="Portugal"
+Romania="Romania"
+Russia="Russia"
+Saudiarabia="Saudiarabia"
+;^Singapore="^Singapore"
+Slovakia="Slovakia"
+Slovenia="Slovenia"
+Southafrica="Southafrica"
+Southkorea="Southkorea"
+Spain="Spain"
+Sweden="Sweden"
+Switzerland="Switzerland"
+Syria="Syria"
+;^Taiwan="^Taiwan"
+Thailand="Thailand"
+Uae="Uae"
+Uk="Uk"
+Usa="Usa"
+Yemen="Yemen"
+
+Czech Republic="Czech Republic"
+Estonia="Estonia"
+Lithuania="Lithuania"
+Russian Federation / ex Soviet Union="Russian Federation / ex Soviet Union"
+United Kingdom="United Kingdom"
+United States / North America="United States / North America"
+United States Circa 1950/ North America="United States Circa 1950/ North America"
+Venezuela / South America="Venezuela / South America"
+South Africa="South Africa"
+Custom...="Custom..."
+
+Echocancel Range="echocancel range:0-500"
+GlbSetting Restart help="Your settings need to be restarted dahdi to take effect. Are you sure to restart the dahdi?"
+Echo Type="Echo Type"
+Echo Type help="Echo Type"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	alg_fxoparam.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[alg_fxoparam]
+FXO settings="FXO settings"
+Dahdi parameters="Dahdi parameters"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	alg_fxsparam.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[alg_fxsparam]
+FXS settings="FXS settings"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	alg-calltest.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Call Test="Call Test"
+Voice File="Voice File"
+Voice File help="Voice File"
+Voice File tip="File format can only be. Ulaw"
+Test="Test"
+File already exist="File already exist"
+File does not exist="File does not exist"
+Please upload the file first="Please upload the file first"
+			
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	sip-endpoints.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[sip-endpoints]
+AutoPassword="AutoPassword"
+Batch="Batch"
+Batch SIP Endpoints="Batch SIP Endpoints"
+js check username 1="'User Name' must not be null!"
+js check username 2="'User Name' only numbers or English characters are allowed,length: 1-32!"
+sip overwrite confirm="It already exists. Do you want to cover it?"
+sips overwrite confirm="It already exists. Do you want to cover it?"
+port binding overwrite confirm="port already configured, Do you want to reconfigure it?"
+ports binding overwrite confirm="port already configured, Do you want to reconfigure it?"
+;Endpoint Name="Endpoint Name"
+;Registration="Registration"
+Credentials="Credentials"
+;Actions="Actions"
+
+Add New SIP Endpoint="Add New SIP Endpoint"
+Edit SIP Endpoint="Edit SIP Endpoint"
+
+;Main Endpoint Settings"
+Main Endpoint Settings="Main Endpoint Settings"
+;Name="Name"
+Name help@sip-endpoints="A name which is able to read by human. <br/>And it's only used for user's referance."
+;User Name="User Name"
+User Name help@ip-endpoints="User Name the endpoint will use to authenticate with the gateway."
+Anonymous="Anonymous"
+;Password="Password"
+Password help@ip-endpoints="Password the endpoint will use to authenticate with the gateway.<br/>Allowed characters"
+;Registration="Registration"
+Registration help@sip-endpoints="Whether this endpoint will register to this gateway or this gateway to the endpoint."
+;_None="None"
+;Endpoint registers with this gateway="Endpoint registers with this gateway"
+Endpoint registers with this gateway="Server"
+;This gateway registers with the endpoint="This gateway registers with the endpoint"
+This gateway registers with the endpoint="Client"
+Hostname or IP Address="Hostname or IP Address"
+Hostname or IP Address help="IP address or hostname of the endpoint or 'dynamic' if the endpoint has a dynamic IP address.<br/>This will require registration.<br>Notice: If the input here is hostname and your DNS has changed, you must <span style=\"color:rgb(255,0,0)\">reboot asterisk</span>."
+Backup Hostname or IP Address="Backup Hostname or IP Address"
+Backup Hostname or IP Address help="IP address or hostname of the endpoint or 'dynamic' if the endpoint has a dynamic IP address.<br/>This will require registration.<br>Notice: If the input here is hostname and your DNS has changed, you must <span style=\"color:rgb(255,0,0)\">reboot asterisk"
+Transport="Transport"
+Transport help="This sets the possible transport types for outgoing. Order of usage, <br/>when the respective transport protocols are inabled, is UDP, TCP, TLS.<br/>The first enabled transport type is only used for outbound messages until a<br/>Registration takes place. During the peer Registration the transport type <br/>may change to another supported type if the peer requests so."
+NAT Traversal="NAT Traversal"
+NAT Traversal help="Addresses NAT-related issues in incoming SIP or media sessions."
+SUBSCRIBE for MWI="SUBSCRIBE for MWI"
+VOS Encryption="VOS Encryption"
+VOS Encryption help@sip-endpoints="Whether or not to enable VOS Encryption."
+MWI help@sip-endpoints="Whether or not to subscribe to receive the MWI."
+;_No="No"
+Force report on="Force report on"
+;_Yes="Yes"
+Report if requested and comedia="Report if requested and comedia"
+
+;Advanced:Registration Options"
+Advanced:Registration Options="Advanced:Registration Options"
+Authentication User="Authentication User"
+Authentication User help="A username to use only for registration."
+Register Extension="Register Extension"
+Register Extension help="When Gateway registers as a SIP user agent to a SIP proxy(provider), <br/>calls from this provider connect to this local extension."
+;Modify="Modify"
+From User="From User"
+From User help="A username to identify the gateway to this endpoint."
+From Domain="From Domain"
+From Domain help="A domain to identify the gateway to this endpoint."
+Remote Secret help="A password which is only used if the gateway registers to the remote side."
+Remote Secret="Remote Secret"
+;Port="Port"
+Port help@sip-endpoints="The port number the gateway will connect to at this endpoint."
+Qualify="Qualify"
+Qualify help@sip-endpoints="Whether or not to check the endpoint's connection status."
+Qualify Frequency="Qualify Frequency"
+Qualify Frequency help="How often, in seconds, to check the endpoint's connection status."
+Register User="Register User"
+Register User help="Register user name , <br/>it is the user of register => user[:secret[:authuser]]@host[:port][/extension]."
+Custom Registery="Custom Registery"
+Custom Registery help="Custom Registery On / Off."
+Registery String="Registery String"
+Registery String help="Context of registery. user[:secret[:authuser]]@host[:port][/extension] </br>eg: 1001@sip.com:pbx122@172.16.6.122/1001 </br>"
+
+;Call Settings"
+Call Settings="Call Settings"
+DTMF Settings="DTMF Settings"
+DTMF Mode="DTMF Mode"
+DTMF Mode help="Set default dtmfmode for sending DTMF. Default:rfc2833. <br/>Other options: 'info', SIP INFO message(application/dtmf-relay);<br/>'inband',Inband audio(require 64kbit codec -alaw,ulaw)."
+RFC2833="RFC2833"
+Inband="Inband"
+Info="Info"
+
+Call Limit="Call Limit"
+Call Limit help="Setting a call-limit will cause calls above the limit not to be accepted."
+
+
+Caller ID Settings="Caller ID Settings"
+Trust Remote-Party-ID="Trust Remote-Party-ID"
+Trust Remote-Party-ID help="Whether or not the Remote-Party-ID header should be trusted."
+Send Remote-Party-ID="Send Remote-Party-ID"
+Rpid="Rpid"
+Pai="Pai"
+Send Remote-Party-ID help="Whether or not to send the Remote-Party-ID header."
+Remote Party ID Format="Remote Party ID Format"
+Remote Party ID Format help="How to set the Remote-Party-ID header: from Remote-Party-ID or from P-Asserted-Identity."
+P-Asserted-Identity Header="P-Asserted-Identity Header"
+Remote-Party-ID Header="Remote-Party-ID Header"
+Caller ID Presentation="Caller ID Presentation"
+Caller ID Presentation help="Whether or not to display Caller ID."
+
+Allowed,not screened="Allowed,not screened"
+Allowed,passed screen="Allowed,passed screen"
+Allowed,failed screen="Allowed,failed screen"
+Allowed="Allowed"
+Prohibited,not screened="Prohibited,not screened"
+Prohibited,passed screen="Prohibited,passed screen"
+Prohibited,failed screen="Prohibited,failed screen"
+Prohibited="Prohibited"
+Unavailable="Unavailable"
+
+;Advanced:Signaling Settings"
+Advanced:Signaling Settings="Advanced:Signaling Settings"
+Progress Inband="Progress Inband"
+Progress Inband help="If we should generate in-band ringing. <br/>Always use 'never' to never use in-band signalling, even in cases where some buggy devices might not render it.<br/>Valid values: yes, no, never. <br/>Default: never."
+Never="Never"
+Allow Overlap Dialing="Allow Overlap Dialing"
+Allow Overlap Dialing help="Allow Overlap Dialing: Whether or not to allow overlap dialing. <br/>Disabled by default."
+Append user="Append user"
+phone to URI="phone to URI"
+phone to URI help="Whether or not to add ';user=phone' to URIs that contain a valid phone number."
+Add Q.850 Reason Headers="Add Q.850 Reason Headers"
+Add Q.850 Reason Headers help="Whether or not to add Reason header and to use it if it is available."
+Honor SDP Version="Honor SDP Version"
+Honor SDP Version help="By default, the gateway will honor the session version number in SDP packets and will only modify the SDP session if the version number changes. <br/>Turn this option off to force the gateway to ignore the SDP session version number and treat all SDP data as new data. <br/>This is required for devices that send non-standard SDP packets (observed with Microsoft OCS). <br/>By default this option is on."
+Allow Transfers="Allow Transfers"
+Allow Transfers help="Whether or not to globally enable transfers. <br/>Choosing 'no' will disable all transfers (unless enabled in peers or users). <br/>Default is enabled."
+Allow Promiscuous Redirects="Allow Promiscuous Redirects"
+Allow Promiscuous Redirects help="Whether or not to allow 302 or REDIR to non-local SIP address. <br/>Note that promiscredir when redirects are made to the local system will cause loops since this gateway is incapable of performing a \"hairpin\" call."
+Max Forwards="Max Forwards"
+Max Forwards help="Setting for the SIP Max-Forwards header (loop prevention)."
+Send TRYING on REGISTER="Send TRYING on REGISTER"
+Send TRYING on REGISTER help="Send a 100 Trying when the endpoint registers."
+Outbound Proxy="Outbound Proxy"
+Outbound Proxy help="A proxy to which the gateway will send all outbound signaling instead of sending signaling directly to endpoints."
+
+;Advanced:Timer Settings"
+Advanced:Timer Settings="Advanced:Timer Settings"
+Default T1 Timer="Default T1 Timer"
+Default T1 Timer help="This timer is used primarily in INVITE transactions. <br/>The default for Timer T1 is 500 ms or the measured run-trip time between the gateway and the device if you have qualify=yes for the device."
+Call Setup Timer="Call Setup Timer"
+Call Setup Timer help="If a provisional response is not received in this amount of time, the call will autocongest. <br/>Defaults to 64 times the default T1 timer."
+Session Timers="Session Timers"
+Session Timers help="Session-Timers feature operates in the following three modes: originate, Request and run session-timers always;<br/>accept, Run session-timers only when requested by other UA; refuse, <br/>Do not run session timers in any case."
+Accept="Accept"
+Originate="Originate"
+Refuse="Refuse"
+Minimum Session Refresh Interval="Minimum Session Refresh Interval"
+Minimum Session Refresh Interval help="Minimum session refresh interval in seconds. Defualts to 90 secs."
+Maximum Session Refresh Interval="Maximum Session Refresh Interval"
+Maximum Session Refresh Interval help="Maximum session refresh interval in seconds. Defaults to 1800s."
+Session Refresher="Session Refresher"
+Session Refresher help="The session refresher, uac or uas. Defaults to uas."
+
+;Media Settings
+Media Settings="Media Settings"
+Media Settings help="Select codec from the drop down list. Codecs should be different for each Codec Priority."
+Not Used="Not Used"
+
+save_sip_endpoints endpoint_name="Please set Name"
+save_sip_endpoints registration="Please set registration"
+save_sip_endpoints anonymous="Anonymous only use registration 'none'"
+save_sip_endpoints sip_username="Please set Username"
+save_sip_endpoints order="Must set order"
+
+AutoPassword="AutoPassword"
+Batch="Batch"
+Batch SIP Endpoints="Batch SIP Endpoints"
+js check username 1="'User Name' must not be null!"
+js check username 2="'User Name' must be number!"
+sip overwrite confirm="already exists, Do you want to overlap it?"
+sips overwrite confirm="already exist, Do you want to overlap them?"
+port binding overwrite confirm="port already configured, Do you want to reconfigure it?"
+ports binding overwrite confirm="ports already configured, Do you want to reconfigure them?"
+
+Save To Other Sips="Save To Other Sips"
+Save To Other Sips help="Saving sip param to other sips synchronously"
+
+Enable outboundproxy to Host="Enable outboundproxy to Host"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	setting tls
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+tlsenable="tlsenable"
+tlsverify="tlsverify"
+tlssetup="tlssetup"
+tlscertfile="tlscertfile"
+tlscafile="tlscafile"
+tlsprivatekey="tlsprivatekey"
+encryption="encryption"
+
+tlsenable help="Open the server's incoming TLS (secure) connection and close by default."
+tlsverify help="enable TLS verify or disable."
+tlssetup help="Whether we are willing to accept connections, connect to the other party, or both."
+tlscertfile help="Certificate chains (*. PEM format) are used for TLS connections. Certificates must be sorted from the certificates of the principal. Then intermediate CA certificates (if applicable) default to find asterisk. PEM in the current directory."
+tlscafile help="If the connected server uses a self-signed certificate. You should install its certificate here so that the code can verify the authenticity of its certificate."
+tlsprivatekey help="Private key file (*.pem format only) for TLS connections. If no tlsprivatekey is specified, tlscertfile is searched for both public and private key."
+encryption help="Whether to offer SRTP encrypted media (and only SRTP encrypted media) on outgoing calls to a peer. Calls will fail with HANGUPCAUSE=58 if the peer does not support SRTP. Defaults to no."
+
+
+
+;Save="Save"
+;Cancel="Cancel"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	sip-batch-endpoints.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Batch Create SIP="Batch Create SIP"
+Outboundproxy="outboundproxy"
+Enable Outboundproxy to Host="Enable Outboundproxy to Host"
+js check outboundproxy="Invalid outboundproxy"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	sip-bendpoints.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Support Codec="Support Codec"
+Solo="Solo"
+Choose File="Choose File"
+Import="Import"
+File_import_tips="Click upload!(Please import the txt file!)<br>format:<br>Num,Username,Password,Hostname,Hosename-backup,Port,Vos,Codec,Support;<br>eg:<br>1,301,123abc,172.16.99.1,172.16.99.2,8,No,G.711 u-law,solo;<br>"
+Download_samples_tips="Please upload this download file after decompress it!"
+Browser_warning="Your browser version is too old to support this widget, please upgrade your browser"
+FXS Batch Binding SIP="FXS Batch Binding SIP"
+Register Mode="Register Mode"
+No file selected="No file selected"
+File type="The file type is incorrect\nPlease import the txt file!"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	sip-adv-settings.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[sip-adv-settings]
+Networking="Networking"
+;General="General"
+UDP Bind Port="UDP Bind Port"
+UDP Bind Port help="Choose a port on which to listen for UDP traffic."
+Enable TCP="Enable TCP"
+Enable TCP help="Enable server for incoming TCP connection(default is no)."
+TCP Bind Port="TCP Bind Port"
+TCP Bind Port help="Choose a port on which to listen for TCP traffic."
+TCP Authentication Timeout="TCP Authentication Timeout"
+TCP Authentication Timeout help="The maximum number of seconds a client has to authenticate.<br/>If the client does not authenticate before this timeout expires,<br/>the client will be disconnected.(default value is: 30 seconds)"
+TCP Authentication Limit="TCP Authentication Limit"
+TCP Authentication Limit help="The maiximum number of unauthenticated sessions that will be<br/>allowed to connect at any given time.(default is:50)"
+Enable Hostname Lookup="Enable Hostname Lookup"
+Enable Hostname Lookup help="Enable DNS SRV lookups on outbound calls Note: the gateway only<br/> uses the first host in SRV records Disabling DNS SRV lookups disables<br/>the ability to place SIP calls based on domain names to some other SIP<br/>users on the Internet Sepcifying a port in a SIP peer definition or when<br/>dialing outbound calls with supress SRV lookups for that peer or call."
+Enable Internal SIP Call="Enable Internal SIP Call"
+Enable Internal SIP Call help="Whether enable the internal SIP calls or not when you select the registration option \"Endpoint registers with this gateway\"."
+Internal SIP Call Prefix="Internal SIP Call Prefix"
+Internal SIP Call Prefix help="Specify a prefix before routing the internal calls."
+
+NAT Settings="NAT Settings"
+Local Network="Local Network"
+Local Network help="Format:192.168.0.0/255.255.0.0 or 172.16.0.0./12<br/>A list of IP address or IP ranges which are located inside a NATed network.<br/> This gateway will replace the internal IP address in SIP and SDP messages with<br/> the extenal IP address when a NAT exists between the gateway and other endpoings."
+;Add="Add"
+Local Network List="Local Network List"
+Local Network List help="Local IP address list that you added."
+IP Range="IP Range"
+;Action="Action"
+Subscribe Network Change Event="Subscribe Network Change Event"
+Subscribe Network Change Event help="Through the use of the test_stun_monitor module, the gateway has the ability to detect when<br/>the perceived external network address has changed. When the stun_monitor is installed and <br/>configured, chan_sip will renew all outbound registrations when the monitor detects any sort<br/>of network change has occurred. By default this option is enabled, but only takes effect once<br/>res_stun_monitor is configured. If res_stun_monitor is enabled and you wish to not generate all<br/>outbound registrations on a network change,use the option below to disable this feature."
+
+STUN Settings="STUN Settings"
+Reflesh Request Interval="Reflesh Request Interval"
+Reflesh Request Interval help="Reflesh Request Interval"
+Server IP Adress/Domain Name="Server IP Adress/Domain Name"
+Server IP Adress/Domain Name help="Server IP Adress/Domain Name"
+STUN Switch="STUN Switch"
+STUN Switch help="You need to turn on the stun switch on the SIP advanced settings page to take effect"
+
+Advanced:NAT Settings="Advanced:NAT Settings"
+Match External Address Locally="Match External Address Locally"
+Match External Address Locally help="Only substitute the externaddr or externhost setting if it matches."
+Dynamic Exclude Static="Dynamic Exclude Static"
+Dynamic Exclude Static help="Disallow all dynamic hosts from registering as any IP address<br/> used for staticly defined hosts. This helps avoid the configuration<br/>error of allowing your users to register at the same address as a SIP provider."
+Externally Mapped TCP Port="Externally Mapped TCP Port"
+Externally Mapped TCP Port help="The externally mapped TCP port, when the gateway is behind a static NAT or PAT."
+External Address="External Address"
+External Address help="The external address (and optional TCP port) of the NAT.<br>External Address = hostname[:port] specifies a static address[:port] to be used in SIP and SDP messages.Examples: <br>External Address = 12.34.56.78<br>External Address = 12.34.56.78:9900 <br>"
+External Hostname="External Hostname"
+External Hostname help="The external hostname (and optional TCP port) of the NAT.<br>External Hostname = hostname[:port] is similar to \"External Address\". Examples: <br>External Hostname = foo.dyndns.net<br>"
+Hostname Refresh Interval="Hostname Refresh Interval"
+Hostname Refresh Interval help="How often to perform a hostname lookup. This can be useful when your NAT device<br/>lets you choose the port mapping, but the IP address is dynamic. Beware, you might<br/>suffer from service disruption when the name server resolution fails."
+
+RTP Settings="RTP Settings"
+Start of RTP Port Range="Start of RTP Port Range"
+Start of RTP Port Range help="Start of range of port numbers to be used for RTP."
+End of RTP port Range="End of RTP port Range"
+End of RTP port Range help="End of range of port numbers to be used for RTP"
+RTP Timeout="RTP Timeout"
+RTP Timeout help="RTP Timeout"
+
+Parsing and Compatibility="Parsing and Compatibility"
+;General="General"
+Strict RFC Interpretation="Strict RFC Interpretation"
+Strict RFC Interpretation help="Check header tags, character conversion in URIs, and multiline headers<br/>for strict SIP compatibility(default is yes)"
+Send Compact Headers="Send Compact Headers"
+Send Compact Headers help="Send compact SIP headers."
+SDP Owner="SDP Owner"
+SDP Owner help="Allows you to change the username filed in the SDP owner string,£¨o=£©.<br/>This filed MUST NOT contain spaces."
+
+SIP Methods="SIP Methods"
+Disallowed SIP Methods="Disallowed SIP Methods"
+Disallowed SIP Methods help="When a dialog is started with another SIP endpoint, the other endpoint<br/> should include an Allow header telling us what SIP methods the endpoint<br/> implements. However, some endpoints either do not include an Allow header<br/>or lie about what methods they implement.In the former case, the gateway<br/>makes the assumption that the endpoint supports all known SIP methods. If<br/>you know that your SIP endpoint does not provide support for a specific method,<br/> then you may provide a list of methods that your endpoint does not implement in the<br/>disallowed_methods option. Note that if your endpoint is truthful with its Allow header,<br/> then there is no need to set this option."
+ACK="ACK"
+BYE="BYE"
+CANCEL="CANCEL"
+INFO="INFO"
+INVITE="INVITE"
+MESSAGE="MESSAGE"
+NOTIFY="NOTIFY"
+OPTIONS="OPTIONS"
+PRACK="PRACK"
+PUBLISH="PUBLISH"
+REFER="REFER"
+REGISTER="REGISTER"
+SUBSCRIBE="SUBSCRIBE"
+UPDATE="UPDATE"
+Hangup Cause Code="Hangup Cause Code"
+Hangup Cause Code help="Hangup Cause Code"
+default="default"
+
+;Caller ID="Caller ID"
+Shrink Caller ID="Shrink Caller ID"
+Shrink Caller ID help="The shrinkcallerid function removes '(', ' ', ')', non-trailing '.',<br/>and '-' not in square brackets. For example,the caller id value 555.5555<br/>becomes 5555555 when this option is enabled. Disabling this option results<br/>in no modification of the caller id value,which is necessary when the caller<br/> id represents something that must be preserved. By default this option is on."
+SIP To help="Callee ID transfer."
+Callee ID help="defalut: EXTEN<br/>eg: When selecting SIP To, Name is Jason and Number is 401.<br/>To mode is: \"Jason\"&lt;sip:401@172.16.6.239;transport=UDP&gt;"
+
+Timer Configuration="Timer Configuration"
+Maximum Registration Expiry="Maximum Registration Expiry"
+Maximum Registration Expiry help="Maximum allowed time of incoming registrations and subscriptions (seconds)"
+Minimum Registration Expiry="Minimum Registration Expiry"
+Minimum Registration Expiry help="Minimum length of registrations/subscriptions (default 60)"
+Default Registration Expiry="Default Registration Expiry"
+Default Registration Expiry help="Default length of incoming/outgoing registration"
+
+Outbound Registrations="Outbound Registrations"
+Registration Timeout="Registration Timeout"
+Registration Timeout help="How often, in seconds, to retry registration calls. Default 20 seconds."
+Number of Registration Attempts="Number of Registration Attempts"
+Number of Registration Attempts help="Number of registration attempts before we give up. 0 = continue forever,<br/> hammering the other server until it accepts the registration. Default is 0 tries,<br/> continue forever"
+
+;----------------
+Security="Security"
+Authentication Settings="Authentication Settings"
+Match Auth Username="Match Auth Username"
+Match Auth Username help="If available, match user entry using the 'username' field from the<br/> authentication line instead of the 'from' field."
+Realm="Realm"
+Realm help="Realm for digest authentication. Realms MUST be globally unique according<br/>to RFC 3261. Set this to your host name or domain name."
+Use Domain as Realm="Use Domain as Realm"
+Use Domain as Realm help="Use the domain from the SIP Domains setting as the realm.<br/>In this case, the realm will be based on the request 'to' or 'from'<br/> header and should match one of the domain. Otherwise, the configured 'realm'<br/> value will be used."
+Always Auth Reject="Always Auth Reject"
+Always Auth Reject help="When an incoming INVITE or REGISTER is to be rejected, <br/>for any reason, always reject with an identical response equivalent<br/> to valid username and invalid password/hash instead of letting the requester<br/> know whether there was a matching user or peer for their request. This reduces<br/>the ability of an attacker to scan for valid SIP usernames. This option is set<br/>to 'yes' by default."
+Authenticate Options Requests="Authenticate Options Requests"
+Authenticate Options Requests help="Enabling this option will authenticate OPTIONS requests just<br/>like INVITE requests are. By default this option is disabled."
+
+Guest Calling="Guest Calling"
+Allow Guest Calling="Allow Guest Calling"
+Allow Guest Calling help="Allow or reject guest calls (default is yes, to allow). If your gateway<br/> is connected to the Internet and you allow guest calls, you want to check<br/>which services you offer everyone out there, by enabling them in the default context."
+
+;----------------
+Media="Media"
+
+ISDN Media Settings="ISDN Media Settings"
+Premature Media="Premature Media"
+Premature Media help="Some ISDN links send empty media frames before the call is in ringing<br/> or progress state. The SIP channel will then send 183 indicating early<br/>media which will be empty - thus users get no ring signal. Setting this to<br/>\"yes\" will stop any media before we have call progress (meaning the SIP channel<br/>will not send 183 Session Progress for early media). Default is 'yes'. Also make<br/> sure that the SIP peer is configured with progressinband=never. In order for 'noanswer'<br/> applications to work, you need to run the progress() application in the priority before the app."
+
+QoS/ToS="QoS/ToS"
+TOS for SIP Packets="TOS for SIP Packets"
+TOS for SIP Packets help="Sets type of service for SIP packets."
+TOS for RTP Packets="TOS for RTP Packets"
+TOS for RTP Packets help="Sets type of service for RTP packets"
+RTP for SIP="RTP for SIP"
+directmedia="directmedia"
+directmedia help="Redirect the RTP media stream to go directly from the caller to the callee or not."
+;-
+Codec Settings="Codec Settings"
+Codec Settings help="Select the encoding from the drop-down list. Each priority has a different encoding."
+Codec Priority="Codec Priority"
+
+;Save="Save"
+
+Matching Priority="Matching Priority"
+From-Number="From-Number"
+Extern-Number="Extern-Number"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	sip-security.php
+:
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Sip Account Security="Sip Account Security"
+TLS Setting="TLS Setting"
+TLS Enable="TLS Enable"
+TLS Enable help="Enable or disable DTLS-SRTP support."  
+;;Enable or disable DTLS-SRTP support.
+TLS Verify Server="TLS Verify Server"
+Enable TLS Verify Server help="Enable or disable tls verify server(default is no)." 
+;;Enable or disable tls verify server(default is no).
+Port="Port"
+Port help="Specify the port for remote connection." 
+;;Specify the port for remote connection.
+TLS Client Method="TLS Client Method"
+TLS Client Method help="values include tlsv1, sslv3, sslv2, Specify protocol for outbound client connections, default is sslv2." 
+;;values include tlsv1, sslv3, sslv2, Specify protocol for outbound client connections, default is sslv2.'
+Tls Keys="Tls Keys"
+Type="Type"
+Key Name="Key Name"
+IP Address="IP Address"
+Organization="Organization"
+Password="Password"
+Operation="Operation"
+client="client"
+server="server"
+;;;;;;;;;;;;;;;;;;;;;;;
+Key Files="Key Files"
+Upload the pem file="Upload the pem file"
+Upload the crt file="Upload the crt file"
+File Upload="File Upload"
+File Name="File Name"
+File Size="File Size"
+delete file failed="delete file failed"
+delete key failed="delete key failed"
+create key failed="create key failed"
+Create="Create"
+TLS Server Existed help="Only one server can be created."
+TLS Create Server help="Please create the server first."
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	routing-rules.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[routing-rules]
+Move="Move"
+Order="Order"
+Rule Name="Rule Name"
+;From="From"
+;To="To"
+;Rules="Rules"
+;Actions="Actions"
+
+New Call Routing Rule="New Call Routing Rule"
+Save Orders="Save Orders"
+
+Create a Call Routing Rule="Create a Call Routing Rule"
+Modify a Call Routing Rule="Modify a Call Routing Rule"
+Call Routing Rule="Call Routing Rule"
+Routing Name="Routing Name"
+Routing Name help="The name of this route. Should be used to describe what types of calls this route matches(for example, 'SIP2GSM' or 'GSM2SIP')."
+Call Comes in From="Call Comes in From"
+Call Comes in From help="The launching point of incoming calls.。"
+Send Call Through="Send Call Through"
+Send Call Through help="The destination to receive the incoming calls."
+
+DISA Settings="DISA Settings"
+Authentication="Authentication"
+Authentication help="Enable or disable password authentication."
+Secondary Dialing="Secondary Dialing"
+Secondary Dialing help="Enable or disable secondary dialing."
+DISA Timeout="DISA Timeout"
+DISA Timeout help="Select the timemout range of 1 to 10 seconds."
+Max Password Digits="Max Password Digits"
+Max Password Digits help="Restrict the max length of password."
+Password Authentication help="Click the button to edit the Authenticated Password."
+
+Dial Patterns that will use this Route="Dial Patterns that will use this Route"
+
+Advance Routing Rule="Advance Routing Rule"
+
+Click here to remove this pattern="Click here to remove this pattern"
+Dial Patterns that will use this Route="Dial Patterns that will use this Route"
+CalleeID Manipulation Help="Dial-up mode is a unique set of numbers that will select routes and send calls to specified relays. If the dial-up mode matches this route, other routing rules will not match.<br/> If the time mode is enabled, the matching routing will be checked to match any number outside the specified time: <br> <br> X matches any number in 0-9 <br> Z matches any number in 1-9 <br> N matches any number in 2-9 <br>[1237-9] matches any number in brackets <e.g. 1, 2, 3, 7, 8, 9> <br>* matches one or more numbers <br> Prepend<br> Add < Prefix >: Number added when pattern matching is successful. If the dialed number matches the pattern specified by the subsequent column, it will be added <br> <br> Prefix < prefix > before being sent to the relay: when the pattern matching is successful, it will be removed. The number dialed matches the pattern specified by the subsequent column.<br/> Once the match is successful, the prefix is removed from the number before it is sent to the relay. <br><br> Match Pattern < Match Pattern >: The number dialed will be compared with'prefix + number of this matching pattern'. Once the match is successful, the matching mode part of the dial-up is sent to the relay. <br><br> SDfR < Delete Number from Right >: Number number deleted from right. If this value exceeds the length of the current number, the whole number will be deleted. <br><br> RDfR < Right Beginning Reserved Number >: Right Beginning Reserved Number Number Number. <br><br> StA < Add Suffix >: Add this number from the right end of the current number. <br><br> Caller Name < Caller Display Name >: Set your preferred calling name before sending this call to the terminal, allowing the use of local languages such as Chinese and Latin. <br>"
+
+
+Time Patterns that will use this Route="Time Patterns that will use this Route"
+Time to start="Time to start"
+Time to finish="Time to finish"
+Week Day start="Week Day start"
+Week Day finish="Week Day finish"
+Month Day start="Month Day start"
+Month Day finish="Month Day finish"
+Month start="Month start"
+Month finish="Month finish"
+
+CalleeID/callerID Manipulation="CalleeID/callerID Manipulation"
+Callee_Dial_pattern="Callee_Dial_pattern"
+Caller_Dial_pattern="Caller_Dial_pattern"
+Prepend="Prepend"
+Prefix="Prefix"
+SDfR="SDfR"
+StA="StA"
+RdfR="RdfR"
+Match Pattern="Match Pattern"
+Caller Name="Caller Name"
+Time Patterns that will use this Route help="Time Mode Setting of Routing Rules"
+Add More Dial Pattern Fields="Add More Dial Pattern Fields"
+
+Add More Time Pattern Fields="Add More Time Pattern Fields"
+
+Dialing Delay="Dialing Delay"
+Dialing Delay help="The action of send calleeid will be delay <br/>when you creating a calling."
+Change Rules="Change Rules"
+Set the Caller ID Name to="Set the Caller ID Name to"
+Set the Caller ID Name to help="Set a preferred calling user name before the call arrives at the opposite end."
+Set the Caller ID Number to="Set the Caller ID Number to"
+Set the Caller ID Number to help="Set a preferred call number before arriving at the opposite end of the call."
+Forward Number="Forward Number"
+Forward Number help="What destination number will you dial? <br/>This is very useful when you have a transfer call."
+
+Failover Call Through Number="Failover Call Through Number"
+Failover Call Through Number help="The gateway will attempt to send the call out each of these in the order you specify."
+Add a Failover Call Through Provider="Add a Failover Call Through Provider"
+
+GROUP="GROUP"
+Cid Number Settings="Cid Number Settings"
+Cid Number="Cid Number"
+save order failed="save order failed"
+
+Force Answer="Force Answer"
+Force Answer help="Force Answer"
+
+;Save="Save"
+;Cancel="Cancel"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	routing-group.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[routing-group]
+Group Name="Group Name"
+;Type="Type"
+Policy="Policy"
+Members="Members"
+;Actions="Actions"
+
+New Group="New Group"
+
+Create a Group="Create a Group"
+Modify a Group="Modify a Group"
+Routing Groups="Routing Groups"
+;Group Name="Group Name"
+;Type="Type"
+;Policy="Policy"
+;Members="Members"
+
+Ascending="Ascending"
+ascending="ascending"
+Descending="Descending"
+descending="descending"
+Roundrobin="Roundrobin"
+roundrobin="roundrobin"
+Reverse Roundrobin="Reverse Roundrobin"
+reverseroundrobin="reverseroundrobin"
+Least Recent="Least Recent"
+Fewest Calls="Fewest Calls"
+Random="Random"
+experiment="experiment"
+Ringall="Ringall"
+
+;;group help
+Group Name help="The name of this route. Should be used to describe what types of calls this route matches(for example, 'sip1TOport1' or 'port1TOsip2')."
+Type help="Group Type, SIP or T1/E1。"
+Policy help="Policy type"
+Members help="Members"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	sip-fxo-binding.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Batch Create Rules="Batch Create Rules"
+Sip Endpoint="Sip Endpoint"
+CallerID="CallerID"
+Fixed="Fixed"
+Batch@sip_fxo="Batch"
+Increment="Increment"
+Copy="Copy"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	routing-group.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Enable Internal FXS Call="Enable Internal FXS Call"
+Enable Internal FXS Call help="Enable Internal FXS Call"
+Enable Internal SIP Call@Routing="Enable Internal SIP Call"
+Enable Internal SIP Call help@Routing="Enable Internal SIP Call"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	network-vlan.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[network-lan]
+Basic Settings="Basic Settings"
+Network Type="Network Type"
+Network Type help="Network Type"
+Lan Settings="Lan Settings"
+Wan Settings="Wan Settings"
+Disable="Disable"
+LAN IPv4="LAN IPv4"
+Interface="Interface"
+Interface help="The name of network interface."
+;Type="Type"
+Type help@network-lan="The method to get IP.<br/>Factory: Getting IP address by Slot Number(System-->Information to check slot number).<br/>Static: manually set up your gateway IP.<br/>DHCP: automatically get IP from your local LAN."
+Factory="Factory"
+Static="Static"
+DHCP="DHCP"
+MAC="MAC"
+MAC help="Physical address of your network interface."
+
+IPv4 Settings="IPv4 Settings"
+Address="Address"
+Address help="The IP address of your gateway."
+Netmask="Netmask"
+Netmask help="The subnet mask of your gateway."
+Default Gateway="Default Gateway"
+Default Gateway help="Default gateway IP addrress."
+
+Reserved Access IP="Reserved Access IP"
+Reserved Access IP help="A reserved IP address to access in case your gateway IP is not available.<br/>Remember to set a similar network segment with the following address of your local PC."
+;Enable="Enable"
+Enable help@network-lan="A switch to enable the reserved IP address or not.<br/>On(enabled),Off(disabled)"
+Reserved Address="Reserved Address"
+Reserved Address help="The reserved IP address for this gateway."
+Reserved Netmask="Reserved Netmask"
+Reserved Netmask help="The subnet mask of the reserved IP address."
+
+DNS Servers="DNS Servers"
+DNS Servers help="A list of DNS IP address. <br/>Basically this info is from your local network service provider."
+DNS Server="DNS Server"
+
+;Save="Save"
+
+Burn="Burn"
+Mac Tip="Please enter a 12-bit string with character requirements of 0-9 or a-f or A-F"
+Burn Confirm="After clicking 'burning' to complete, the device will automatically shut down! Do you want to continue?"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	network-ddns.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[network-ddns]
+;DDNS Settings="DDNS Settings"
+DDNS="DDNS"
+DDNS help="Enable/Disable DDNS (dynamic domain name server). <br/>"
+Type help@network-ddns="Set the type of DDNS server. <br/>"
+inadyn="inadyn"
+phddns="phddns"
+User Name help@network-ddns="Your DDNS account's login name.<br/>"
+Password help@network-ddns="Your DDNS account's password.<br/>"
+Your domain="Your domain"
+Your domain help="The domain to which your web server will belong.<br/>"
+
+;Save="Save"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	network-openvpn.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[network-openvpn]
+VPN Settings="VPN Settings"
+VPNType="VPNType"
+Server="Server"
+Account="Account"
+Account help="Account"
+Password help="Password"
+Domain="Domain"
+Use MPPE="Use MPPE"
+OpenVPN="OpenVPN"
+OpenVPN Configuration Files Upload="OpenVPN Configuration Files Upload"
+OpenVPN help="Enable/Disable OpenVPN Client. <br/>"
+Stop OpenVPN="Stoping OpenVPN....<br>"
+Start OpenVPN="Starting OpenVPN....<br>"
+OpenVPN Settings="OpenVPN Settings"
+Download Samples="Download Samples"
+OpenVPN Configuration Files help="Notice:&#10;1.The format of the upload file should be like this \"xxxx.tar.gz\" or \"xxx.ovpn\";&#10;2.The postfix of configuration files should be \".conf\";&#10;3.The upload file can not include any directory;&#10;4.If still confused please download the sample configuration and refer to it;"
+Sample Configuration="Sample Configuration"
+OpenVPN Sample Configuration help="It's just a sample configuration which help you to refer to the format. <br/>"
+Download Samples="Download Samples"
+Switch="Switch"
+Switch help="Switch"
+Server Port="Server Port"
+PPTP VPN Settins="PPTP VPN Settings"
+PPTP VPN Configuration help="The pptp's server ip address."
+PPTP VPN Account help="pptp vpn account"
+PPTP VPN Password help="pptp vpn password"
+PPTP VPN Domain help="pptp server domain"
+PPTP VPN MPPE help="Use MPPE or not"
+Use MPPE="Use MPPE"
+Type help@network-openvpn="The type of VPN.<br/>OpenVPN: openvpn.<br/>PPTP VPN: pptp vpn.<br/>None: None."
+Connection Status="Connection Status"
+Connected="Connected"
+Failed to connect="Failed to connect"
+Zerotier VPN Settings="Zerotier VPN Settings"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	network-toolkit.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[network-toolkit]
+Ping="Ping"
+Traceroute="Traceroute"
+Source host="Source host"
+Source host help="IP address of source host"
+Destination host="Destination host"
+Destination host help="Destination host"
+Tcpdump Option Paramater="Tcpdump Option Paramater"
+Tcpdump Parameter Option help="the tool of tcpdump capture network data by parameter option specified"
+Tcpdump Parameter Option Number="Tcpdump Parameter Option Number"
+Add a Tcpdump paramter option="Add a Tcpdump paramter option"
+tcpdump start failed="tcpdump start failed"
+tcpdump stop failed="tcpdump stop failed"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	network-switch.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Security Settings="Security Settings"
+Firewall Settings="Firewall Settings"
+Firewall Enable="Firewall Enable"
+Firewall help="ON(enabled),OFF(disabled)"
+Ping Enable="Ping Enable"
+Ping help="ON(enabled),OFF(disabled)"
+White List Settings="White List Settings"
+White List Enable="White List Enable"
+White List help="ON(enabled),OFF(disabled)"
+List IP Settings="List IP Settings"
+Ping help="ON(enabled),OFF(disabled)"
+Black List Settings="Black List Settings"
+Black List Enable="Black List Enable"
+Black List help="ON(enabled),OFF(disabled)"
+List IP Settings="List IP Settings"
+Ping help="ON(enabled),OFF(disabled)"
+
+Submit="Submit"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	network-rules.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Security Rules="Security Rules"
+Protocol="Protocol"
+Modify a Rule="Modify a Rule"
+Create a Rule="Create a Rule"
+Rule Name help="The name of this rule."
+Protocol help="Choose the protocol."
+Port help="Input the range of port."
+IP help="The format of IP is IP/MASK.Confirm the range by IP and mask."
+Security Rules="Security Rules"
+Actions help="Choose the firewall action."
+New Rule="New Rule"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	adv-astapi.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[adv-astapi]
+;General="General"
+;Enable="Enable"
+;Port="Port"
+Port help@adv-astapi="Network port number."
+
+Manager="Manager"
+Manager Name="Manager Name"
+Manager Name help="Name of the manager without space."
+Manager secret="Manager secret"
+Manager secret help="Password for the manager.<br/>Characters: Allowed characters \"-_+.<>&0-9a-zA-Z\".Length: 4-32 characters."
+Deny="Deny"
+Deny help@adv-astapi="If you want to deny many hosts or networks, use char & as separator.<br/>Example: 0.0.0.0/0.0.0.0 or 192.168.1.0/255.255.255.0&10.0.0.0/255.0.0.0"
+Permit="Permit"
+Permit help@adv-astapi="If you want to permit many hosts or networks, use char & as separator.<br/>Example: 0.0.0.0/0.0.0.0 or 192.168.1.0/255.255.255.0&10.0.0.0/255.0.0.0"
+Rights="Rights"
+read="read"
+write="write"
+
+;System="System"
+System help@adv-astapi="General information about the system and ability to run system management commands, <br/>such as Shutdown, Restart, and Reload."
+Call="Call"
+Call help@adv-astapi="Information about channels and ability to set information in a running channel."
+Log="Log"
+Log help@adv-astapi="Logging information.  Read-only. (Defined but not yet used.)"
+Verbose="Verbose"
+Verbose help@adv-astapi="Verbose information.  Read-only. (Defined but not yet used.)"
+Command="Command"
+Command help@adv-astapi="Permission to run CLI commands.  Write-only."
+Agent="Agent"
+Agent help@adv-astapi="Information about queues and agents and ability to add queue members to a queue."
+User="User"
+User help@adv-astapi="Permission to send and receive UserEvent."
+Config="Config"
+Config help@adv-astapi="Ability to read and write configuration files."
+DTMF="DTMF"
+DTMF help@adv-astapi="Receive DTMF events.  Read-only."
+Reporting="Reporting"
+Reporting help@adv-astapi="Ability to get information about the system."
+;CDR="CDR"
+CDR help@adv-astapi="Output of cdr_manager, if loaded.  Read-only."
+Dialplan="Dialplan"
+Dialplan help@adv-astapi="Receive NewExten and VarSet events.  Read-only."
+;Originate="Originate"
+Originate help@adv-astapi="Permission to originate new calls.  Write-only."
+;All="All"
+All help@adv-astapi="Select all or deselect all."
+
+;Save="Save"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	adv-astcli.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[adv-astcli]
+;Asterisk CLI="Asterisk CLI"
+;Command="Command"
+Command help@adv-astcli="Type your Asterisk CLI commands here to check or debug your gateway.<br/>e.g, type \"help\" or \"?\" you will get all help information."
+Output="Output"
+Execute="Execute"
+execute failed="execute failed"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	adv-astfileediter.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[adv-astfileediter]
+Configuration Files="Configuration Files"
+File Name="File Name"
+File Size="File Size"
+New Configuration File="New Configuration File"
+Reload Asterisk="Reload Asterisk"
+Reload Asterisk confirm="Are you sure to reload asterisk now?"
+
+Edit="Edit"
+;Save="Save"
+Save file name="Please in put file name!"
+Save file exist="File already exist!"
+;Cancel="Cancel"
+Delete File="Delete File"
+Delete File confirm="Are you sure to delete this file?"
+reload asterisk tip="Are you sure to reload asterisk now?"
+file delete tip="Are you sure to delete this file?"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	adv-cloud.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Cloud="Cloud"
+Enable Cloud Service="Enable Cloud Service"
+Account="Account"
+cloud help@adv-account="the account which is registered in OpenVox cloud center."
+Password="Password"
+cloud help@adv-password="The password of cloud account."
+Connection Status="Connection Status"
+cloud help@adv-Connection Status="Cloud management connection status."
+Choose Service="Choose Service"
+Choose Service help="choosing a remote server the current device will connect"
+China="China"
+America="America"
+Customize="Customize"
+cloud sign help="Sign up"
+cloud signmessage help="Don't have an account?"
+connected="connected"
+no connected="no connected"
+Cloud Service Disconnected="Cloud Service Disconnected"
+Connection timed out="Connection timed out"
+Password error="Password error"
+User does not exist="User does not exist"
+You have been blacklisted="You have been blacklisted"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	adv-tr069.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[adv-tr069]
+TR069 Settings="TR069 Settings"
+Username="Username"
+Username help="Username"
+Server@tr069="Server"
+Server@tr069 help="Server"
+Provisioning code="Provisioning code"
+Provisioning code help="Provisioning code"
+Periodic inform enable="Periodic inform enable"
+Periodic inform enable help="Periodic inform enable"
+Periodic inform interval="Periodic inform interval"
+Periodic inform interval help="Range:60-7200"
+Connection request URL="Connection request URL"
+Connection request URL help="Connection request URL"
+Connection request username="Connection request username"
+Connection request username help="Connection request username"
+Connection request password="Connection request password"
+Connection request password help="Connection request password"
+Second="Second"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	adv-snmp.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+SNMP Parameter="SNMP Parameter"
+SNMP Enable="SNMP Enable"
+SNMP Enable Help="Whether to enable SNMP"
+System Contact="System Contact"
+System Contact Help="System contact information"
+System Location="System Location"
+System Location Help="The locale of system contact"
+Private Enterprise Number="Private Enterprise Number"
+Private Enterprise Number Help="The number is used for defining private SNMP MIBs which is assigned by Internet Assigned Numbers Authority (IANA). For more information, please access:  http://pen.iana.org/pen/PenApplication.page"
+Support SNMP Version="Support SNMP Version"
+Support SNMP Version help="Select the SNMP version to be run"
+SNMP Version="SNMP Version"
+SNMP Version help="Modify the selected SNMP version\'s parameters"
+User Configuration="User Configuration"
+AuthType="AuthType"
+AuthPassword="AuthPassword"
+PrivacyType="PrivacyType"
+PrivacyPassword="PrivacyPassword"
+Community Configuration="Community Configuration"
+Security Name="Security Name"
+ViewName="ViewName"
+ViewType="ViewType"
+ViewSubtree="ViewSubtree"
+ViewMask="ViewMask"
+Access Configuration="Access Configuration"
+Group="Group"
+Read="Read"
+Write="Write"
+Notify="Notify"
+sec.level="sec.level"
+Souce="Souce"
+Community="Community"
+Group Configuration="Group Configuration"
+View Configuration="View Configuration"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	log-settings.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[log-settings]
+Auto clean="Auto clean"
+Auto clean help="switch on : when the size of log file reaches the max size, <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the system will cut a half of the file. New logs will be retained.<br>switch off : logs will remain, and the file size will increase gradually. <br>"
+maxsize="maxsize"
+
+;System Logs="System Logs"
+System Logs help="Whether enable or disable system log."
+Auto clean default@System Logs="default on, default size=1MB."
+
+;Asterisk Logs="Asterisk Logs"
+;Verbose="Verbose"
+Asterisk Logs Verbose help="Asterisk console verbose message switch."
+Notice="Notice"
+Asterisk Logs Notice help="Asterisk console notice message  switch."
+Warning="Warning"
+Asterisk Logs Warning help="Asterisk console warning message  switch."
+Debug="Debug"
+Asterisk Logs Debug help="Asterisk console debug message switch."
+Error="Error"
+Asterisk Logs Error help="Asterisk console error message  switch."
+;DTMF="DTMF"
+Asterisk Logs DTMF help="Asterisk console DTMF info switch."
+Auto clean default@Asterisk Logs="default on, default size=100KB."
+
+;SIP Logs="SIP Logs"
+SIP Logs help="Whether enable or disable SIP log."
+Auto clean default@SIP Logs="default on, default size=100KB."
+
+AT Commands Logs="AT Commands Logs"
+AT Commands Logs help="Displaying GSM module AT messages."
+Auto clean default@AT Commands Logs="default on, default size=100KB."
+
+Auto clean default@DAHDI Logs="default on, default size=2MB."
+
+Call Detail Record="Call Detail Record"
+Call Detail Record help="Displaying Call Detail Records for each channel."
+Append IMEI="Append IMEI"
+Append IMEI help="switch on : IMEI will be appended to the CDR gsm channel in 'From' or 'To'. <br> switch off : No appended IMEI. <br>  default off."
+Auto clean default@Call Detail Record="default on, default size=5MB."
+
+;Save="Save"
+
+Syslog="Syslog"
+Local Syslog="Local Syslog"
+Local Syslog help="This action needs to set the Asterisk log level in the log, and then turn on the local Syslog to take effect."
+Server Address="Server Address"
+Server Port="Server Port"
+Syslog Level="Syslog Level"
+Klog Level="Klog Level"
+Klog Level help="Kernel log Level"
+CDR Level="CDR Level"
+CDR Level help="CDR Level"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	wctdmc1k_parm.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+cidguisepolaritydebounce help="cid guise polarity debounce, the default value : 1000, range is 1 ~ 4000"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	log-sys.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[log-sys]
+Refresh Rate="Refresh Rate"
+Refresh="Refresh"
+;Clean Up="Clean Up"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	log-ast.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[log-ast]
+clean up failed="clean up failed"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	log-sip.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[log-sip]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	log-debugat.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[log-debugat]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	log-cdr.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[log-cdr]
+;Caller ID="Caller ID"
+Callee ID="Callee ID"
+;From="From"
+;To="To"
+Start Time="Start Time"
+Duration="Duration"
+;Result="Result"
+
+DATABASE BUSY="DATABASE BUSY"
+NO RECORD="NO RECORD"
+
+ANSWERED="ANSWERED"
+BUSY="BUSY"
+FAILED="FAILED"
+NO ANSWER="NO ANSWER"
+Total Records="Total Records"
+export failed="export failed"
+
+[js_check]
+js check domain="Invalid domain or IP address."
+js check diyname="Allowed character must be any of [-_+.<>&0-9a-zA-Z],1 - 32 characters."
+js check ssh_diyname="Allowed character must be any of [-_+.<>&0-9a-zA-Z],1 - 25 characters."
+js check diypwd="Allowed character must be any of [-_+.<>&0-9a-zA-Z],4 - 32 characters."
+js check gsmvol="Volume range: 0-100."
+js check gsmmic="Volume range: 0-15."
+js check adcchipgain="Gain range:  -42 - 20."
+js check dialprefix="Must be 0-9 or +,*,#"
+js check gsmpin="Must be 4 digits"
+js check email="Please input a valid email address"
+js check sipendp="Allowed character must be any of [0-9a-zA-Z`~!@#$%^*()_{}:|?+-=.], 1 - 32 characters."
+js check sipname="Allowed character must be any of [0-9a-zA-Z$*+-=_.], 1 - 32 characters."
+js check sippwd="Allowed character must be any of [0-9a-zA-Z`~!#@$%^&*()_+{}|<>-=[],.], 1 - 32 characters."
+js check sipnumber="Only allow digits characters, length: 1 - 32."
+js check networkport="Please input valid port number (1-65535)"
+js check smtpuser="Please input a valid STMP user name"
+js check smtppwd="Password character range: 1-64"
+js check phonenum="Please input a valid phone number!"
+js check ussd="Please input a valid USSD number!"
+js check ip="Please input a valid IP address"
+js check mac="Please input a valid MAC address"
+js check pppoeuser="Please input valid username"
+js check pppoepwd="Please input valid password"
+js check float="Please input floating number"
+js check integer="Please input integer number"
+js check busername="you need to set a number for username"
+
+js check smail="You must set a email address."
+
+js check dtmf float 1="Please input floating number"
+js check dtmf float 2="The input should be less than 100.0"
+js check dtmf integer 1="Please input integer data"
+js check dtmf integer 2="The input should be less than 100"
+
+js check digitgain="Invalid value! Range: from -20.0dB to 6dB, in 0.1 dB increments."
+limit character="Allowed character must be any of 1 - 31 characters."
+
+page not found="404 page not found！"
+back="back"
+resource error="The resource request error, please consult the administrator."
+read failed="read failed"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	set-info.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Set Information="Set Information"
+Switch@setinfo="Switch"
+Switch help@setinfo="If this switch is enabled, the following parameter information will be used."
+Product Name="Product Name"
+Product Name help="Product Name"
+Contact Address help="Contact Address"
+Tel help="Tel"
+Fax help="Fax"
+E-Mail help="E-Mail"
+Web Site help="Web Site"
+Download Sample Images="Download Sample Images"
+Download Sample Images help="Download the case picture and modify it according to the size of the picture."
+Header Image help="Header background picture, the size of the picture is 1280x417, can be seen in the following case picture."
+Footer Image help="Footer background picture, the size of the picture is 1280x105, can be seen in the following case picture."

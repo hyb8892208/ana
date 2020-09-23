@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+			<script type="text/javascript" src="../js/jquery.ibutton.js"></script>
+			<link type="text/css" href="../css/jquery.ibutton.css" rel="stylesheet" media="all" />
+			<script type="text/javascript" src="../js/check.js"></script>
+			<script type="text/javascript" src="../js/functions.js"></script>
+			
+			<h3 id="feed_back_tip"></h3>
+			
+			<div id="tab">
+				<li class="tb_unfold" onclick="lud(this,'tab_functionkeys')" id="tab_tab_functionkeys_li">&nbsp;</li>
+				<li class="tbg_fold" id="function_keys_li" onclick="lud(this,'tab_functionkeys')"></li>
+				<li class="tb2_fold" onclick="lud(this,'tab_functionkeys')">&nbsp;</li>
+				<li class="tb_end">&nbsp;</li>
+			</div>
+			<div id="tab_functionkeys" style="display:block">
+				<table width="98%" class="tedit" align="right" >
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_none_keys_blind_transfer"></span>:
+								<span id="lang_none_keys_blind_transfer_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type=checkbox name='enablenonspecialcharactersblindtransfer' id='enablenonspecialcharactersblindtransfer' value='on' />
+							<span id='cenablenonspecialcharactersblindtransfer'></span>
+						</td>
+					</tr>
+						
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_blind_transfer"></span>:
+								<span id="lang_blind_transfer_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type=text name='blindtransfer' id='blindtransfer' value="" />
+							<span id='cblindtransfer' class='number_tip'></span>
+						</td>
+					</tr>
+						
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_asked_transfer"></span>:
+								<span id="lang_asked_transfer_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type=text name='askedtransfer' id='askedtransfer' value="" />
+							<span id='caskedtransfer' class='number_tip'></span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			<div id="newline"></div>
+			<br>
+
+			<table id="float_btn" class="float_btn" style="float:left;">
+				<tr id="float_btn_tr" class="float_btn_tr" style="">
+					<td>
+						<input type="button" class="save_input" value="Save"/>
+					</td>
+					<td>
+						<input type="button" class="cancel_input" value="Cancel" onclick="location.reload()"/>
+						<img src="/images/loading1.gif" id="loading_image" style="margin-left:10px;vertical-align: middle;display:none;"/>
+					</td>
+				</tr>
+			</table>
+			<table id="float_btn2" style="border:none;" class="float_btn2" style="float:left;">
+				<tr id="float_btn_tr2" class="float_btn_tr2" style="">
+					<td style="width:51px;">
+						<input type="button" id="float_button_1" class="float_short_button save_input" value="Save" />
+					</td>
+					<td>
+						<input type="button" id="float_button_2" class="float_short_button cancel_input" value="Cancel" onclick="location.reload()"/>
+					</td>
+				</tr>
+			</table>
+			<div style="clear:both;"></div>
+		</div>
+		
+		<script src="../js/page/alg-funkeys.js?v=1.2"></script>
+	</div>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+			<script type="text/javascript" src="../js/jquery.ibutton.js"></script>
+			<link type="text/css" href="../css/jquery.ibutton.css" rel="stylesheet" media="all">
+			<script type="text/javascript" src="../js/float_btn.js"></script>
+			<script type="text/javascript" src="../js/check.js"></script>
+			<script type="text/javascript" src="../js/functions.js"></script>
+
+			<h3 id="feed_back_tip"></h3>
+			
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li class="tbg" id="lang_fxs_settings"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			
+			<!-- Caller ID begin -->
+			<div id="tab">
+				<li class="tb_unfold" onclick="lud(this,'tab_cidsettings')" id="tab_cidsettings_li">&nbsp;</li>
+				<li class="tbg_fold" id="lang_caller_id" onclick="lud(this,'tab_cidsettings')"></li>
+				<li class="tb2_fold" onclick="lud(this,'tab_cidsettings')">&nbsp;</li>
+				<li class="tb_end">&nbsp;</li>
+			</div>
+
+			<div id="tab_cidsettings">
+				<table width="98%" class="tedit" align="right">
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_the_pattern_of_sending_cid"></span>:
+								<span class="showhelp" id="lang_the_pattern_of_sending_cid_help"></span>
+							</div>
+						</th>
+						<td>
+							<select name="sendcalleridafter" id="sendcalleridafter">
+								<option value="0" id="lang_send_cid_before_ring"></option>
+								<option value="1" id="lang_send_cid_after_first_ring"></option>
+								<option value="2" id="lang_send_cid_after_second_ring"></option>
+								<option value="3" id="lang_send_cid_after_third_ring"></option>
+							</select>
+							<span id="csendcalleridafter"></span>
+						</td>
+					</tr>
+
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_waiting_time_before_sending_cid"></span>:
+								<span class="showhelp" id="lang_waiting_time_before_sending_cid_help"></span>
+							</div>
+						</th>
+						<td>
+							<input type="text" name="sendcalleridaftertime" id="sendcalleridaftertime" value="">
+							<span id="csendcalleridaftertime"></span>
+						</td>
+					</tr>
+
+					<tr style="display:none;"><!-- H2AG-16 delete -->
+						<th>
+							<div class="helptooltips">
+								<span id="lang_send_polarity_reversal"></span>:
+								<span class="showhelp" id="lang_send_polarity_reversal_help"></span>
+							</div>
+						</th>
+						<td>
+							<input type="checkbox" name="sendpolarityrev" id="sendpolarityrev" />
+							<span id="csendpolarityrev"></span>
+						</td>
+					</tr>
+
+					<tr style="display:none;"><!-- H2AG-16 delete -->
+						<th>
+							<div class="helptooltips">
+								<span id="lang_start_code"></span>:
+								<span class="showhelp" id="lang_start_code_help"></span>
+							</div>
+						</th>
+						<td>
+							<input type="text" name="startcode" id="startcode" value="">
+							<span id="cstartcode"></span>
+						</td>
+					</tr>
+
+					<tr style="display:none;"><!-- H2AG-16 delete -->
+						<th>
+							<div class="helptooltips">
+								<span id="lang_stop_code"></span>:
+								<span class="showhelp" id="lang_stop_code_help"></span>
+							</div>
+						</th>
+						<td>
+							<input type="text" name="stopcode" id="stopcode" value="">
+							<span id="cstopcode"></span>
+						</td>
+					</tr>
+
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_flash_wink"></span>:
+								<span class="showhelp" id="lang_flash_wink_help"></span>
+							</div>
+						</th>
+						<td>
+							<input type="checkbox" name="flashwink" id="flashwink" onchange="change_flashwink();"/>
+							<span id="cflashwink"></span>
+						</td>
+					</tr>
+						<tr>
+							<th>
+								<div class="helptooltips">
+									<span id="lang_min_flash_time"></span>:
+									<span class="showhelp" id="lang_min_flash_time_help"></span>
+								</div>
+							</th>
+							<td>
+								<input type="text" name="rxminflash" id="rxminflash" value="">
+								<span id="crxminflash"></span>
+							</td>
+						</tr>
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_max_flash_time"></span>:
+								<span class="showhelp" id="lang_max_flash_time_help"></span>
+							</div>
+						</th>
+						<td>
+							<input type="text" name="rxflash" id="rxflash" value="">
+							<span id="crxflash"></span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<div class="helptooltips">
+								"#" <span id="lang_as_ending_dial_key"></span>:
+								<span class="showhelp" id="lang_as_ending_dial_key_help"></span>
+							</div>
+						</th>
+						<td>
+							<input type=checkbox name="enddialkey" id="enddialkey" />
+							<span id="cenddialkey"></span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_display_extension_number"></span>:
+								<span class="showhelp" id="lang_display_extension_number_help"></span>
+							</div>
+						</th>
+						<td>
+							<input type="checkbox" name="ciddisplay" id="ciddisplay">
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- Caller ID end -->
+
+			<div id="newline"></div>
+
+			<!-- Other Parameters begin -->
+			<div id="tab">
+				<li class="tb_unfold" onclick="lud(this,'tab_otherparam')" id="tab_otherparam_li">&nbsp;</li>
+				<li class="tbg_fold" id="lang_other_parameters" onclick="lud(this,'tab_otherparam')"></li>
+				<li class="tb2_fold" onclick="lud(this,'tab_otherparam')">&nbsp;</li>
+				<li class="tb_end">&nbsp;</li>
+			</div>
+
+			<div id="tab_otherparam" >
+				<table width="98%" class="tedit" align="right">
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_offhook_antishake"></span>:
+								<span class="showhelp" id="lang_offhook_antishake_help"></span>
+							</div>
+						</th>
+						<td>
+							<input type="text" name="dialdebounce" id="dialdebounce" value="">ms
+							<span id="cdialdebounce"></span>	
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- Other Parameters end -->
+			
+			<div id="newline"></div>
+			
+			<table id="float_btn" class="float_btn" style="float:left;">
+				<tr id="float_btn_tr" class="float_btn_tr" >
+					<td>
+						<input type="button" class="lang_save save_input" value="" >
+					</td>
+					<td>
+						<input type="button" class="lang_cancel cancel_input" value="" onclick="location.reload()">
+						<img src="/images/loading1.gif" id="loading_image" style="margin-left:10px;vertical-align: middle;display:none;"/>
+					</td>
+				</tr>
+			</table>
+			<table id="float_btn2" style="border: none;" class="float_btn2" style="float:left;">
+				<tr id="float_btn_tr2" class="float_btn_tr2" >
+					<td style="width:51px;">
+						<input type="button" id="float_button_1" class="float_short_button lang_save save_input" value="" >
+					</td>
+					<td>
+						<input type="button" id="float_button_2" class="float_short_button lang_cancel cancel_input" value="" onclick="location.reload()">
+					</td>
+				</tr>
+			</table>
+			<div style="clear:both;"></div>
+		</div>
+		<script src="../js/page/alg-fxsparam.js?v=1.7"></script>
+	</div>
+</body>
+</html>
+<div id="to_top"></div>
+<div id="float_btn1" class="sec_float_btn1">
+</div>
+<div class="float_close" onclick="close_btn()" >
+</div>

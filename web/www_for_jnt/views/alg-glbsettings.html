@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+			<script type="text/javascript" src="../js/jquery.ibutton.js"></script>
+			<link type="text/css" href="../css/jquery.ibutton.css" rel="stylesheet" media="all" />
+			<link type="text/css" href="../css/jquery-ui-1.10.2.custom.all.css" rel="stylesheet" media="all"/>
+			<script type="text/javascript" src="../js/float_btn.js"></script>
+			<script type="text/javascript" src="../js/check.js"></script>
+			<script type="text/javascript" src="../js/functions.js"></script>
+			<script type="text/javascript" src="../js/jquery-ui-1.10.2.custom.all.min.js"></script>
+			<script type="text/javescript" src="../js/jquery.js"></script>
+
+			<h3 id="feed_back_tip"></h3>
+			
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="global_settings_li" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			
+			<!-- General begin -->
+			<div id="tab">
+				<li class="tb_unfold" onclick="lud(this,'tab_general')" id="tab_general_li">&nbsp;</li>
+				<li class="tbg_fold" id="general_li" onclick="lud(this,'tab_general')"></li>
+				<li class="tb2_fold" onclick="lud(this,'tab_general')">&nbsp;</li>
+				<li class="tb_end">&nbsp;</li>
+			</div>
+			<div id="tab_general" style="display:block">
+				<table width="98%" class="tedit" align="right" >
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_tone_duration"></span>:
+								<span id="lang_tone_duration_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type=text name='toneduration' id='toneduration' value='' />
+							<span id='ctoneduration' class="number_tip"></span>
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_tone_interval"></span>:
+								<span class="showhelp" id="lang_tone_interval_help"></span>
+							</div>
+						</th>
+						<td>
+							<input type="text" name="toneinterval" id="toneinterval" value="">
+							<span id="ctoneinterval" class="number_tip"></span>		
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_dial_timeout"></span>:
+								<span id="lang_dial_timeout_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type=text name='dialtimeout' id='dialtimeout' value='' />
+							<span id='cdialtimeout' class="number_tip"></span>
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_echo_type"></span>:
+								<span id="lang_echo_type_help" class="showhelp"></span>
+							</div>
+						</th>
+						<td>
+							<select name="echotype" id="echotype">
+								<option value="0">Aec</option>
+								<option value="1">Oslec</option>
+							</select>
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_echo_cancel_tap_length"></span>:
+								<span id="lang_echo_cancel_tap_length_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td id="echocancel_html">
+					
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_fxs_signaling"></span>:
+								<span id="lang_fxs_signaling_help" class="showhelp"></span>
+							</div>
+						</th>
+						<td>
+							<select name="sigfxs" id="sigfxs">
+								<option value="0">Loop start</option>
+								<option value="1">Kewlstart</option>
+							</select>
+						</td>
+					</tr>
+					
+				</table>
+			</div>
+			<!-- General end -->
+			
+			<div id="newline"></div>
+			
+			<!-- Fax begin -->
+			<div id="tab">
+				<li class="tb_fold" onclick="lud(this,'tab_fax')" id="tab_fax_li">&nbsp;</li>
+				<li class="tbg_fold" id="fax_li" onclick="lud(this,'tab_fax')"></li>
+				<li class="tb2_fold" onclick="lud(this,'tab_fax')">&nbsp;</li>
+				<li class="tb_end">&nbsp;</li>
+			</div>
+			<div id="tab_fax" style="display:none">
+				<table width="98%" class="tedit" align="right">
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_mode"></span>:
+								<span id="lang_mode_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<select name='mode' id='mode'>";
+								<option id="lang_adaptive" value='Adaptive'></option>
+								<option id="lang_t38" value='T.38'></option>
+								<option id="lang_pass_through" value='Pass-through'></option>
+							</select>
+							<span id='cmode'></span>
+						</td>
+					</tr>
+						
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_rate"></span>:
+								<span id="lang_rate_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<select name='rate' id='rate'>
+								<option value='0' >No speed limit</option>
+								<option value='2400' >2400</option>
+								<option value='4800' >4800</option>
+								<option value='7200' >7200</option>
+								<option value='9600' >9600</option>
+								<option value='12000' >12000</option>
+								<option value='14400' >14400</option>
+							</select>
+							<span id='crate'></span>
+						</td>
+					</tr>
+						
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_ecm"></span>:
+								<span id="lang_ecm_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type=checkbox name='ecm' id='ecm' /><span id='cecm'></span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- Fax end -->
+			
+			<div id="newline"></div>
+			
+			<!-- Country begin -->
+			<div id="tab">
+				<li class="tb_fold" onclick="lud(this,'tab_country')" id="tab_country_li">&nbsp;</li>
+				<li class="tbg_fold" id="country_li" onclick="lud(this,'tab_country')"></li>
+				<li class="tb2_fold" onclick="lud(this,'tab_country')">&nbsp;</li>
+				<li class="tb_end">&nbsp;</li>
+			</div>
+			<div id="tab_country" style="display:none;clear:both;height:426px;">
+				<table width="98%" class="tedit" align="right">
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_country"></span>:
+								<span id="lang_country_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td id="country_select">
+							<span id='ccountry'></span>
+						</td>
+					</tr>
+					
+					<tr id='tab_country_ringcadence'>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_ring_cadence"></span>:
+								<span id="lang_ring_cadence_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type=text name='ind_ringcadence' id='ind_ringcadence' style='width:400px;' value='' class="_country_readonly" /><span id='cind_ringcadence'></span>
+						</td>
+					</tr>
+						
+					<tr id='tab_country_dial'>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_dial_tone"></span>:
+								<span id="lang_dial_tone_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type=text name='ind_dial' id='ind_dial' style='width:400px;' value='' class="_country_readonly"/><span id='cind_dial'></span>
+						</td>
+					</tr>
+						
+					<tr id='tab_country_ring'>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_ring_tone"></span>:
+								<span id="lang_ring_tone_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type=text name='ind_ring' id='ind_ring' style='width:400px;' value='' class="_country_readonly"/><span id='cind_ring'></span>
+						</td>
+					</tr>
+						
+					<tr id='tab_country_busy'>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_busy_tone"></span>:
+								<span id="lang_busy_tone_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type=text name='ind_busy' id='ind_busy' style='width:400px;' value='' class="_country_readonly"/><span id='cind_busy'></span>
+						</td>
+					</tr>
+						
+					<tr id='tab_country_callwaiting'>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_call_waiting_tone"></span>:
+								<span id="lang_call_waiting_tone_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type=text name='ind_callwaiting' id='ind_callwaiting' style='width:400px;' value='' class="_country_readonly" /><span id='cind_callwaiting'></span>
+						</td>
+					</tr>
+						
+					<tr id='tab_country_congestion'>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_congestion_tone"></span>:
+								<span id="lang_congestion_tone_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type=text name='ind_congestion' id='ind_congestion' style='width:400px;' value='' class="_country_readonly" /><span id='cind_congestion'></span>
+						</td>
+					</tr>
+						
+					<tr id='tab_country_dialrecall'>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_dial_recall_tone"></span>:
+								<span id="lang_dial_recall_tone_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type=text name='ind_dialrecall' id='ind_dialrecall' style='width:400px;' value='' class="_country_readonly"/><span id='cind_dialrecall'></span>
+						</td>
+					</tr>
+						
+					<tr id='tab_country_record'>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_record_tone"></span>:
+								<span id="lang_record_tone_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type=text name='ind_record' id='ind_record' style='width:400px;'  value='' class="_country_readonly"/><span id='cind_record'></span>
+						</td>
+					</tr>
+						
+					<tr id='tab_country_info'>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_info_tone"></span>:
+								<span id="lang_info_tone_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type=text name='ind_info' id='ind_info' style='width:400px;'  value='' class="_country_readonly" /><span id='cind_info'></span>
+						</td>
+					</tr>
+						
+					<tr id='tab_country_stutter'>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_stutter_tone"></span>:
+								<span id="lang_stutter_tone_help" class='showhelp'><br/></span>
+							</div>
+						</th>
+						<td>
+							<input type=text name='ind_stutter' id='ind_stutter' style='width:400px;' value='' class="_country_readonly"/><span id='cind_stutter'></span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- Country end -->
+			
+			<div id="newline"></div>
+			
+			<br>
+			<br>
+			<table id="float_btn" class="float_btn">
+				<tr id="float_btn_tr" class="float_btn_tr" style="">
+					<td>
+						<input class="check_submit save_input" type="button" value=""/>
+					</td>
+					<td>
+						<input type="button" class="cancel_input" value="" onclick="location.reload()" />
+						<img src="/images/loading1.gif" id="loading_image" style="margin-left:10px;vertical-align: middle;display:none;"/>
+					</td>
+				</tr>
+			</table>
+			<table id="float_btn2" style="border:none;" class="float_btn2">
+				<tr id="float_btn_tr2" class="float_btn_tr2" style="">
+					<td style="width:51px;">
+						<input type="button" id="float_button_1" class="float_short_button save_input" value=""/>
+					</td>
+					<td>
+						<input type="button" id="float_button_2" class="float_short_button cancel_input" value="" onclick="location.reload()"/>
+					</td>
+				</tr>
+			</table>
+			
+		</div>
+		
+		<script src="../js/page/alg-glbsettings.js?v=2.1"></script>
+	</div>
+</body>
+</html>
+<div id="to_top"></div>
+<div id="float_btn1" class="sec_float_btn1">
+</div>
+<div class="float_close" onclick="close_btn()" >
+</div>

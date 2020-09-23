@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+			<script type="text/javascript" src="../js/jquery.ibutton.js"></script>
+			<script type="text/javascript" src="../js/check.js"></script>
+			<script type="text/javascript" src="../js/functions.js"></script>
+			<link type="text/css" href="../css/jquery.ibutton.css" rel="stylesheet" media="all" />
+			<script type="text/javascript" src="../js/functions.js"></script>
+			<script type="text/javascript" src="../js/check.js"></script>
+			<script type="text/javascript" src="../js/float_btn.js"></script> 
+			
+			<h3 id="feed_back_tip"></h3>
+			
+			<table width="100%" class="tshow">
+				<tr>
+					<th style='width:0.3%' class='nosort'>
+						<input type='checkbox' id='selall' name='selall'>
+					</th>
+					<th id="lang_port" width='10%'></th>
+					<th id="lang_forward_number" width='30%'></th>
+					<th id="lang_sip_endpoint" width='30%'></th>
+					<th id="lang_callerid" width='30%'></th>
+				</tr>
+				<tr>
+					<td class="list_bg_color"></td>
+					<td class="list_bg_color"></td>
+					<td class="list_bg_color">
+						<input type='text' id='sip_number' />
+					</td>
+					<td id="batch_get_all_sip" class="list_bg_color"></td>
+					<td class="list_bg_color">
+						<input type='text' id='callerid' />
+					</td>
+				</tr>
+			</table> 
+			
+			<div id="newline"></div>
+			<br/>
+			<table id="float_btn" class="float_btn">
+				<tr id="float_btn_tr" class="float_btn_tr" style="">
+					<td>
+						<input type="button" class="save_input save_click" value="Save" />
+					</td>
+					<td>
+						<input type="button" class="cancel_input" value="Cancel" onclick="location.reload()" />
+					</td>
+					<td>
+						<input type="button" class="batch_input save_input" value="Batch" />
+					</td>
+					<td>
+						<input type="button" class="fixed_input save_input" value="Fixed" />
+						<img src="/images/loading1.gif" id="loading_image" style="margin-left:10px;vertical-align: middle;display:none;"/>
+					</td>
+				</tr>
+			</table>
+			<table id="float_btn2" style="border:none;" class="float_btn2">
+				<tr id="float_btn_tr2" class="float_btn_tr2" style="padding-left: 15px;">
+					<td style="width:51px;">
+						<input type="button" id="float_button_1" class="float_short_button save_input save_click" value="Save" />
+					</td>
+					<td>
+						<input type="button" id="float_button_2" class="float_short_button cancel_input" value="Cancel" onclick="location.reload()"/>
+					</td>
+					<td>
+						<input type="button" class="float_short_button batch_input save_input" value="Batch" />
+					</td>
+					<td>
+						<input type="button" class="float_short_button fixed_input save_input" value="Fixed" />
+					</td>
+				</tr>
+			</table>
+
+		</div>
+		<script src="../js/page/sip-fxo-binding.js?v=1.5"></script>
+	</div>
+</body>
+</html>
+<div id="to_top"></div>
+<div id="float_btn1" class="sec_float_btn1">
+</div>
+<div  class="float_close" onclick="close_btn()" >
+</div>

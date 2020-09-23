@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<script type="text/javascript" src="../js/jquery.ibutton.js"></script>
+		<link type="text/css" href="../css/jquery.ibutton.css" rel="stylesheet" media="all" />
+		<div id="lps">
+		
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="lang_record" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			
+			<div style="float:right;margin-right:20px;">
+				<input type="checkbox" name="commit" id="commit" >
+			</div>
+			<span id="lang_record_sw" style="float:right;margin-right:20px;font-weight:bold;"></span>
+			
+			<table width="100%" class="tshow">
+				<thead>
+					<th style="text-align:center;" width="1%">ID</th>
+					<th id="lang_record_message" width="20%"></th>
+					<th id="lang_date" width="20%"></th>
+					<th id="lang_actions" width="1%"></th>
+				</thead>
+				<tbody id="backup_content"></tbody>
+			</table>
+			
+			<br/>
+			<div class="pg"></div>
+			<div style="clear:both;"></div>
+			
+		</div>
+		
+		<script src="../js/page/system-record.js?v=1.3"></script>
+</div>
+</body>
+</html>

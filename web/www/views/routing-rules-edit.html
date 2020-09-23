@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+            <script type="text/javascript" src="../js/jquery.ibutton.js"></script>
+            <script type="text/javascript" src="../js/functions.js"></script> 
+            <h4 id="routing_title"></h4>
+			<link type="text/css" href="../css/jquery.ibutton.css" rel="stylesheet" media="all" />
+            <script type="text/javascript" src="../js/check.js"></script>
+            <script type="text/javascript" src="../js/functions.js"></script>
+            <script type="text/javascript" src="../js/float_btn.js"></script>
+            <script type="text/javascript" src="../js/jquery.js"></script>
+            <script type="text/javascript" src="../js/jquery.ibutton.js"></script> 
+
+        	<div id="tab">
+        		<li class="tb_unfold" onclick="lud(this,'tab_main')" id="tab_main_li">&nbsp;</li>
+        		<li id="call_routing_rule_li" class="tbg_fold" onclick="lud(this,'tab_main')"></li>
+        		<li class="tb2_fold" onclick="lud(this,'tab_main')">&nbsp;</li>
+        		<li class="tb_end">&nbsp;</li>
+        	</div>
+
+			<!-- Call Routing Rule begin -->
+        	<div id="tab_main" style="display:block">
+        		<table width="100%" class="tedit" >
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_routing_name"></span>:
+								<span id="lang_routing_name_help" class="showhelp"></span>
+							</div>
+						</th>
+						<td>
+							<input type="text" name="routing_name" id="routing_name" value="" /><span id="crouting_name"></span>
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_call_comes_in_from"></span>:
+								<span id="lang_call_comes_in_from_help" class="showhelp"></span>
+							</div>
+						</th>
+						<td id="from_channel_select">
+							<span id="cfrom_channel"></span>
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_send_call_throuth"></span>:
+								<span id="lang_send_call_throuth_help" class="showhelp"></span>
+							</div>
+						</th>
+						<td id="to_channel_select">
+							<span id="cto_channel"></span>
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_forceanswer"></span>:
+								<span id="lang_forceanswer_help" class="showhelp"></span>
+							</div>
+						</th>
+						<td>
+							<input type="checkbox" id="forceanswer" name="forceanswer" />
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- Call Routing Rule end -->
+			
+			<div id="newline"></div>
+			<div id="tab">                                                                                                                   
+				<li class="tb_fold" onclick="lud(this,'tab_disa')" id="tab_disa_li">&nbsp;</li>                                          
+				<li id="disa_settings_li" class="tbg_fold" onclick="lud(this,'tab_disa')"></li>                         
+				<li class="tb2_fold" onclick="lud(this,'tab_disa')">&nbsp;</li>                                                          
+				<li class="tb_end">&nbsp;</li>                                                                                           
+			</div>                                                                                                                           
+                                                                                                                                                         
+			<link type="text/css" href="../css/jquery-ui-1.10.2.custom.all.css" rel="stylesheet" media="all"/>                                 
+			<script type="text/javascript" src="../js/jquery-ui-1.10.2.custom.all.min.js"></script>                                            
+                                                                                                                                                         
+			<div id="DISA_secret_dg" title="DISA Secret Edit" style="display:none">                                                          
+				<center>                                                                                                                 
+					<textarea id="editsecret" style="height:280px;width:460px;" rows="50" cols="10"></textarea>
+				</center>                                                                                                                
+			</div>                                                                                                                           
+            
+			<!-- DISA Settings begin -->
+			<div id="tab_disa" style="display:block">                                                                                        
+				<table width="100%" class="tedit" >
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_authentication"></span>:
+								<span id="lang_authentication_help" class="showhelp"></span>
+							</div>
+						</th>
+						<td>
+							<input type="checkbox" id="disa_sw" name="disa_sw" onchange="disa_ami_change()"/>
+						</td>
+					</tr>
+					
+					<tr id= "second_dial_ctl" style = "display:none;">
+						<th>
+							<div class="helptooltips">
+								<span id="lang_secondary_dialing"></span>:
+								<span id="lang_secondary_dialing_help" class="showhelp"></span>
+							</div>
+						</th>
+						<td>
+							<input type="checkbox" id="second_dial_sw" name="second_dial_sw"  />
+						</td>
+					</tr>
+					
+					<tr id= "disa_timeout_ctl" style = "display:none;">
+						<th>
+							<div class="helptooltips">
+								<span id="lang_disa_timeout"></span>:
+								<span id="lang_disa_timeout_help" class="showhelp"></span>
+							</div>
+						</th>
+						<td id="disa_time_select"></td>
+					</tr>
+					
+					<tr id= "disa_password_digits_ctl" style = "display:none;">
+						<th>
+							<div class="helptooltips">
+								<span id="lang_max_pssword_digits"></span>:
+								<span id="lang_max_pssword_digits_help" class="showhelp"></span>
+							</div>
+						</th>
+						<td id="disa_password_select"></td>
+					</tr>
+					
+					<tr id= "disa_secret_ctl" style = "display:none;">
+						<th>
+							<div class="helptooltips">
+								<span id="lang_password"></span>:
+								<span id="lang_password_help" class="showhelp"></span>
+							</div>
+						</th>
+						<td>
+							<input type="button" id="lang_edit" style="width:80px"  value="" onclick="secret_edit();"/>
+						</td>
+					</tr>
+				</table>                                                                                                                         
+			</div>      
+			<!-- DISA Settings end -->
+			
+        	<div id="newline"></div>
+        	<div id="tab">
+        		<li class="tb_fold" onclick="lud(this,'tab_advance')" id="tab_advance_li">&nbsp;</li>
+        		<li id="advance_routing_rule_li" class="tbg_fold" onclick="lud(this,'tab_advance')"></li>
+        		<li class="tb2_fold" onclick="lud(this,'tab_advance')">&nbsp;</li>
+        		<li class="tb_end">&nbsp;</li>
+        	</div>
+
+			<!-- Advance Routing Rule begin -->
+        	<div id="tab_advance" style="display:none">
+				<table width="98%" class="tedit" align="right" id="tbl_callee_caller_manipulation" >
+					<tr id="for_dial_pattern_html" class="ttitle">
+						<td>
+							<div class="helptooltips">
+								<span id="lang_calleeid"></span>
+								<span id="lang_calleeid_help" class="showhelp"></span>
+							</div>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>
+							<input type="button" id="lang_add_more_dial_pattern" value="" onclick="addDPRow2();"/>
+						</td>
+					</tr>
+				</table>
+        		
+        		<div id="newline"></div>
+        		<table width="98%" class="ttpedit" align="right" id="tbl_timeroute">
+					<tr class="ttitle">
+						<td colspan=5>
+							<div class="helptooltips">
+								<span id="lang_time_patterns"></span>
+								<span id="lang_time_patterns_help" class="showhelp"></span>
+							</div>
+						</td>
+					</tr>
+					
+					<tr>
+						<td id="time_pattern_table_str"></td>
+					</tr>
+					
+					<tr>
+						<td colspan=5 style="text-align:left;">
+							<input type="button" id="lang_add_more_time_pattern" value="" onclick="addTPRow()"/>
+						</td>
+					</tr>
+				</table>
+
+        		<div id="newline"></div>
+				
+        		<table width="98%" class="tedit" id="changerules" align="right" >
+					<tr class="ttitle">
+						<td id="lang_change_rules" colspan = 2></td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_forward_number"></span>
+								<span id="lang_forward_number_help" class="showhelp"></span>
+							</div>
+						</th>
+						<td>
+							<input type="text" id="forward_number" name="forward_number" value="" style="width: 300px;" />
+							<span id="cforward_number" class="number_tip"></span>
+						</td>
+					</tr>
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_dialing_delay"></span>
+								<span class="showhelp" id="lang_dialing_delay_help"></span>
+							</div>
+						</th>
+						<td>
+							<input type="text" id="dialing_delay" name="dialing_delay" value="" style="width: 300px;" />
+							<span id="cdialing_delay"></span>
+						</td>
+					</tr>
+				</table>
+
+        		<div id="newline"></div>
+				
+        		<table width="98%" class="tedit" id="tbl_fctn" align="right">
+					<tr id="for_fctn_channel_select" class="ttitle">
+						<td colspan = 2>
+							<div class="helptooltips">
+								<span id="lang_failover_call_through_number"></span>
+								<span id="lang_failover_call_through_number_help" class="showhelp"></span>
+							</div>
+						</td>
+					</tr>
+					
+					<tr>
+						<td colspan = 2>
+							<input type="button" id="add_failover_call" name="add_failover_call" value="" />
+						</td>
+					</tr>
+				</table>
+				
+        		<div style="clear:both;"></div>
+        	</div>
+        	<!-- Advance Routing Rule end -->
+			
+			<div class="cidNumber_table">
+				<div id="newline"></div>
+
+				<div id="tab">
+					<li class="tb_unfold" onclick="lud(this,'cid_settings')" id="cid_settings_li">&nbsp;</li>
+					<li id="cid_number_settings_li" class="tbg_fold" onclick="lud(this,'cid_settings')"></li>
+					<li class="tb2_fold" onclick="lud(this,'cid_settings')">&nbsp;</li>
+					<li class="tb_end">&nbsp;</li>
+				</div>
+				
+				<div id="cid_settings">
+					<table width="98%" class="tedit" align="right" >
+						<tr>
+							<th>
+								<div class="helptooltips">
+									<span id="lang_cid_number"></span>:
+									<span id="lang_cid_number_help" class="showhelp"></span>
+								</div>
+							</th>
+							<td>
+								<input type="text" name="cidNumber" id="cidNumber" value="" onkeyup="this.value=this.value.replace(/\D/g,\'\')" onafterpaste="this.value=this.value.replace(/\D/g,\'\')"> <span id="cendpoint_name"></span>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+        	<div id="newline"></div>
+        	<br>
+			
+        	<input type="button" class="float_btn gen_short_btn save_routing save_input" value="" />
+        	<input type="button" class="cancel_input" value="" onclick="cancel();" />
+			<img src="/images/loading1.gif" id="loading_image" style="margin-left:10px;vertical-align: middle;display:none;"/>
+			
+        	<table id="float_btn2" style="border:none;" class="float_btn2">
+        		<tr id="float_btn_tr2" class="float_btn_tr2">
+        			<td style="width:50px">
+        				<input type="button" id="float_button_1" class="float_short_button save_routing" value="" />
+        			</td>
+        			<td>
+        				<input type="button" id="float_button_2" class="float_short_button cancel_input" value="" onclick="cancel();" />
+        			</td>
+        		</tr>
+        	</table>
+
+		</div>
+		
+		<input type="hidden" id="old_section" value="" >
+		<input type="hidden" id="order" value="" >
+		<input type="hidden" name="revc_secret" id="revc_secret" value="" />
+		
+		<script src="../js/page/routing-rules-edit.js?v=1.4"></script>
+	</div>
+</body>
+</html>
+<div id="float_btn1" class="float_btn1 sec_float_btn1">
+</div>
+<div  class="float_close" onclick="close_btn()" >
+</div>

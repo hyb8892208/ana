@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+			<script type="text/javascript" src="../js/layer/layer.min.js"></script>
+			<script type="text/javascript" src="../js/check.js"></script>
+			<script type="text/javascript" src="../js/functions.js"></script>
+			<script type="text/javascript" src="../js/check.js"></script>
+			<script type="text/javascript" src="../js/float_btn.js"></script>
+			
+			<h3 id="feed_back_tip"></h3>
+			
+			<table width="100%" class="tshow">
+				<thead>
+					<tr>
+						<th id="lang_port"></th>
+						<th id="lang_type"></th>
+						<th id="lang_name"></th>
+						<th id="lang_line_status"></th>
+						<th id="lang_port_status"></th>
+						<th id="lang_hour_call_count"></th>
+						<th id="lang_daily_call_count"></th>
+						<th id="lang_daily_answer_count"></th>
+						<th id="lang_call_status"></th>
+						<th id="lang_actions" width="50px"></th>
+					</tr>
+				</thead>
+				<tbody id="html_str"></tbody>
+			</table>
+			<br/>
+			
+			<div id="button_show" style="display:none;">
+				<table id="float_btn" class="float_btn">
+					<tr id="float_btn_tr" class="float_btn_tr" style="">
+						<td><input type="button" class="save_input" value="" /></td>
+						<td>
+							<input type="button" class="cancel_input" value="" onclick="location.reload()" />
+							<img src="/images/loading1.gif" id="loading_image" style="margin-left:10px;vertical-align: middle;display:none;"/>
+						</td>
+					</tr>
+				</table>
+				
+				<table id="float_btn2" style="border:none;" class="float_btn2">
+					<tr id="float_btn_tr2" class="float_btn_tr2" style="padding-left: 15px;">
+						<td style="width:51px;"><input type="button" id="float_button_1" class="float_short_button save_input" value="" /></td>
+						<td><input type="button" id="float_button_2" class="float_short_button cancel_input" value="" onclick="location.reload()"/></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+		<script src="../js/page/alg-chnsettings.js?v=1.8"></script>
+	</div>
+	<div id="to_top"></div>
+	<div id="float_btn1" class="sec_float_btn1"></div>
+	<div  class="float_close" onclick="close_btn()" ></div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+			<script type="text/javascript" src="../js/jquery.ibutton.js"></script> 
+			<link type="text/css" href="../css/jquery.ibutton.css" rel="stylesheet" media="all" />
+			<script type="text/javascript" src="../js/functions.js"></script>
+			<script type="text/javascript" src="../js/check.js"></script>
+
+			<h3 id="feed_back_tip"></h3>
+			
+			<!-- WAN IPv4 begin -->
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="wan_ipv4_li" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			
+			<table width="100%" class="tedit" id="wan_ipv4" >
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_interface"></span>:
+							<span id="lang_interface_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td id="network_name"></td>
+				</tr>
+				
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_type"></span>:
+							<span id="lang_type_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<select id='wan_type' name='wan_type' >
+							<option id="lang_dhcp" value='dhcp' ></option>
+							<option id="lang_static" value='static' ></option>
+							<option id="lang_disable" value='disable' ></option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr id="mac_tr" style="display:none;">
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_mac"></span>:
+							<span id="lang_mac_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input id='wan_mac' type='text' name='wan_mac' value='' />
+						<span id='cwan_mac' class='number_tip'></span>
+					</td>
+				</tr>
+			</table>
+			<!-- WAN IPv4 end -->
+			
+			<br>
+			
+			<!-- IPv4 Settings begin -->
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="ipv4_settings_li" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			<table width="100%" class="tedit" id="ipv4_settings" >
+				<tr id='field_wan_ipaddr' style='display: none'>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_address"></span>:
+							<span id="lang_address_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input id='wan_ipaddr' type='text' name='wan_ipaddr' value='' />
+						<span id='cwan_ipaddr' class='number_tip'></span>
+					</td>
+				</tr>
+					
+				<tr id='field_wan_netmask' style='display: none'>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_netmask"></span>:
+							<span id="lang_netmask_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input id='wan_netmask' type='text' name='wan_netmask' value='' />
+						<span id='cwan_netmask' class='number_tip'></span>
+					</td>
+				</tr>
+				
+				<tr id='field_wan_gateway' style='display: none'>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_default_gateway"></span>:
+							<span id="lang_default_gateway_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input id='wan_gateway' type='text' name='wan_gateway' value='' />
+						<span id='cwan_gateway' class='number_tip'></span>
+					</td>
+				</tr>
+			</table>
+			<!-- IPv4 Settings end -->
+			
+			<br/>
+
+			<input type="button" class="save_input" value="Save" />
+			<img src="/images/loading1.gif" id="loading_image" style="margin-left:10px;vertical-align: middle;display:none;"/>
+
+		</div>
+	
+		<script src="../js/page/network-wan.js?v=1.0"></script>
+	</div>
+</body>
+</html>

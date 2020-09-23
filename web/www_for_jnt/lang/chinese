@@ -1,0 +1,2458 @@
+language#chinese#简体中文
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;     Language Package Description
+;
+;     Format:
+;          key="value"
+;
+;     Notice:
+;          1.Package head line format: language#xxx#XXXX
+;            xxx is the Internal identification.
+;            XXX is the web view.
+;          2.Package must save format: UTF-8(No BOM)
+;          3.If there is ["] in value, please use [\"]. For example: 
+;            language help="This is \"Portuguese\""
+;
+;     2013.8.23, OpenVox Co.
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Must Set="必须填写"
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;    general
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[常规]
+Name="名字"
+User Name="用户名"
+Password="密码"
+Port="端口"
+Port Name="端口名"
+From="从"
+Type="类型"
+To="到"
+Enable="开启"
+Enable help="打开(生效),关闭(无效)"
+All="全选"
+All help="全选或者取消."
+
+Report="报告"
+new failed="新建失败"
+Save Successfully="保存成功"
+Delete Successfully="删除成功"
+Create Successfully="创建成功"
+Copyright="模拟网关-版权所有"
+OpenVox Copyright="深圳市开源通信有限公司<br>电话:+86-755-82535461 传真:+86-755-83823074"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;    special
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[特殊]
+_On="on"
+_None="无"
+_No="否"
+_Yes="是"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;    title
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[标题]
+;system
+System Status="系统状态"
+Time Settings="时间设置"
+Login Settings="登陆设置"
+General="常规"
+Cluster="集群"
+System Tools="系统工具"
+Information="系统信息"
+Config Record="配置记录"
+Config Label="配置标签"
+
+;alg
+Channel Settings="通道设置"
+Dial Matching Table="拨号匹配表"
+Global Settings="全局设置"
+Pickup Settings="接听设置"
+Pickup="接听设置"
+Advanced Settings="高级设置"
+Analog feature Batch="Analog feature Batch"
+Special Function Keys="特殊功能键"
+
+;sip
+SIP Endpoints="SIP终端"
+Batch SIP Endpoints="Batch SIP Endpoints"
+Advanced SIP Settings="SIP高级设置"
+;Call Routing Rules="Call Routing Rules"
+
+;routing
+Call Routing Rules="呼叫路由规则"
+Groups="群组"
+
+;network
+Netowrk Settings="网络设置"
+DDNS Settings="DDNS设置"
+Network Toolkit="网络诊断工具"
+
+;adv
+Asterisk API="Asterisk应用程序接口"
+Asterisk CLI="Asterisk命令行界面"
+Asterisk File Editor="Asterisk文件编辑"
+
+;log
+Logs Settings="日志设置"
+System Logs="系统日志"
+Asterisk Logs="Asterisk日志"
+SIP Logs="SIP日志"
+CDR="通话记录"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;    menu
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[主菜单]
+system="系统信息"
+analog="模拟设置"
+sip="SIP设置"
+network="网络配置"
+advanced="高级选项"
+logs="系统日志"
+
+;system
+Status="状态"
+Time="时间"
+;Login Settings="登录设置"
+;General="常规"
+Tools="工具"
+routing="路由设置"
+;Information="信息"
+
+;alg
+Channel Settings="通道设置"
+Global Settings="全局设置"
+
+;sip
+SIP Endpoints="SIP终端"
+Batch SIP Endpoints="Batch SIP Endpoints"
+Advanced SIP Settings="SIP高级设置"
+
+;routing
+;Call Routing Rules="Call Routing Rules"
+;Groups="Groups"
+
+;network
+Network Settings="网络设置"
+;DDNS Settings="DDNS设置"
+Toolkit="工具"
+
+;advanced
+;Asterisk API="Asterisk API"
+;Asterisk CLI="Asterisk CLI"
+;Asterisk File Editor="Asterisk File Editor"
+
+;logs
+Log Settings="日志设置"
+System="系统日志"
+Asterisk="Asterisk日志"
+SIP="SIP日志"
+;CDR="CDR"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;    button
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[按钮]
+Save="保存"
+Cancel="取消"
+
+Action="操作"
+Actions="操作"
+Manual="手动"
+Send="发送"
+Stop="停止"
+Start="开始"
+Add="添加"
+
+Download="下载"
+Modify="修改"
+
+Filter="过滤"
+Clean Filter="清除过滤"
+
+Delete="删除"
+Delete confirm="你确定要删除所选择项？"
+Clean Up="清除"
+Clean Up confirm="你确定要删除所有日志吗？"
+Export="导出"
+
+Apply="应用"
+Apply Bar help="设置已修改，通话在你应用这些修改时可能会中断，你想现在就应用吗？"
+Close="关闭"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;    pages
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[pages]
+Previous page="当前页"
+Next page="下一页"
+input page help="请输入页码，按[Enter]跳转到。"
+total pages="总页数"
+goto input page="跳转到输入页"
+go="go"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	system-status.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[system-status]
+;Port status
+Port Information="端口信息"
+;Port="Port"
+;Type="Type"
+Caller ID="主叫号码"
+Sip Account="Sip账号"
+Port Status="端口状态"
+Line Status/Sip Account="线路状态/Sip账号"
+
+;SIP status
+SIP Information="SIP信息"
+Endpoint Name="终端名称"
+;User Name="User Name"
+Host="主机"
+Registration="注册"
+SIP Status="SIP状态"
+Response Code="响应码"
+Network Information="网络信息"
+;Name="Name"
+MAC Address="MAC地址"
+IP Address="IP地址"
+Mask="掩码"
+Gateway="网关"
+RX Packets="接收数据包"
+TX Packets="发送数据包"
+
+PPPoE Information="PPPoE信息"
+;IP Address="IP Address"
+Server IP="服务器IP"
+Server IP help="服务器IP"
+Subnet Mask="子网掩码"
+RX packets="接收数据包"
+TX packets="发送数据包"
+Routing Information="路由信息"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	system-time.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[system-time]
+;Time Settings="Time Settings"
+System Time="系统时间"
+System Time help@system-time="网关系统时间"
+Time Zone="时区"
+Time Zone help@system-time="世界时区。请选择与您所在城市相同或最近的时区。"
+POSIX TZ String="Posix时区字符串"
+POSIX TZ String help="Posix时区字符串"
+NTP Server 1="NTP服务器1"
+NTP Server 1 help="时间服务器域名或主机名。例如：[time.asia.apple.com] "
+NTP Server 2="NTP服务器2"
+NTP Server 2 help="第一备用NTP服务器。例如：[time.windows.com] "
+NTP Server 3="NTP服务器3"
+NTP Server 3 help="第二备用NTP服务器。例如：[time.nist.gov] "
+Auto-Sync from NTP="从NTP服务器自动同步"
+Auto-Sync from NTP help="是否开启时间从NTP服务器自动同步。On(开启),OFF(关闭)."
+
+Sync from NTP="从NTP服务器同步"
+Sync from Client="从客户端同步"
+Save Data="保存配置"
+
+;Report="Report"
+Time Synchronize="时间同步"
+Synchronize Succeeded="同步成功"
+Synchronize Failed="同步失败"
+Client Synchronize Succeeded="客户端同步成功"
+Client Synchronize Failed="客户端同步失败"
+
+;Time Zone
+Australia="澳大利亚"
+Melbourne,Canberra,Sydney="墨尔本,堪培拉,悉尼"
+Perth="珀斯"
+Brisbane="布里斯班"
+Adelaide="阿德莱德"
+Darwin="达尔文"
+Hobart="霍巴特"
+
+Europe="欧洲"
+Amsterdam,Netherlands="阿姆斯特丹,荷兰"
+Athens,Greece="雅典,希腊"
+Berlin,Germany="柏林,德国"
+Brussels,Belgium="布鲁塞尔,比利时"
+Bratislava,Slovakia="伯拉第斯拉瓦,斯洛伐克"
+Budapest,Hungary="布达佩斯,匈牙利"
+Copenhagen,Denmark="哥本哈根,丹麦"
+Dublin,Ireland="都柏林,爱尔兰"
+Helsinki,Finland="赫尔辛基,芬兰"
+Kyiv,Ukraine="基辅,乌克兰"
+Lisbon,Portugal="里斯本,葡萄牙"
+London,GreatBritain="伦敦,英国"
+Madrid,Spain="马德里,西班牙"
+Oslo,Norway="奥斯陆,挪威"
+Paris,France="巴黎,法国"
+Prague,CzechRepublic="布拉格,捷克共和国"
+Roma,Italy="罗马,意大利"
+Moscow,Russia="莫斯科,俄罗斯"
+Stockholm,Sweden="斯德哥尔摩,瑞典"
+Zurich,Switzerland="苏黎世,瑞士"
+
+New Zealand="新西兰"
+Auckland, Wellington="奥克兰,惠灵顿"
+
+USA and Canada="美国 & 加拿大"
+Hawaii Time="夏威夷时区"
+Alaska Time="阿拉斯加时区"
+Pacific Time="太平洋时区"
+Mountain Time="山地时区"
+Mountain Time @Arizona, no DST="山地时区(亚利桑那州，没有DST)"
+Central Time="中部时区"
+Eastern Time="东部时区"
+
+Atlantic="大西洋"
+Bermuda="百慕大群岛"
+
+Asia="亚洲"
+;Asia (UTC+1)
+Anadyr="阿纳德尔河"
+
+;Asia (UTC+2)
+Amman="安曼"
+Beirut="贝鲁特"
+Damascus="大马士革"
+Gaza="加沙"
+Jerusalem="耶路撒冷"
+Nicosia="尼科西亚"
+
+;Asia (UTC+3)
+Aden="亚丁"
+Baghdad="巴格达"
+Bahrain="巴林岛"
+Kuwait="科威特"
+Qatar="卡塔尔"
+Riyadh="利雅得"
+
+;Asia (UTC+3:30)
+Tehran="德黑兰"
+
+;Asia (UTC+4)
+Baku="巴库"
+Dubai="迪拜"
+Muscat="马斯喀特"
+Tbilisi="第比利斯"
+Yerevan="耶烈万"
+
+;Asia (UTC+4:30)
+Kabul="喀布尔"
+
+;Asia (UTC+5)
+Aqtobe="阿克托拜"
+Ashgabat="阿什哈巴德"
+Dushanbe="杜尚别"
+Karachi="卡拉奇"
+Oral="乌拉尔"
+Samarkand="撒马尔罕"
+Tashkent="塔什干"
+Yekaterinburg="叶卡捷琳堡"
+
+;Asia (UTC+5:30)
+Calcutta="加尔各答"
+Colombo="科伦坡"
+Almaty="阿拉木图"
+Bishkek="比什凯克"
+Dhaka="达卡"
+Novosibirsk="新西伯利亚"
+Omsk="鄂木斯克"
+Qyzylorda="克孜洛尔达"
+Thimphu="廷布"
+
+;Asia (UTC+7)
+Jakarta="雅加达"
+Bangkok="曼谷"
+Vientiane="万象"
+Phnom Penh="金边"
+
+;Asia (UTC+8)
+Chongqing="重庆"
+Hong Kong="香港"
+Shanghai="上海"
+Singapore="新加坡"
+Urumqi="乌鲁木齐"
+Taiwan="台湾"
+Ulaanbaatar="乌兰巴托"
+
+;Asia (UTC+9)
+Dili="帝力"
+Jayapura="查亚普拉"
+Pyongyang="平壤"
+Seoul="首尔"
+Tokyo="东京"
+Yakutsk="雅库茨克"
+
+Central and South America="中南美洲"
+Sao Paulo,Brazil="圣保罗,巴西"
+Argentina="阿根廷"
+Central America @no DST="美洲中部(没有DST)"
+Venezuela="委内瑞拉"
+
+Unknown="未知"
+User defined @or out of date="用户自定义 (不在以上列表)"
+sync from client failed="同步客户端失败"
+sync from NTP failed="从NTP同步失败"
+NTP running tip="同步到NTP正在运行中"
+Client running tip="同步到客户端正在运行中"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	system-login.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[system-login]
+Web Login Settings="Web登陆设置"
+;User Name="用户名"
+User Name help@system-login web="注意：您的网关没有管理作用。<br/>您可以在此定义用户名和密码管理您的网关。<br/>此用户具有网关控制的所有权限<br/>用户名: 可用字符 \"-_+.<>&0-9a-zA-Z\".长度: 1-32个字符."
+;Password="Password"
+Password help@system-login web="字符: 可用字符 \"-_+.&lt;&gt;&amp;0-9a-zA-Z\".长度: 4-32个字符."
+Confirm Password="确认密码"
+Confirm Password help@system-login web="请再次输入相同的密码."
+Confirm Password warning@system-login web="这个密码必须匹配上面的密码."
+SSH Login Settings="SSH登陆设置"
+;User Name="User Name"
+User Name help@system-login ssh="用户名: 可用字符 \"-_+.&lt;&gt;&amp;0-9a-zA-Z\".长度: 1-25个字符.</br>不能使用 'root'."
+User Name warning@system-login ssh="不能使用'root'"
+;Password="Password"
+Password help@system-login ssh="字符: 可用字符 \"-_+.&lt;&gt;&amp;0-9a-zA-Z\".长度: 4-32个字符."
+Login Mode="登录模式"
+Login Mode help="选择登录模式"
+HTTP Port="HTTP端口"
+HTTPS Port="HTTPS端口"
+web server port help="指定web服务端口"
+Port help@system-login ssh="SSH登陆端口号."
+js webserver http port help="HTTP端口使用范围：1024-65535，默认端口：80，有些端口禁止使用。"
+js webserver https port help="HTTPS端口使用范围：1024-65535，默认端口：443，有些端口禁止使用。"
+
+;Save="Save"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	system-general.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[system-general]
+Language Debug="语言调试"
+TURN ON="打开"
+TURN OFF="关闭"
+Scheduled Reboot="定时重启"
+Reboot Type="重启类型"
+Reboot Type help="每天: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每天在 xx:xx(时间)重启. <br>每星期: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每星期在XX(星期) xx:xx(时间)重启. <br>每月: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每月在XXX(日) xx:xx(时间)重启. <br>运行时间: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;按运行时间定时重启."
+By Day="每天"
+By Week="每星期"
+By Month="每月"
+By Running Time="按运行时间"
+;Time="Time"
+Running Time="运行时间"
+Month="月"
+Week="星期"
+Day="日"
+Hour="时"
+Minute="分"
+
+Sun="星期日"
+Mon="星期一"
+Tue="星期二"
+Wed="星期三"
+Thu="星期四"
+Fri="星期五"
+Sat="星期六"
+
+Language Settings="语言设置"
+Language="语言"
+Language Package="语言包"
+Advanced="高级"
+
+;Download="Download"
+Language Download help="下载已选择的语言包."
+Language Download error="未找到您所选语言包."
+
+Add New Language="增加新的语言"
+New language Package="新的语言包"
+Language Package Upload Filesize error="您要上传的文件超过1MB!<br>语言包上传失败.<br>"
+Language Package Upload Move Failed="语言包上传移动失败"
+Language Package Upload Failed="语言包上传失败"
+Language Package Format error="语言包格式错误"
+Add Language overwrite alert="此种语言已存在!\n只读文件不能被覆盖!"
+Add Language overwrite confirm="此种语言已存在!\n是否覆盖原文件?"
+
+Delete language help="删除已选择文件."
+Delete Language alert="对不起，您不能删除默认语言"
+Delete Language confirm="是否确定删除已选语言包?"
+Select File alert="请先选择文件!"
+Language Package Size alert="最大上传文件1MB!"
+
+Snmp Agent="Snmp代理"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	system-cluster.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[system-cluster]
+Manual Cluster="人工集群"
+Automatic Cluster="自动集群"
+Working Mode="工作模式"
+Image build time="固件编译时间"
+Image version="固件版本"
+Mode="模式"
+Detail="明细"
+Mode help@system-cluster="Stand-alone Mode: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Run alone, total 4 ports<br>Master Mode: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Run as master with two different IP, controlling up to four slaves. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The master can be accessed by the original IP. The target IP is used to communicate with the slaves. <br>Slave Mode: <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Run as slave with two different IP, controlled by the master. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the original IP is forbidden, the slave can be accessed by the master with inward IP only. <br>"
+Stand-alone="非集群设备"
+Basis="集群控制"
+Master="主设备"
+Slave="从设备"
+Set Default="设置默认值"
+;Password="Password"
+slave number="slave number"
+slave number help@system-cluster="The number of slave board"
+Password help@system-cluster master mode="The Master Mode password. <br>Must be 4~16bits digital 0-9."
+Password help@system-cluster slave mode="The slave's Master Mode password. <br>Must be the same as the master."
+Master IP="主设备IP"
+Master IP help@system-cluster master mode="The master's target IP. <br>Must be set in the subnet different from external subnet, <br>so that the external subnet couldn't access internal subnet."
+Master IP help@system-cluster slave mode="The master's target IP. <br>You must set the master's target IP first."
+Slave IP="从设备IP"
+Slave IP help@system-cluster slave mode="The slave's target IP. <br>Must be set in the same subnet as the master."
+Slaves IP List help@system-cluster master mode="Set the slaves's original and target IP. <br>The original IP is outward IP, and the target IP is inward IP. <br>Up to four slaves."
+Local IP="本地IP"
+Original IP="初始IP"
+Board-="板-"
+port-="port-"
+Target IP="集群IP"
+Slaves IP List="从设备IP列表"
+Remain Origianl IP address="保留初始IP地址"
+
+Master Mode warning 1="Please input valid password number 0-9 ,min:4 max:16"
+Master Mode warning 2="Please input valid Master IP address."
+Master Mode warning 3="Please input valid Master IP address,can't confilct with user IP address"
+Slave Mode warning 1="Please input valid password number 0-9 ,min:4 max:16"
+Slave Mode warning 2="Please input valid Slave IP address."
+Slave Mode warning 3="Please input valid Master IP address."
+slave list warning 1="Please input valid target IP address of board."
+slave list warning 2="Please input valid original IP address of board."
+
+;Apply="Apply"
+Apply Master Mode="Apply Master Mode"
+
+4 slave="4 slave"
+1 master + 1 slave="1 master + 1 slave"
+1 master + 2 slave="1 master + 2 slave"
+1 master + 3 slave="1 master + 3 slave"
+1 master + 4 slave="1 master + 4 slave"
+cluster fail, not found="cluster fail, not found"
+cluster success="集群成功！"
+cluster fail="集群失败！"
+device mode="设备集群模式"
+Please turn off the other gateways while scanning the network="Please turn off the other gateways while scanning the network."
+Not found gateway="Not found gateway"
+Automatic cluster failed="Automatic cluster failed"
+Automatic cluster successful="Automatic cluster successful"
+List gateways failed="List gateways failed"
+Get master slot number failed="Get master slot number failed"
+not online="not online"
+have some slave board not online, please check it first,boardlist:="have some slave board not online, please check it first,boardlist:"
+DND="DND"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	system-tools.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[system-tools]
+Reboot Tools="重新启动工具"
+System Reboot="系统重启"
+System Reboot help="重新启动网关,当前所有通话将会被挂断."
+System Reboot confirm="确定要立刻重启网关吗?\n内存中的所有数据将会被删除!"
+Asterisk Reboot="Asterisk重启"
+Asterisk Reboot help="重启asterisk,当前所有通话将会被挂断."
+Asterisk Reboot confirm="确定立刻重启Asterisk吗?"
+
+Update Firmware="固件升级"
+System Update="系统升级"
+System Update filesize alert="最大上传文件40M!"
+System Update IE alert="请允许ActiveX脚本文件系统对象!"
+System Update confirm="确定要升级系统吗?\\n请谨慎!这可能会损坏你的原始配置文件结构."
+New system file="新的系统文件"
+System Online Update="系统在线升级"
+System Online Update help="新的系统文件可以从官方网站下载并升级系统."
+System Online Update Download error="下载系统文件失败. 请检查网络连接是否正常!"
+System Online Update fopen error="保存系统文件失败!"
+System version help 1="当前系统版本 :"
+System version help 2="最新系统版本 :"
+System Online Update confirm="请谨慎 : 这可能会损坏你的原始配置文件结构.\n\n确定升级系统吗?\n"
+System Online Update version error="获取远程版本失败. 请检查网络连接是否正确!"
+
+Upload Configuration="上传配置文件"
+File Upload="上传文件"
+File Upload confirm="是否确定上传配置文件?\n这可能会损坏你的原始配置文件结构."
+New configuration file="新的配置文件"
+
+Backup Configuration="备份配置文件"
+Download Backup="下载备份文件"
+Current configuration file version="当前配置文件版本"
+
+Restore Configuration="还原配置文件"
+Channel Recording="通道记录"
+Choose Channel="选择通道"
+Factory Reset="恢复出厂设置"
+Factory Reset help="这将导致所有的配置文件恢复到默认出厂值! 完成后将会立刻重启网关."
+Factory Reset confirm="是否确定立刻还原配置文件?"
+
+;output
+;Report="Report"
+;Slave="Slave"
+Result="结果"
+
+;system reboot
+;System Reboot="System Reboot"
+System Rebooting="系统正在重启"
+System Reboot wait="系统重启中...<br>请等待大约180秒，系统将会重新启动."
+Starting capture the message from channel="开始获取信息从通道"
+
+;asterisk reboot
+;Asterisk Reboot="Asterisk Reboot"
+Asterisk Rebooting="Asterisk正在重启"
+Asterisk Reboot Succeeded="Asterisk已成功重启"
+Asterisk Reboot Failed="Asterisk重启失败"
+
+;system update
+;System Update="System Update"
+System Update Filesize error="更新文件大于40M!<br>系统升级失败."
+System Update Move error="移动更新文件失败!<br>系统升级失败."
+System Updating="系统正在升级"
+fork error="复制错误"
+Error code="错误代码"
+Error ="错误"
+System Update Succeeded="系统升级成功"
+System Update Succeeded help="重新启动才能进入新的系统."
+System Update error 1="文件超过服务器空间(40M)!"
+System Update error 2="文件超过浏览器限制!"
+System Update error 3="文件只有部分上传!"
+System Update error 4="找不到上传文件!"
+System Update error 5="文件夹丢失!"
+System Update error 6="未能写入临时文件夹!"
+System Update Failed="系统升级失败"
+
+Downloading="正在下载"
+;System Online Update="系统在线升级"
+Updating system="升级系统"
+Update failed="升级失败"
+update failed output="系统升级失败.<br>错误代码: "
+update succeed output="系统已成功升级!<br>重新启动才能进入新的系统."
+;fork error="fork error"
+
+Updating system was failed="系统升级失败"
+
+;upload cfg file
+Configuration Files Upload="上传配置文件"
+Configuration Files Upload Filesize error="上传的配置文件超过40M!<br>配置文件上传失败."
+Configuration Files Upload Move error="移动更新文件失败!<br>配置文件上传失败."
+Configuration Files Uploading="正在上传配置文件"
+Configuration Files Upload Failed="配置文件上传失败"
+Configuration Files Upload Succeeded="成功上传配置文件"
+Configuration Files Upload version error 1="</br>找不到配置文件!</br>找不到asterisk/cfg_版本!<br>"
+Configuration Files Upload version error 2="</br>未知的配置文件版本!"
+Configuration Files Upload version error 3="</br>当前系统不支持此配置文件版本!</br>"
+Configuration Files Upload check="检查配置文件版本....<br>"
+Configuration Files Upload update="正在更新配置文件....<br>"
+Configuration Files Upload error 1="文件超过服务器空间(40M)!"
+Configuration Files Upload error 2="文件超过浏览器限制!"
+Configuration Files Upload error 3="文件只有部分上传!"
+Configuration Files Upload error 4="找不到上传文件!"
+Configuration Files Upload error 5="文件夹丢失!"
+Configuration Files Upload error 6="未能写入临时文件夹!"
+Stop Asterisk="停止asterisk....<br>"
+Start Asterisk="启动asterisk....<br>"
+
+;downlad cfg files
+Packing was failed="打包失败"
+;Error code="错误代码"
+Can not find="找不到"
+
+;Configuration Restore
+Configuration Restore="配置文件恢复"
+Configuration Restore wait="正在恢复默认配置文件...<br>请等待大约60秒,系统将会重新启动."
+Configuration Restoring="正在恢复配置文件"
+Configuration Restore Failed="恢复配置文件失败"
+Change Log="更新内容"
+Detailed="详细信息"
+Update Online Now="在线升级"
+Update Online Information="在线升级信息"
+
+;Voice Record
+Voice Record="语音记录"
+Voice Record help="选择一个模块录制语音："
+Start Recording="开始录音"
+
+System Switch="切换文件系统"
+System Switching="文件系统切换中"
+System Switch Succeeded="文件系统切换成功"
+System Switch Failed="文件系统切换失败"
+System Switch confirm="你确定要切换文件系统吗？切换之后需要重启系统才能生效。"
+System Count Dowm="系统倒计时10秒后将自动重启"
+Second="秒"
+
+Restore System="恢复系统"
+Restore System help="恢复系统将导致所有配置文件恢复到默认出厂值，可选CDR日志、系统日志清除！完成后将会立刻重启网关。"
+Restore System clear="请选择需要清除的数据："
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	system-info.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[system-info]
+Model Name="模块名称"
+GSM Modem Description="GSM模块描述"
+Software Version="软件版本"
+Hardware Version="硬件版本"
+Slot Number="插槽号"
+Storage Usage="存储使用情况"
+Memory Usage="内存使用情况"
+Memory Clean="清理内存"
+Build Time="创建时间"
+Contact Address="联系地址"
+Contact Address Trun="成都市武侯区科华北路69号世外桃源广场B座620"
+Contact Address Ryu="新北市中和區圓通路369巷10號1樓"
+Contact Address content="中国广东省深圳市龙华新区宝能科技园6栋A座10楼 518109"
+Contact Address YFree="中国上海市浦东新区杨高南路2875号康琳创意园1号楼3007室"
+Tel="联系电话"
+Fax="传真"
+E-Mail="邮箱"
+Web Site="网址"
+Rebooting Counts="重启次数"
+;System Time="系统时间"
+System Uptime="系统运行时间"
+clean failed="清除失败"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	system-record.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[system-record]
+Record Message="记录信息"
+Date="日期"
+Back="回退"
+backup tip="回退将会导致通话中断，您确定要返回到这个记录吗？"
+back failed="返回失败！"
+Config Record Switch="配置记录开关"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	system-label.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[system-label]
+New Label="新建标签"
+New Label help="新建标签帮助"
+Labels="标签"
+Label Name="标签名称"
+label save tip="标签名称不能为空！"
+label back tip="你确定要返回到标签"
+label delete tip="你确定要删除此标签吗？"
+Commit Open help="如需使用标签功能，请在配置记录页面打开配置记录开关。"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	alg-chnsettings.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[通道设置]
+;Port="端口"
+;Type="类型"
+;Caller ID="主叫号码"
+;Sip Account="Sip账号"
+;Port Status="端口状态"
+;Actions="操作"
+
+Line Status="线路状态"
+
+Port Name help="端口名称"
+
+Port type="端口类型"
+Port type help="端口类型只读,网关自动识别."
+
+Rx gain="接收增益"
+Rx gain help="设置接收增益 (db). <br/>"
+Tx gain="发送增益"
+Tx gain help="设置接收增益 (db). <br/>"
+Ring timeout="振铃超时"
+Ring timeout help="设置振铃超时参数 (秒). <br/>"
+Sip Account help="在接收到相应端口的呼叫请求后,<br/>该SIP账号会初始化一个新的SIP请求. <br/>"
+Failover fxo="呼叫失败从FXO呼出"
+Failover fxo help="当网关或者网关所注册的SIP服务器出现网络故障，此时网关上注册的SIP或SIP中继不可用，可通过FXO上的PSTN线路直接出局"
+Telephone Type="话机类型"
+Telephone Type help="话机类型"
+
+;Caller ID
+Caller ID help="来电显示设置 <br/>"
+Full name="来电显示全名"
+CID signalling="来电显示型号使用的类型"
+Full name help="来电显示全名设置<br/>"
+Hide callerid="隐藏主叫号码"
+Hide callerid help="是否隐藏呼出的主叫号码. <br/>"
+;Send callerid after="来显设置"
+;Send callerid after help="不同的国家（如英国）振铃音不同,<br/>这就意味着来显需要设置在第一声振铃之后<br/>, 默认为 (1).<br/>"
+
+Use callerid="启动来电显示"
+Use callerid help="是否启用来显<br/>"
+CID signalling="来电显示类型"
+CID signalling help="来电显示型号使用的类型. <br/>"
+bell="bell"
+v23="v23"
+dtmf="dtmf"
+smdi="smdi"
+v32_jp="v32_jp"
+CID start signal="来电显示模式"
+CID start signal help="设置发送来电显示号码前的信号模式： ring=来显前有振铃信号; polarity=来显前有反极性信号; polarity_IN=来显前有反极性信号，用于印度. <br/>"
+;CID start signal help="Set the signals of start of caller ID<br/>ring        = a ring signals the start (default)<br/>polarity    = polarity reversal signals the start<br/>polarity_IN = polarity reversal signals the start, for India<br/>"
+ring="ring"
+polarity="polarity"
+polarity_IN="polarity_IN"
+;dtmf="dtmf"
+Polarity="反极性"
+Answer on polarity switch="反极性信号应答开关"
+Answer on polarity switch help="当呼叫fxo出局时，被叫应答，使用反极性信号通知fxo已经摘机。<br/>"
+Hangup on polarity switch="反极性信号挂机开关"
+Hangup on polarity switch help="在一些国家，通过反极性信号通知fxo，对端已经挂机。<br/>"
+Polarity on answer delay="反极性信息应答延时"
+Polarity on answer delay help="在反极性信号中，从应答到挂机的最低周期时长（默认值值600毫秒）<br/>"
+
+Delay reply 200 OK switch="IP侧延时发送200OK开关"
+Delay reply 200 OK switch help="极性反转开启时无效; <br/>开启时，延时delay_reply_200ok_timer时间发送200OK; <br/>关闭时，立刻发送200OK；默认值是关闭.<br/>"
+Delay reply 200 OK timer="延时发送200OK的时间"
+Delay reply 200 OK timer help="延时发送200OK的时间，默认值是8秒.<br/>"
+
+Save To Other Channels="保存到其他通道"
+Save To Other Channels help="选择中后，保存时，也同时保存到其他通道. <br/>"
+Sync All Settings="同步所有设置"
+Sync All Settings help="同步所有设置，保存后会同步到其他端口. <br/>"
+Select all settings="全选"
+Save To Other Channles help="同时保存通道参数到其他通道"
+
+;Call feature
+Call feature="呼叫特性"
+Call waiting="呼叫等待"
+Call waiting help="打开或者关闭呼叫等待功能. <br/>"
+Three way calling="三方通话"
+Three way calling help="打开或者关闭三方通话的功能. <br/>"
+Call transfer="呼叫转移"
+Call transfer help="打开或者关闭呼叫转移的功能. <br/>"
+Call forward="呼叫前转"
+Call forward help="打开或者关闭呼叫前转的功能. <br/>"
+Call forward number="呼叫前转号码"
+Call forward number help="设置呼叫前转号码"
+SIP out="同步SIP帐号超出了范围"
+Save To Other Channels="保存到其他通道"
+dnd help="防打扰开关"
+
+;Call limit
+Call Limit Switch="呼叫限制开关"
+Call Limit Switch help="呼叫限制开关"
+Limit Call Time="限制单次通话时间"
+Limit Call TIme help="限制单次通话时间"
+Limit Daily Call Times="限制日呼叫次数"
+Limit Daily Call Times help="限制日呼叫次数"
+Limit Daily Answer Times="限制日接通次数"
+Limit Daily Answer Times help="限制日接通次数"
+Limit Hour Call Times="限制小时呼叫次数"
+Limit Hour Call Times help="限制小时呼叫次数"
+Call Status="呼叫状态"
+Hour Call Count="时呼叫次数"
+Daily Call Count="日呼叫次数"
+Daily Answer Count="日应答次数"
+Limited="已限制"
+Unlimited="未限制"
+Unlimit Tip="你确定要解除当前端口的呼叫限制吗？"
+Port Status Unlimit="端口状态：未限制"
+Extension Number="分机号码"
+Extension Number help="分机号码"
+Internal Exten Number="内部分机号码"
+Internal Exten Number help="内部分机号码"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	alg_fxoparam.php and alg_fxsparam.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Driver="驱动"
+Dahdi Restart help="设置驱动参数将会重启dahdi，重启需要大约3分钟，重启过程中将会中断通话，确定需要重启吗？"
+Fxo Parameters="O口参数"
+Fxs Parameters="S口参数"
+FXO settings="FXO设置"
+FXS settings="FXS设置"
+Tone interval="信号间隔"
+Tone interval help="相应通道内信号音的间隔时间（单位：毫秒）"
+FXO Rx gain="FXO接收增益"
+FXO Tx gain="FXO发送增益"
+CallerID detect="主叫号码检测"
+Immediate Send Cid="\"#\"立即送出"
+Immediate Send Cid help="\"#\"立即送出"
+Callout Min Interval="呼出最小间隔时间"
+Callout Min Interval help="呼出最小间隔时间(范围：400-10000ms，默认：2000ms)"
+Current Threshold="电流阈值"
+Current Threshold help="范围:1-65535"
+
+Use Callerid="使用主叫号码"
+
+Hide Callerid="隐藏主叫号码"
+
+callerid=""
+
+cidsignalling="cid信号类型"
+
+cidstart="cid初始信号"
+Busy detect="忙音检测"
+Busy count="忙音数量"
+Busy country="忙音国家制式"
+
+Silence detect="静音检测"
+Silence threshold="静音触发时长"
+Max silence="最大静音时长"
+Rx threshold="接收阈值"
+Tx threshold="发送阈值"
+
+cidbeforering="非标准CID检测"
+cidbeforering help="处理不规则CID功能的开关。"
+
+cidbuflen="CID媒体流长度"
+cidbuflen help="cid媒体流长度字节大小。"
+offhook-antishake="摘机防抖动"
+offhook-antishake help="网关FXS端口检测到挂断信号时的抗抖动延迟值。设定值为32ms至2048ms（32的倍数），默认值为64ms。"
+
+cutcidbufheadlen="CID媒体流头部长度"
+cutcidbufheadlen help="cid媒体流头长度字节大小。"
+
+fixedtimepolarity="发送极性信号延时"
+fixedtimepolarity help="发射极性线反转信号延迟时间."
+
+cidtimeout="最长振铃时间"
+cidtimeout help="检测一个呼叫的第一次振铃，一次呼叫中两个振铃之间的最大间隔时间。是为了检测一个呼叫中的第一次振铃，两个呼叫之间时间间隔要比这个时间大. <br/>单位ms，范围：从4000ms 到 20000ms, 默认值是7000ms. <br/>"
+js check parameters data type="参数数据类型必须为整型."
+
+js empty-check fxotxgain="fxotxgain的值不允许为空"
+js check fxorxgain="fxorxgain值的范围 -150 ~ 120."
+js empty-check fxorxgain="fxorxgain的值不允许为空"
+js check fxorxgain="fxorxgain值的范围 -150 ~ 120."
+js empty-check polaritydebounce="polaritydebounce的值不允许为空"
+js check polaritydebounce="polaritydebounce值的范围 0 ~ 2048ms"
+js empty-check ringdebounce="ringdebounce的值不允许为空"
+js check ringdebounce="ringdebounce值的范围 0 ~ 2048ms"
+js empty-check ringoncount="ringoncount的值不允许为空"
+js check ringoncount="ringoncount值的范围 0 ~ 128"
+js empty-check ringoffcount="ringoffcount的值不允许为空"
+js check ringoffcount="ringoffcount值的范围 0 ~ 128"
+js check ringdebouncetime="ringdebouncetime值的范围 100 ~ 3000"
+
+js check fxsringfreq="js允许fxsringfreq值的范围 15 ~ 50Hz"
+js check fxsringamp="js允许fxsringamp值得范围 45 ~ 85V"
+js check dialdebounce="js允许dialdebounce值的有效范围 32 ~ 2048ms (32的倍数)"
+js empty-check dialdebounce="js不允许dialdebounce的值为空"
+
+js empty-check cidbuflen="js不允许cidbuflen的值为空"
+js check cidbuflen="无效值！js允许cidbuflen的有效范围 1 ~ 4000ms"
+js empty-check cutcidbufheadlen="js不允许cutcidbufheadlen的值为空"
+js check cutcidbufhendlen="无效值！js允许cutcidbufheadlen的有效范围 1 ~ 2000ms, 并且小于等于CID媒体长度值cidbuflen"
+js empty-check fixedtimepolarity="js不允许fixedtimepolarity的值为空"
+js check fixedtimepolarity="无效值！js允许fixedtimepolarity的有效范围 -1 ~ 2000ms"
+js check cidtimeout="无效值！js允许cidtimeout的有效值范围 4000 ~ 20000ms"
+
+Flexible Routing Switch="灵活路由开关"
+Flexible Routing Switch help="灵活路由开关"
+Flex Routing Switch Open help="这个操作会清除所有fxs绑定sip分机的信息，需要继续吗？"
+Flex Routing Switch Close help="这个操作会清除所有fxs相关的路由信息，需要继续吗？"
+
+ringdebouncetime="振铃最小间隔时间"
+ringdebouncetime help="FXO上一次挂机后到下一次发送DAHDI_RINGON事件前的最小间隔时间。范围：100-3000毫秒。默认：2000毫秒。"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	alg-dialtable.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Dial Matching Rule="拨号匹配规则"
+Add New Dial Matching Rule="添加新的拨号匹配规则"
+Edit Dial Matching Rule="编辑拨号匹配规则"
+Rule="规则"
+Dial Matching Rule help="拨号匹配规则可能是数字, 字母, 或者它们之间的组合. 如果一个规则以 '_' 字符开始, 它代表的是一种匹配方式而不仅仅是作为一个字符.  在匹配规则中一些字符具有特殊的含义: &#10;&#10;     X - 匹配0-9中的任意一个数字 &#10;     Z - 匹配1-9中的任意一个数字 &#10;     N - 匹配2-9中的任意一个数字 &#10;     [1235-9] - 匹配括弧中包含的任何一个数字 (在本例中,可以匹配 1,2,3,5,6,7,8,9中的任意一个) &#10;     ! - 通配符, 可使匹配过程尽快完成 ;它可以明确地确定包含了所有的匹配可能&#10;&#10;例如, 规则 _NXXXXXX 将匹配7位数字的号码, 而 _1NXXNXXXXXX在一个电话号码前加区号."
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	alg-pickupsettings.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Time Out="超时时间"
+Number="号码"
+Disabled="关闭"
+Enabled="开启"
+Status Settings="状态设置"
+Time Out help="超时时间，单位毫秒"
+Number help="接听号码"
+Save Interrupt Call help="保存将会中断通话，确定要保存吗？"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	alg_funkeys.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+None Special Characters Blind Transfer="无功能键的盲转"
+Blind Transfer="盲转"
+Blind Transfer help="当打开盲转时，传输呼叫之前配置拨号计划（*38默认）。"
+Asked Transfer="询转"
+Asked Transfer help="当打开询转时，转接呼叫之前配置拨号计划（*38默认）"
+Function Keys="功能键"
+None Keys Blind Transfer="无任何键的盲转"
+None Keys Blind Transfer help="打开开关：A呼叫B，A按*38（可定制）并呼叫C电话号码，C接听并与A通话。<br/>关闭开关：A呼叫B，A按*38（可定制）并呼叫C电话号码，A挂断，C接听并与B通话。"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	wctdmc1k_param.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Dahdi parameters="驱动参数"
+Wctdmc1k parameters="驱动参数"
+Polaritydebounce="极性反转消抖时间"
+Polaritydebounce help="极性反转消抖时间. 范围: 从0ms 到 2048ms, 默认值是64ms.<br/>"
+Time of Polaritydebounce="极性反转消抖时间"
+ringdebounce="振铃消抖总时间"
+ringdebounce help="振铃消抖总时间. 范围: 从0ms 到 2048ms, 默认值是64ms. <br/>"
+Time of ringdebounce="振铃检测时间"
+ringoncount="振铃发生消抖次数"
+ringoncount help="振铃发生消抖次数. 范围: 从0 到 128, 默认值是16. <br/>"
+Counting the ring on="统计振铃发生消抖次数"
+ringoffcount="振铃结束消抖次数"
+ringoffcount help="振铃结束消抖次数. 范围: 从0 到 128, 默认值是0. <br/>"
+Counting the ring off="统计振铃结束消抖次数"
+ringonincrement="振铃增量"
+Increment of ring on="振铃信号增量"
+times="次"
+fastringer="振铃频率"
+ing Amplitude="设置振铃频率. 0是20Hz, 1是25Hz. "
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	register_param.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Reading Regiter Value="读取寄存器的值"
+Channel="通道"
+Channel help="当前通道号"
+Register Number="寄存器编号号"
+Register Value="寄存器值"
+Read="读取"
+Setting Register="设置寄存器"
+Register="寄存器号"
+Register help="当前通道寄存器号"
+Value="寄存器值"
+Value help="设置寄存器的值"
+
+js check channel register number = "当前输入的通道寄存器号不存在，寄存器号的范围：0 ~ 59."
+js check channel register value = "当前输入的通道寄存器值超出范围,寄存器值的范围：0 ~ 255."
+
+Other Parameters="其他参数"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	alg-glbsettings
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[全局设置]
+Advanced settings="高级配置"
+Global settings="全局设置"
+;General="General"
+Tone duration="信号保持"
+Tone duration help="相应通道生成的信号音保持时长.<br/>(毫秒)."
+Dial timeout="呼叫超时"
+Dial timeout help="拨打特定设备指定的超时时长. <br/>(秒)"
+Codec="编码"
+Codec help="全局的编码设置:mulaw,alaw<br/>"
+Ulaw="Ulaw"
+Alaw="Alaw"
+Impedance="阻抗"
+Impedance help="阻抗设置. <br/>"
+Echo cancel tap length="回声消除信号长度"
+Echo cancel tap length help="硬件回声消除信号长度. <br/>"
+Pulse dial="脉冲拨号"
+Pulse dial help="打开或者关闭脉冲拨号. <br/>"
+Flash/Wink="拍叉/闪断"
+Flash/Wink help="打开或者关闭拍叉/闪断功能. <br/>"
+Min flash time="最小拍叉时长"
+Max flash time="最大拍叉时长"
+Min flash time help="最小拍叉时长. (毫秒). 范围：1-100.<br/>"
+Max flash time help="最大拍叉时长. (毫秒). 范围：100-3000.<br/>"
+as Ending Dial Key="作为结束拨号"
+as Ending Dial Key help="打开或者关闭拨号键. <br/>"
+Checking SIP Status="SIP帐号注册状态检查"
+Checking SIP Status help="打开或者关闭SIP帐号注册状态检查. <br/>"
+The pattern of sending CID="发送CID的方式"
+The pattern of sending CID help="有些国家（英国）的铃声具有不同的铃声（铃声），这意味着根据默认设置（1），需要稍后设置来电显示，而不是仅在第一个铃声之后设置。"
+Waiting time before sending CID="发送CID前的等待时长"
+Waiting time before sending CID help="在通道上发送CID之前，我们将等待的时间（毫秒）。"
+MOH pattern of transfer="转接的MOH方式"
+MOH pattern of transfer help="选择转接的MOH方式.<br>如果选择了将会给等待方播放音乐, 否则将会是回铃音."
+Send polarity reversal="发送反极信号(仅DTMF)"
+Send polarity reversal help="在向通道发送CID前发送反极信号."
+Start code="起始码(仅DTMF)"
+Start code help="起始码."
+Stop code="终止码(仅DTMF)"
+Stop code help="终止码."
+Display extension number="显示分机号码"
+Display extension number help="设置是否显示分机号码"
+send CID before ringing="在振铃前发送CID"
+send CID after first ring="在第一声振铃后发送CID"
+send CID after second ring="在第二声振铃后发送CID"
+send CID after third ring="在第三声振铃后发送CID"
+FXS Signaling="FXS信令"
+FXS Signaling help="FXS信令"
+FXS Signaling change="修改FXS Signaling参数，会清空所有通道绑定的SIP，必须重启生效。"
+
+;Hardware gain
+Hardware gain="硬件增益"
+FXO Rx gain="FXO往终端增益"
+FXO Rx gain help="将FXO设置为终端增益. 范围: 从 -150 到 120.<br/>"
+FXO Tx gain="FXO往IP端增益"
+FXO Tx gain help="将FXO设置为IP增益. 范围: 从 -150 到 120.<br/>"
+FXS Rx gain="FXS往终端增益"
+FXS Rx gain help="将FXS设置为终端增益. 范围:  -35 ,0 or 35.<br/>"
+FXS Tx gain="FXS往IP端增益"
+FXS Tx gain help="将FXS设置为IP增益. 范围:  -35,0 or 35.<br/>"
+
+;Busy detect
+Busy detect="忙音检测"
+Busy detect help="忙音检测用于检测忙音信号或远端挂断。<br/>"
+Busy count="忙音次数"
+Busy count help="配置当启用忙检测时，在挂断呼叫之前用户将听到的忙音数目。<br/>"
+Busy country="忙音格式国家"
+Busy country help="为音调设置选择“国家/地区”。 <br/>"
+;China="China"
+;Taiwan="Taiwan"
+;Japan="Japan"
+Korea="Korea"
+USA="USA"
+;Germany="Germany"
+Fxo Monitor="fxomon检测"
+Fxo Monitor help="设置打开或关闭fxomon检测 <br/>"
+Busy tone pattern="忙音样式"
+Busy tone pattern help="设置忙音样式 <br/> 例如: 550/250,0/250 <br/>"
+Add More Busy Pattern Fields="添加新的忙音样式"
+
+Silence detect="静音检测"
+Silence detect help="打开或关闭检测检测功能. <br/>"
+Silence threshold="静音检测阀值"
+Silence threshold help="What we consider silence: the lower, the more sensitive, eg: 250 is 250ms.<br/>Range: 100 to 500(100 to 500ms), default: 250<br/>"
+Max silence="最大静音分贝"
+Max silence help="How many silencethreshold of silence before hanging up(eg: 16 is 250ms * 16 = 4s).<br/>Range: 2 to 1020(200ms to 512s), default: 80(20s)<br/>"
+Rx threshold="接收端阀值"
+Rx threshold help="Range: -20 dBm0 to -40 dBm0, default: 20 (-20 dBm0), all values are understood to be negative.<br/>"
+Tx threshold="发送端阀值"
+Tx threshold help="Range: -20 dBm0 to -40 dBm0, default: 20 (-20 dBm0), all values are understood to be negative.<br/>"
+
+;Fax="Fax"
+Mode="模式"
+Mode help="设置传输模式."
+Rate="波特率"
+Rate help@alg-glbsettings="设置发送和接收波特率."
+No speed limit="无速率限制"
+Ecm="误码纠错模式"
+Ecm help="打开或者关闭T.30 ECM (误码纠错模式) 默认开启.<br/>"
+
+;Country
+Country="国家"
+Country help@alg-glbsettings="设置网关所在国家的信号音标准. <br/>"
+Ring cadence="振铃节奏"
+Ring cadence help="持续振铃列表.<br/>"
+Dial tone="拨号音"
+Dial tone help="设置摘机拨号音.<br/>"
+Ring tone="回铃音"
+Ring tone help="设置振铃时向主叫方发出的提示音.<br/>"
+Busy tone="忙音"
+Busy tone help="设置遇忙时的提示音.<br/>"
+Call waiting tone="呼叫等待音"
+Call waiting tone help="设置当进入呼叫等待播放的背景提示音.<br/>"
+Congestion tone="拥塞音"
+Congestion tone help="设置拥塞时播放的提示音<br/>"
+Dial recall tone="二次拨号音"
+Dial recall tone help="设置按下闪断键后进行二次拨号的提示音. <br/>"
+Record tone="录音提示音"
+Record tone help="设置录音过程的提示音.<br/>"
+Info tone="特殊信息音"
+Info tone help="设置播放特殊信息的提示音 (例如, \"所拨号码不在服务区\")<br/>"
+Stutter tone="通信音"
+Stutter tone help="通信音"
+
+Adaptive="自适应"
+T.38="T.38"
+Pass-through="透传"
+
+Fcc="Fcc"
+Tbr21="Tbr21"
+;^Argentina="^Argentina"
+;^Australia="^Australia"
+Austria="奥地利"
+;^Bahrain="^Bahrain"
+Belgium="比利时"
+Brazil="巴西"
+Bulgaria="保加利亚"
+Canada="加拿大"
+Chile="智利"
+China="中国"
+Colombia="哥伦比亚"
+Croatia="克罗地亚"
+Cyprus="塞浦路斯"
+Czech="捷克"
+Denmark="丹麦"
+Ecuador="厄瓜多尔"
+Egypt="埃及"
+Elsalvador="埃尔萨"
+Finland="芬兰"
+France="法国"
+Germany="德国"
+Greece="希腊"
+Guam="关岛"
+Hongkong="香港"
+Hungary="匈牙利"
+Iceland="冰岛"
+India="印度"
+Indonesia="印尼"
+Ireland="爱尔兰"
+Israel="以色列"
+Italy="意大利"
+Japan="日本"
+Jordan="约旦"
+Kazakhstan="哈萨克"
+;^Kuwait="^Kuwait"
+Latvia="拉脱维亚"
+Lebanon="黎巴嫩"
+Luxembourg="卢森堡"
+Macao="澳门"
+Malaysia="马拉西亚"
+Malta="马耳他"
+Mexico="墨西哥"
+Morocco="摩洛哥"
+Netherlands="荷兰"
+Newzealand="新西兰"
+Nigeria="尼日利亚"
+Norway="挪威"
+Oman="阿曼"
+Pakistan="巴基斯坦"
+Peru="秘鲁"
+Philippines="菲律宾"
+Poland="波兰"
+Portugal="葡萄牙"
+Romania="罗马尼亚"
+Russia="俄罗斯"
+Saudiarabia="沙特阿拉伯"
+;^Singapore="^Singapore"
+Slovakia="斯洛伐克"
+Slovenia="斯洛文尼亚"
+Southafrica="南非"
+Southkorea="朝鲜"
+Spain="西班牙"
+Sweden="瑞典"
+Switzerland="瑞士"
+Syria="叙利亚共和国"
+;^Taiwan="^Taiwan"
+Thailand="泰国"
+Uae="阿拉伯联合酋长国"
+Uk="英国"
+Usa="美国"
+Yemen="也门"
+
+Czech Republic="捷克斯洛伐克共和国"
+Estonia="爱沙尼亚"
+Lithuania="立陶宛"
+Russian Federation / ex Soviet Union="俄罗斯/前苏联"
+United Kingdom="英国"
+United States / North America="美国/南美"
+United States Circa 1950/ North America="美国1950/南美"
+Venezuela / South America="委内瑞拉/南美"
+South Africa="南美"
+Custom...="自定义..."
+
+Echocancel Range="回声消除信号长度范围：0-500"
+GlbSetting Restart help="您的设置需要重启Dahdi才能生效，确认重启Dahdi吗?"
+Echo Type="回声算法类型"
+Echo Type help="回声算法类型"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	alg-calltest.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Call Test="呼叫测试"
+Voice File="语音文件"
+Voice File help="语音文件"
+Voice File tip="文件格式只能是.ulaw"
+Test="测试"
+File already exist="文件已存在"
+File does not exist="文件不存在"
+Please upload the file first="请先上传文件"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	sip-endpoints.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[sip-endpoints]
+AutoPassword="密码递增"
+Batch="批量设置"
+Batch SIP Endpoints="批量添加SIP账号"
+js check username 1="'用户名' 不能为空!"
+js check username 2="'用户名'只允许数字或者英文字符，长度：1-32!"
+sip overwrite confirm="已存在, 是否想覆盖它?"
+sips overwrite confirm="已存在,是否想覆盖它们?"
+port binding overwrite confirm="端口已配置, 你是否想重新配置?"
+ports binding overwrite confirm="端口已配置, 你是否想重新配置它们?"
+;Endpoint Name="对端名"
+;Registration="注册模式"
+Credentials="注册状态"
+;Actions="执行"
+
+Add New SIP Endpoint="增加一个新的SIP对端"
+Edit SIP Endpoint="编辑SIP对端"
+
+;Main Endpoint Settings"
+Main Endpoint Settings="主要对端设置"
+;Name="名字"
+Name help@sip-endpoints="一个比较容易理解的名字. <br/>一般情况可以给用户提供一个参考."
+;User Name="用户名"
+User Name help@ip-endpoints="对端与网关进行认证的用户名"
+Anonymous="匿名"
+;Password="密码"
+Password help@ip-endpoints="对端与网关进行认证的密码.<br/>允许使用字母"
+;Registration="注册模式"
+Registration help@sip-endpoints="对端向网关注册还是网关向对端注册."
+;_None="不注册"
+Endpoint registers with this gateway="对端注册到网关"
+This gateway registers with the endpoint="网关注册到对端"
+Hostname or IP Address="域名或IP地址"
+Hostname or IP Address help="对端的IP地址或者域名或者是dynamic（如果对端是动态域名）.<br/>这些要求注册.<br>注意: 如果输入了域名并且改变了DNS, 你必须 <span style=\"color:rgb(255,0,0)\">重启 asterisk</span>."
+Backup Hostname or IP Address="备用域名或IP地址"
+Backup Hostname or IP Address help="对端的IP地址或者域名或者是dynamic（如果对端是动态域名）.<br/>这些要求注册.<br>注意: 如果输入了域名并且改变了DNS, 你必须 <span style=\"color:rgb(255,0,0)\">重启 asterisk</span>."
+Transport="传输方式"
+Transport help="为外传设置可能传输类型. 使用顺序, <br/>当你使能各种传输协议, UDP, TCP, TLS.<br/>第一次启用的传输类型仅用于外传消息，直到<br/>注册发生. 如果对端在注册的过程中要求另外的传输类型， <br/>那么传输类型可能改变为另外一种传输类型."
+NAT Traversal="NAT 穿越"
+NAT Traversal help="在传入SIP或者媒体会话时与NAT地址相关的问题."
+SUBSCRIBE for MWI="订阅MWI"
+VOS Encryption="VOS加密"
+VOS Encryption help@sip-endpoints="VOS加密设置."
+MWI help@sip-endpoints="是否接收MWI."
+;_No="不"
+Force report on="强制报告"
+;_Yes="是"
+Report if requested and comedia="是否报告请求和媒体"
+
+;高级:注册选择"
+Advanced:Registration Options="高级:注册选择"
+Authentication User="认证用户"
+Authentication User help="仅仅只是在注册时所使用的一个用户名."
+Register Extension="注册分机"
+Register Extension help="当网关作为一个SIP用户代理向SIP代理注册时, <br/>呼叫会被转移到这个分机"
+;Modify="修改"
+From User="用户来源"
+From User help="用来识别网关对端的用户名."
+From Domain="域名来自"
+From Domain help="用来识别网关对端的域名"
+Remote Secret help="仅仅只是网关注册到对端时所使用的密码."
+Remote Secret="对端密码"
+;Port="端口"
+Port help@sip-endpoints="网关链接对端时所使用的端口号."
+Qualify="鉴权"
+Qualify help@sip-endpoints="是否检查和对端的链接状态."
+Qualify Frequency="检测频率"
+Qualify Frequency help="每隔多少秒去检查一次和对端的链接状态."
+Register User="注册用户名"
+Register User help="注册用户名, 是register => user[:secret[:authuser]]@host[:port][/extension]中的user. <br/>"
+Custom Registery="客户定制注册开关"
+Custom Registery help="打开后，客户可以自己定制注册表. <br/>"
+Registery String="注册信息"
+Registery String help="可以输入注册信息, <br/> 格式: user[:secret[:authuser]]@host[:port][/extension] <br/> 例子: 1001@sip.com:pbx122@172.16.6.122/1001 <br/>"
+
+;Call Settings"
+Call Settings="呼叫设置"
+DTMF Settings="DTMF 设置"
+DTMF Mode="DTMF 模式"
+DTMF Mode help="设置发送DTMF的默认模式. 默认:rfc2833. <br/>其他选项: 'info', SIP INFO message(application/dtmf-relay);<br/>'inband',Inband audio(要求 64kbit 编解码 -alaw,ulaw)."
+RFC2833="RFC2833"
+Inband="Inband"
+Info="Info"
+
+Call Limit="呼叫限制"
+Call Limit help="设置一个呼叫限制，在同一时间内能够被允许的最大通话数量."
+
+
+Caller ID Settings="主叫ID设置"
+Trust Remote-Party-ID="信任 Remote-Party-ID"
+Trust Remote-Party-ID help="是否信任 Remote-Party-ID 头."
+Send Remote-Party-ID="发送 Remote-Party-ID"
+Rpid="Rpid"
+Pai="Pai"
+Send Remote-Party-ID help="是否发送 Remote-Party-ID 头."
+Remote Party ID Format="对端 Party ID 格式"
+Remote Party ID Format help="如何设置 Remote-Party-ID 头: from Remote-Party-ID 或者 from P-Asserted-Identity."
+P-Asserted-Identity Header="P-Asserted-Identity Header"
+Remote-Party-ID Header="Remote-Party-ID Header"
+Caller ID Presentation="主叫ID描述"
+Caller ID Presentation help="是否显示主叫ID."
+
+Allowed,not screened="允许,不筛选"
+Allowed,passed screen="允许,通过筛选"
+Allowed,failed screen="允许,没通过筛选"
+Allowed="允许"
+Prohibited,not screened="被禁止,不筛选"
+Prohibited,passed screen="被禁止,通过筛选"
+Prohibited,failed screen="被禁止,没有通过筛选"
+Prohibited="被禁止"
+Unavailable="不可用的"
+
+;Advanced:Signaling Settings"
+Advanced:Signaling Settings="高级:信令设置"
+Progress Inband="呼入带内信令"
+Progress Inband help="是否产生呼入铃声. <br/>从来不:表示从来不适用呼入信号.<br/>可选值: 是, 否, 从来不. <br/>默认值: 从来不."
+Never="从来不"
+Allow Overlap Dialing="允许重叠拨号"
+Allow Overlap Dialing help="允许重叠拨号: 是否允许重叠拨号. <br/>显示的是默认值."
+Append user="附加用户"
+phone to URI="手机到URI"
+phone to URI help="是否增加 ';user=phone' 到 URIs，使URI中包含一个合法的电话号码."
+Add Q.850 Reason Headers="增加 Q.850 原因头"
+Add Q.850 Reason Headers help="如果它是可用的，是否增加一个原因头并且使用它."
+Honor SDP Version="SDP版本头"
+Honor SDP Version help="默认情况下, 网关将会在SDP包里增加一个会话版本号并且如果SDP版本号修改了，它将仅仅只是修改了这个SDP会话. <br/>关掉这个选项将会强制网关忽略这个SDP版本号并且把所有的SDP数据作为一个新数据. <br/>对于一个发送非标准的SDP包的设备来说这是必须得. <br/>默认情况是打开的."
+Allow Transfers="允许呼叫转接"
+Allow Transfers help="是否允许全局的呼叫转接. <br/>选择‘否’将不允许所有的呼叫转接. <br/>默认是打开的"
+Allow Promiscuous Redirects="允许混杂重定向"
+Allow Promiscuous Redirects help="是否允许302或REDIR非本地SIP地址. <br/>注意：对本地系统做重定向操作会导致循环调用，asterisk并不支持这种操作."
+Max Forwards="最大前转"
+Max Forwards help="为SIP设置Max-Forwards头(环路预防)."
+Send TRYING on REGISTER="注册发送TRYING"
+Send TRYING on REGISTER help="在对端注册时发送100 Trying."
+Outbound Proxy="外部代理"
+Outbound Proxy help="网关将会发送信令到这个外部代理而不是直接发送到对端."
+
+;Advanced:Timer Settings"
+Advanced:Timer Settings="高级:时钟设置"
+Default T1 Timer="默认T1时钟"
+Default T1 Timer help="这个定时器主要用于INVITE. <br/>默认的T1时钟是500毫秒或者是如果你有qualify=yes则会测量运行网关和设备之间的往返时间."
+Call Setup Timer="呼叫建立时钟"
+Call Setup Timer help="如果在这段时间内没有收到临时响应，呼叫将自动阻塞. <br/>默认值是64*T1."
+Session Timers="会话时钟"
+Session Timers help="有三种模式可供选择: 主动发起,请求和运行会话计时器;<br/>只有被其他用户代理请求时才会接受或者运行会话计时器; 拒绝, <br/>在任何情况下都不会运行会话计时器."
+Accept="接受"
+Originate="发起"
+Refuse="拒绝"
+Minimum Session Refresh Interval="最小会话刷新间隔"
+Minimum Session Refresh Interval help="最小会话刷新的间隔，单位是秒，默认是90秒."
+Maximum Session Refresh Interval="最小会话刷新间隔"
+Maximum Session Refresh Interval help="最小会话刷新间隔，单位是秒，默认是1800秒."
+Session Refresher="会话刷新者"
+Session Refresher help="会话的刷新者, 用户代理客户端或者用户代理服务器. 默认是用户代理服务器."
+
+;Media Settings
+Media Settings="媒体设置"
+Media Settings help="从以下的列表中选择编解码. 应该设置每种编解码有不同的优先级."
+Not Used="不使用"
+
+save_sip_endpoints endpoint_name="设置终端名称"
+save_sip_endpoints registration="设置注册模式"
+save_sip_endpoints anonymous="仅在注册模式为'无'时选择匿名注册"
+save_sip_endpoints sip_username="设置用户名"
+save_sip_endpoints order="Must set order"
+
+Save To Other Sips="保存到其他Sip"
+Save To Other Sips help="同时保存Sip参数到其他Sip"
+
+Enable outboundproxy to Host="使能ouboundproxy替换host"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	setting tls
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+tlsenable="TLS使能"
+tlsverify="TLS验证"
+tlssetup="TLS设置"
+tlscertfile="TLS的cert文件路径"
+tlscafile="TLS的ca文件路径"
+tlsprivatekey="TLS私钥"
+encryption="加密"
+
+tlsenable help="开启服务器的传入TLS(安全)连接，默认关闭"
+tlsverify help="开启或关闭TLS验证功能"
+tlssetup help="我们是否愿意接受连接，连接到对方，或两者兼而有之."
+tlscertfile help="证书链(*.pem格式)用于TLS连接. 证书必须从主体的证书开始排序. 之后是中间CA证书(如果适用)默认是在当前目录中查找asterisk.pem."
+tlscafile help="如果连接的服务器使用自签名证书。 您应该将其证书安装在此处，以便代码可以验证其证书的真实性。"
+tlsprivatekey help="用于TLS连接的专用密钥文件(*.pem格式)。 如果没有指定tlsprivatekey，则搜索公钥和私钥的tlscertfile。"
+encryption help="是否在对等体的外拨电话上提供SRTP加密媒体(而且只有SRTP加密媒体)。如果对等体不支持SRTP，则呼叫将失败，HANGUPCAUSE = 58。默认为否."
+
+;Save="Save"
+;Cancel="Cancel"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	sip-batch-endpoints.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+Batch Create SIP="批量创建SIP账号"
+Outboundproxy="outboundproxy"
+Enable Outboundproxy to Host="使能outboundproxy替换host"
+js check outboundproxy="无效的outboundproxy"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	sip-bendpoints.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Support Codec="选用编码"
+Solo="唯一"
+Choose File="选择文件"
+Import="导入"
+File_import_tips="点击上传!（请上传txt文件！）<br/>格式如下:<br/>Num,Username,Password,Hostname,Hosename-backup,Port,Vos,Codec,Support;<br/>例子:<br/>1,301,123abc,172.16.99.1,172.16.99.2,8,No,G.711 u-law,solo;<br/>"
+Download_samples_tips="请把下载文件解压后上传！"
+Browser_warning="你的浏览器版本太旧了，不支持此控件，请升级浏览器！"
+FXS Batch Binding SIP="FXS批量绑定SIP账号"
+Register Mode="注册模式"
+No file selected="没有文件选择"
+File type="文件类型不正确，请上传txt文件"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	sip-adv-settings.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[sip-adv-settings]
+Networking="网络"
+;General="General"
+UDP Bind Port="UDP绑定端口"
+UDP Bind Port help="选择一个监听UDP流的端口."
+Enable TCP="使能TCP"
+Enable TCP help="启用TCP链接请求服务(默认是不启用)."
+TCP Bind Port="TCP绑定端口"
+TCP Bind Port help="选择一个监听TCP流的端口."
+TCP Authentication Timeout="TCP认证超时"
+TCP Authentication Timeout help="客户端链接验证的最大秒数.<br/>如果客户端在时间超时之前没有得到验证,<br/>客户端将会被断开链接.(默认值: 30秒)"
+TCP Authentication Limit="TCP认证限制"
+TCP Authentication Limit help="允许在给定的时间内同时链接的最大数目<br/>.(默认值:50)"
+Enable Hostname Lookup="启用主机名查找"
+Enable Hostname Lookup help="打开外呼的DNS SRV查找.注意: 网关仅仅<br/> SRV记录中的第一个主机<br/>该功能可以在拨号激活中使用形式通过域名拨打internet上的SIP电话."
+Enable Internal SIP Call="使能内部SIP呼叫"
+Enable Internal SIP Call help="当你选择远端向网关注册这种注册形式的时候，是否使能内部SIP呼叫."
+Internal SIP Call Prefix="内部SIP呼叫前缀"
+Internal SIP Call Prefix help="路由内部SIP呼叫之前的一个特殊前缀."
+
+NAT Settings="NAT 设置"
+Local Network="本地网络"
+Local Network help="格式:192.168.0.0/255.255.0.0 or 172.16.0.0./12<br/>位于NAT的网络内的IP地址或IP范围列表.<br/> 当有NAT存在在网关和对端设备之间时<br/>网关将会用一个扩展的IP地址取代SIP和SDP消息里面的IP地址 ."
+;Add="Add"
+Local Network List="本地网络列表"
+Local Network List help="增加的本地IP地址列表."
+IP Range="IP 范围"
+;Action="执行"
+Subscribe Network Change Event="订阅网络更改时间"
+Subscribe Network Change Event help="当外部网络地址改变的时候，网关能够通过使用test_stun_monitor模块检测到这种改变<br/>.当安装了stun_monitor并且 <br/>进行了配置, <br/>当监视器检测到任何形式的网络变化时chan_sip 将更新所有出局注册.默认这个选项是使能的, 但是res_stun_monitor只能生效一次<br/>. 如果res_stun_monitor是使能的并且你不希望<br/>网络上的变化产生出局注册,使用下面的选项来禁止此功能."
+
+STUN Settings="STUN设置"
+Reflesh Request Interval="刷新请求间隔"
+Reflesh Request Interval help="刷新请求间隔"
+Server IP Adress/Domain Name="服务器IP地址/域名"
+Server IP Adress/Domain Name help="服务器IP地址/域名"
+STUN Switch="STUN开关"
+STUN Switch help="STUN开关"
+
+Advanced:NAT Settings="高级:NAT 设置"
+Match External Address Locally="本地匹配外部地址"
+Match External Address Locally help="如果匹配成功，仅仅只是替代外部地址或者域名."
+Dynamic Exclude Static="动态与静态选择"
+Dynamic Exclude Static help="不允许动态主机使用静态主机的IP地址注册<br/> 这将避免使用相同IP注册的错误<br/>."
+Externally Mapped TCP Port="外部TCP端口映射"
+Externally Mapped TCP Port help="当网关的背后是一个静态的NAT或者PAT时外部映射TCP端口"
+External Address="外部IP地址"
+External Address help="NAT的外部地址（和可选TCP端口）。<br>外部地址=主机名[：端口]指定要在SIP和SDP消息中使用的静态地址[：端口]。示例：<br>外部地址=12.34.56.78<br>外部地址=12.34.56.78:9900<br>"
+External Hostname="外部主机名"
+External Hostname help="外部的主机名（和可选的TCP端口）的NAT."
+Hostname Refresh Interval="主机名刷新间隔"
+Hostname Refresh Interval help="多久执行主机名查找. 也可以配置一个域名<br/>网关将会执行DNS查询<br/>不推荐使用这种方式，尽量使用IP，配置externip."
+
+RTP Settings="RTP 设置"
+Start of RTP Port Range="起始的RTP端口"
+Start of RTP Port Range help="用于RTP端口号的开始范围."
+End of RTP port Range="结束的RTP端口号"
+End of RTP port Range help="用于RTP端口的结束范围"
+RTP Timeout="RTP 超时时间"
+RTP Timeout help="RTP超时时间"
+
+Parsing and Compatibility="解析和兼容性"
+;General="一般"
+Strict RFC Interpretation="严格的RFC解析"
+Strict RFC Interpretation help="打开消息中的tags值检测，URIs和多行格式化头信息中国际字符转换等<br/>严格的SIP兼容性问题(默认是yes)"
+Send Compact Headers="发送紧凑的头"
+Send Compact Headers help="发送紧凑的SIP消息头部."
+SDP Owner="SDP所有者"
+SDP Owner help="允许你改变SDP用户名的域,£¨o=£©.<br/>这个域不能包含空格."
+
+SIP Methods="SIP 方法"
+Disallowed SIP Methods="不允许SIP方法"
+Disallowed SIP Methods help="当与其他SIP对端会话时, 那么其他对端<br/>应该包括一个Allow的头告诉我们SIP方法的 <br/>实现 . 然而有些对端不包括Allow头<br/>或者伪造他们实行的方法.在这样的情况之下, <br/>网关将假设对端支持所有已知的SIP方法. <br/>如果你知道你的SIP对端不提供支持一个特定的方法,<br/> 那么你可能要在disallowed_methods提供一个对端没有实现的方法列表 the<br/>. 注意：如果你的对端是真实的,那么就没有必要设置此项<br/> ."
+ACK="ACK"
+BYE="BYE"
+CANCEL="CANCEL"
+INFO="INFO"
+INVITE="INVITE"
+MESSAGE="MESSAGE"
+NOTIFY="NOTIFY"
+OPTIONS="OPTIONS"
+PRACK="PRACK"
+PUBLISH="PUBLISH"
+REFER="REFER"
+REGISTER="REGISTER"
+SUBSCRIBE="SUBSCRIBE"
+UPDATE="UPDATE"
+Hangup Cause Code="挂机原因代码"
+Hangup Cause Code help="挂机原因代码"
+default="默认"
+
+;Caller ID="主叫ID"
+Shrink Caller ID="缩小主叫ID"
+Shrink Caller ID help="这个功能可以去除 '(', ' ', ')', 非尾随的 '.',<br/>和 不在方括号中的'-' . 例如,当使能这个选项时，主叫ID的值由555.5555<br/>变成5555555. 默认为使能."
+SIP To help="被叫方ID"
+Callee ID help="默认:EXTEN<br/>例如：选择SIP To时，名称是Jason，号码是401。<br/>To 模式是：\"Jason\"&lt;SIP:401@172.16.6.239；transport=UDP&gt;"
+
+Timer Configuration="Timer设置"
+Maximum Registration Expiry="最大注册超时时间"
+Maximum Registration Expiry help="最大允许传入注册和订阅的时间，单位是秒"
+Minimum Registration Expiry="最小注册超时时间"
+Minimum Registration Expiry help="注册、订阅的最小长度，默认是60"
+Default Registration Expiry="默认注册超时时间"
+Default Registration Expiry help="默认的呼入呼出注册长度"
+
+Outbound Registrations="外部注册"
+Registration Timeout="注册超时"
+Registration Timeout help="在多长时间之内重新注册分机. 默认是20秒."
+Number of Registration Attempts="注册尝试次数"
+Number of Registration Attempts help="在放弃注册之前尝试注册的次数. "
+
+;-
+Security="安全"
+Authentication Settings="认证设置"
+Match Auth Username="匹配验证用户名"
+Match Auth Username help="如果可用, 使用认证行的用户名字段匹配而不是 <br/>使用用户名字段的用户名."
+Realm="域"
+Realm help="认证的领域. 所有的域必须根据RFC3261标准保持全局唯一<br/>. 一般可以设置为主机名或者域名."
+Use Domain as Realm="使用域名作为域"
+Use Domain as Realm help="使用SIP域作为域的边界."
+Always Auth Reject="保持验证决绝"
+Always Auth Reject help="一个INVITE或者REGISTER请求由于任何原因被拒绝时, <br/>总会使用同一个原因，用户名合法但密码不正确。<br/>而不会告诉请求者是否有这个user或peer，这样会减少攻击者扫描SIP账户的可能性 .这个参数默认是开启的"
+Authenticate Options Requests="验证OPTIONS请求"
+Authenticate Options Requests help="开启此参数将会是OPTIONS请求如同INVITE请求样生效。<br/> 默认此参数关闭。"
+
+Guest Calling="客户呼叫"
+Allow Guest Calling="允许客户呼叫"
+Allow Guest Calling help="允许或者拒绝客户呼叫(默认开启, 允许)。<br/> 如果你的网关连接了外部网络并且允许客户呼叫， 你想查询<br/>为大家提供了哪些服务, 在默认的context中开启."
+
+;-
+Media="媒体"
+
+ISDN Media Settings="ISDN媒体设置"
+Premature Media="早期媒体"
+Premature Media help="一些ISDN连接会在电话振铃之前发送一些空的媒体帧<br/> 或者是进程状态. SIP通道将会发送183表示为早期的空媒体<br/> - 因此用户没有收到振铃信号. 将此项设置为<br/>\"yes\" 可以在收到电话进程之前组织其他的媒体(SIP通道<br/>将不会为其他早期媒体发送183会话进程). 默认为'yes'. <br/> 确认SIP peer的配置文件设置progressinband=never.为了使 '无应答'<br/> 功能应用, 你需要运行app之前执行progress()."
+
+QoS/ToS="QoS/ToS"
+TOS for SIP Packets="SIP数据包的TOS"
+TOS for SIP Packets help="设置SIP数据包的服务类型."
+TOS for RTP Packets="RTP数据包的TOS"
+TOS for RTP Packets help="设置RTP数据包的服务类型"
+RTP for SIP="RTP for SIP"
+directmedia="重定向媒体流"
+directmedia help="设置媒体流是否重定向"
+;-
+Codec Settings="编码设置"
+Codec Settings help="从下拉列表中选择编码. 每个优先级有不同的编码."
+Codec Priority="最高优先级编码"
+
+;Save="Save"
+
+Matching Priority="匹配优先级"
+From-Number="主叫号码"
+Extern-Number="被叫号码"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	sip-security.php
+:
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Sip Account Security="SIP账号安全"
+TLS Setting="设置TLS"
+TLS Enable="开启"
+TLS Enable help="开启或关闭TLS功能"  
+;;Enable or disable DTLS-SRTP support.
+TLS Verify Server="TLS验证服务"
+Enable TLS Verify Server help="开启或关闭TLS验证服务功能(默认关闭)." 
+;;Enable or disable tls verify server(default is no).
+Port="端口"
+Port help="为远程连接指定端口" 
+;;Specify the port for remote connection.
+TLS Client Method="TLS客户端模式"
+TLS Client Method help="指定Outbound客户端连接协议，模式包括：tlsv1, sslv3, sslv2,默认是sslv2." 
+;;values include tlsv1, sslv3, sslv2, Specify protocol for outbound client connections, default is sslv2.'
+Tls Keys="Tls 秘钥"
+Type="类型"
+Key Name="秘钥名称"
+IP Address="IP地址"
+Organization="组织"
+Password="密码"
+Operation="操作"
+client="客户端"
+server="服务端"
+;;;;;;;;;;;;;;;;;;;;;;;
+Key Files="秘钥文件"
+Upload the pem file="上传pem文件"
+Upload the crt file="上传crt文件"
+File Upload="文件上传"
+File Name="文件名称"
+File Size="文件大小"
+delete file failed="删除文件失败"
+delete key failed="删除key失败"
+create key failed="创建key失败"
+Create="创建"
+TLS Server Existed help="只能创建一个server。"
+TLS Create Server help="请先创建server。"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	routing-rules.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[routing-rules]
+Move="排序"
+Order="优先级"
+Rule Name="规则名称"
+;From="From"
+;To="To"
+;Rules="Rules"
+;Actions="Actions"
+
+New Call Routing Rule="新建呼叫路由规则"
+Save Orders="保存排序"
+
+Create a Call Routing Rule="创建一个呼叫路由规则"
+Modify a Call Routing Rule="修改一个呼叫路由规则"
+Call Routing Rule="呼叫路由规则"
+Routing Name="路由名称"
+Routing Name help="这是一个规则名字。通常被用来描述呼叫的匹配类型(例如，'sip1TOport1' 或 'port1TOsip1')。"
+Call Comes in From="呼叫来自于"
+Call Comes in From help="呼叫的来源地。"
+Send Call Through="呼叫送达"
+Send Call Through help="对入局呼叫的送达目的地。"
+
+DISA Settings="DISA设置"
+Authentication="验证"
+Authentication help="是否开启密码验证"
+Secondary Dialing="二次拨号"
+Secondary Dialing help="是否开启二次拨号"
+DISA Timeout="DISA超时"
+DISA Timeout help="选择DISA超时时间范围：1-10."
+Max Password Digits="密码最大位数"
+Max Password Digits help="限制密码的最大长度"
+Password Authentication help="编辑DISA验证密码."
+
+Dial Patterns that will use this Route="拨号"
+
+Advance Routing Rule="高级路由规则"
+
+Click here to remove this pattern="点击这儿删除一条路由规则"
+Dial Patterns that will use this Route="号码变换表"
+CalleeID Manipulation Help="拨号模式是一组唯一的数字，这组数字将选择路由并发送呼叫到指定的中继。如果拨号模式与此路由匹配，那么其它的路由规则将不进行匹配。如果时间模式被启用，之后匹配的路由会被检查是否与指定的时间外的匹配规则:<br><br>X 匹配0-9中的任一数字<br>Z  匹配1-9中的任一数字<br>N 匹配2-9中的任一数字<br>[1237-9]    匹配与括号里的任一数字 <例如: 1,2,3,7,8,9> <br>*   匹配一个或一个以上的数字 <br><br>Prepend<添加前缀>： 模式匹配成功时添加的号码。如果所拨的号码与后续列指定的模式相匹配，那么在发送到中继之前该号码会被添加<br><br>Prefix<前缀>： 模式匹配成功时被移除。拨打的号码与后续列指定的模式进行匹配，一旦匹配成功，在发送到中继之前会从号码中移除前缀。<br><br>Match Pattern<匹配模式>： 拨打的号码会和'前缀+此匹配模式的号码'一起作比较。一旦匹配成功，拨号的匹配模式部分会被发送到中继。<br><br>SDfR<从右起删除数字>： 右起删除的号码位数. 如果这个值超过当前号码的长度，那么整个号码就会被删除。<br><br>RDfR<右起保留位数>： 右起保留的号码位数。<br><br>StA<添加后缀>:  从当前号码的右端增加此号码。<br><br>Caller Name<主叫显示名称>:  在发送这个呼叫到终端之前设置你所喜欢的主叫名称，允许使用本地语言，例如中文，拉丁文。<br>"
+
+
+Time Patterns that will use this Route="使用本条规则的时间模式"
+Time to start="开始时间"
+Time to finish="结束时间"
+Week Day start="开始工作日"
+Week Day finish="结束工作日"
+Month Day start="开始的日期"
+Month Day finish="结束的日期"
+Month start="开始的月份"
+Month finish="结束的月份"
+
+CalleeID/callerID Manipulation="主叫/被叫号码过滤与变换"
+Callee_Dial_pattern="被叫号码"
+Caller_Dial_pattern="主叫号码"
+Prepend="添加前缀"
+Prefix="前缀"
+SDfR="右起删除位数"
+StA="添加后缀"
+RdfR="右起保留位数"
+Match Pattern="匹配号码字符串"
+Caller Name="主叫名称"
+Time Patterns that will use this Route help="路由规则的时间模式设置"
+Add More Dial Pattern Fields="新增路由规则"
+
+Add More Time Pattern Fields="新增时间模式"
+
+Dialing Delay="拨号延时"
+Dialing Delay help="当你建立一个呼叫时，送出的被叫号码这个动作将被延时"
+Change Rules="改变规则"
+Set the Caller ID Name to="设置主叫名"
+Set the Caller ID Name to help="在送达呼叫到对端之前设置一个你喜欢的主叫用户名."
+Set the Caller ID Number to="设置主叫号码"
+Set the Caller ID Number to help="在送达呼叫到对端之前设置一个你喜欢的主叫号码."
+Forward Number="前转号码"
+Forward Number help="你想要前转呼叫的号码? <br/>当你有一个呼叫转移的时候这个是非常有用的."
+
+Failover Call Through Number="呼叫失败处理"
+Failover Call Through Number help="网关将尝试着根据你指定的顺序发送这个呼叫"
+Add a Failover Call Through Provider="增加呼叫失败处理"
+
+GROUP="群组设置"
+Cid Number Settings="CID号码设置"
+Cid Number="CID号码"
+save order failed="保存排序失败"
+
+Force Answer="拒接时强制接听"
+Force Answer help="拒接时强制接听"
+
+;Save="Save"
+;Cancel="Cancel"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	routing-group.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[routing-group]
+Group Name="群组描述"
+;Type="类型"
+Policy="策略"
+Members="成员"
+;Actions="操作"
+
+New Group="创建新群组"
+
+Create a Group="创建一个群组"
+Modify a Group="修改一个群组"
+Routing Groups="路由群组"
+;Group Name="群组描述"
+;Type="类型"
+;Policy="策略"
+;Members="成员"
+
+Ascending="升序"
+ascending="升序"
+Descending="降序"
+descending="降序"
+Roundrobin="轮询"
+roundrobin="轮询"
+Reverse Roundrobin="反向轮询"
+reverseroundrobin="反向轮询"
+Least Recent="最近呼叫"
+Fewest Calls="最小呼叫量"
+Random="随机"
+experiment="测试"
+Ringall="同时振铃"
+
+;;group help
+Group Name help="路由的名称，用于描述这条呼叫路由的类型，比如，'sip1TOport1' 或 'port1TOsip2'。"
+Type help="组的类型，SIP或T1/E1。"
+Policy help="策略类型"
+Members help="成员"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	sip-fxo-binding.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Batch Create Rules="批量创建呼叫路由规则"
+Sip Endpoint="SIP中继"
+CallerID="主叫分机号码"
+Fixed="批量设置(复制)"
+Batch@sip_fxo="批量设置(自增)"
+Increment="自增"
+Copy="复制"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	routing-group.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Enable Internal FXS Call="开启FXS内部呼叫"
+Enable Internal FXS Call help="开启FXS内部呼叫"
+Enable Internal SIP Call@Routing="开启SIP内部呼叫"
+Enable Internal SIP Call help@Routing="开启SIP内部呼叫"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	network-vlan.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[network-vlan]
+Basic Settings="基础设置"
+Network Type="网络模式"
+Network Type help="网络模式"
+Lan Settings="Lan设置"
+Wan Settings="Wan设置"
+Disable="无效"
+LAN IPv4="LAN IPv4"
+Interface="接口"
+Interface help="网络接口名称"
+;Type="类型"
+Type help@network-lan="获取IP方法。<br/>出厂: 通过槽位号获取IP地址(系统-->信息目录下查看槽位号).<br/>静态: 手动设置网关IP地址。<br/>动态主机配置: 动态获取网关IP地址。"
+Factory="出厂"
+Static="静态"
+DHCP="动态主机配置"
+MAC="物理地址"
+MAC help="网络接口物理地址"
+
+IPv4 Settings="IPv4 设置"
+Address="地址"
+Address help="网关IP地址"
+Netmask="子网掩码"
+Netmask help="网关子网掩码"
+Default Gateway="默认网关"
+Default Gateway help="默认网关IP地址"
+
+Reserved Access IP="预留访问IP"
+Reserved Access IP help="如果网关IP地址不可用可以使用预留IP地址访问。<br/>设置和本地电脑在同一网段的IP地址。"
+;Enable="启用"
+Enable help@network-lan="启用或禁用预留IP地址开关.<br/>On(启用)，Off(禁用)"
+Reserved Address="预留地址"
+Reserved Address help="网关预留IP地址。"
+Reserved Netmask="预留子网掩码"
+Reserved Netmask help="预留IP地址对应的子网掩码。"
+
+DNS Servers="域名服务器"
+DNS Servers help="域名服务器IP地址列表。 <br/>该信息主要从本地网络服务提供商获取。"
+DNS Server="域名服务器"
+
+;Save="保存"
+
+Burn="烧录"
+Mac Tip="请输入12位的字符串，字符要求:0 - 9 或 a - f 或 A - F"
+Burn Confirm="点击'烧录'完成之后，设备将自动关机！是否继续？"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	network-ddns.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[network-ddns]
+;DDNS Settings="动态域名设置"
+DDNS="动态域名"
+DDNS help="启用/禁用 动态域名 (动态域名服务器)。 <br/>"
+Type help@network-ddns="设置动态域名服务器类型。 <br/>"
+inadyn="inadyn"
+phddns="phddns"
+User Name help@network-ddns="域名服务器登录账户名。<br/>"
+Password help@network-ddns="动态域名服务器账户密码。<br/>"
+Your domain="域"
+Your domain help="web服务器所属域。<br/>"
+
+;Save="保存"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	network-openvpn.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[network-openvpn]
+VPN Settings="VPN设置"
+VPNType="VPN类型"
+Server="服务器"
+Account="账号"
+Account help="账号"
+Password help="密码"
+Domain="域名"
+Use MPPE="使用MPPE"
+OpenVPN="OpenVPN"
+OpenVPN Configuration Files Upload="上传OpenVPN配置文件"
+OpenVPN help="开启/关闭OpenVPN客户端. <br/>"
+Stop OpenVPN="停止OpenVPN....<br>"
+Start OpenVPN="启动OpenVPN....<br>"
+OpenVPN Settings="OpenVPN设置"
+Download Samples="参考配置文件下载"
+OpenVPN Configuration Files help="注意:&#10;1.上传的配置文件名的必须'xxxx.tar.gz'或'xxxx.ovpn'命名;&#10;2.上传的客户端配置文件的后缀必须是'.conf';&#10;3.上传的配置文件包中不能包含任何目录;&#10;4.如果你仍然对上传的配置文件的格式感到困惑请下载并参考样本文件;"
+Sample Configuration="参考配置"
+OpenVPN Sample Configuration help="仅供你参考上传配置文件的样本文件. <br/>"
+Download Samples="下载样本文件"
+Switch="开关"
+Switch help="开关"
+Server Port="服务器端口"
+Type help@network-openvpn="VPN的类型。<br/>OpenVPN:OpenVPN。<br/>PPTP VPN:PPTP VPN。<br/>无：无。"
+PPTP VPN Configuration help="PPTP VPN服务器IP地址"
+PPTP VPN Account help="PPTP VPN账号"
+PPTP VPN Password help="PPTP VPN密码"
+PPTP VPN Domain help="PPTP VPN域名"
+PPTP VPN MPPE help="MPPE开关"
+Connection Status="连接状态"
+Connected="已连接"
+Failed to connect="连接失败"
+Zerotier VPN Settings="Zerotier VPN设置"
+PPTP VPN Settings="PPTP VPN设置"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	network-toolkit.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[network-toolkit]
+Ping="Ping"
+Traceroute="Traceroute"
+Source host="源端主机地址"
+Source host help="源端主机IP地址"
+Destination host="目标端主机地址"
+Destination host help="目标端主机IP地址"
+Tcpdump Option Paramater="Tcpdump使用选项参数"
+Tcpdump Parameter Option help="tcpdump根据指定的参数进行网络数据的抓取"
+Tcpdump Parameter Option Number="Tcpdump使用选项参数"
+Add a Tcpdump paramter option="添加一个Tcpdump选项参数"
+tcpdump start failed="tcpdump开始失败"
+tcpdump stop failed="tcpdump停止失败"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	network-switch.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Security Settings="安全设置"
+Firewall Settings="防火墙设置"
+Firewall Enable="防火墙开关"
+Firewall help="ON(开),OFF(关)"
+Ping Enable="Ping开关"
+Ping help="ON(开),OFF(关)"
+White List Settings="白名单"
+White List Enable="白名单开关"
+White List help="ON(开),OFF(关)"
+List IP Settings="IP列表"
+Ping help="ON(开),OFF(关)"
+Black List Settings="黑名单设置"
+Black List Enable="黑名单开关"
+Black List help="ON(开),OFF(关)"
+List IP Settings="IP列表"
+Ping help="ON(开),OFF(关)"
+
+Submit="提交"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	network-rules.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Security Rules="安全规则"
+Protocol="协议"
+Modify a Rule="修改规则"
+Create a Rule="创建新规则"
+Rule Name help="规则的名称."
+Protocol help="选择使用的协议."
+Port help="输入端口范围."
+IP help="IP的格式是IP/MASK.确认IP和子网掩码的范围."
+Security Rules="防火墙安全规则"
+Actions help="选择防火墙操作"
+New Rule="新规则"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	adv-astapi.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[adv-astapi]
+;General="基本设置"
+;Enable="启用"
+;Port="端口"
+Port help@adv-astapi="网络端口号."
+
+Manager="管理员"
+Manager Name="管理员名称"
+Manager Name help="管理员名称中不能包含空格。"
+Manager secret="管理员密码"
+Manager secret help="管理员密码。<br/>字符串: 可用字符 \"-_+.<>&0-9a-zA-Z\"。长度: 4-32 个字符。"
+Deny="拒绝"
+Deny help@adv-astapi="如果想拒绝某些网络或主机访问， 使用符号 & 作为分隔符。<br/>例如: 0.0.0.0/0.0.0.0 or 192.168.1.0/255.255.255.0&10.0.0.0/255.0.0.0"
+Permit="允许"
+Permit help@adv-astapi="如果想允许某些网络或主机访问, 使用符号 & 作为分隔符。<br/>例如: 0.0.0.0/0.0.0.0 or 192.168.1.0/255.255.255.0&10.0.0.0/255.0.0.0"
+Rights="权限"
+read="可读"
+write="可写"
+
+;System="系统"
+System help@adv-astapi="系统基本信息及常用系统管理命令, <br/>如关机、重启和重载。"
+Call="呼叫"
+Call help@adv-astapi="通道信息及在用通道的设置信息。"
+Log="日志"
+Log help@adv-astapi="日志信息。只读。(已定义但未被使用。)"
+Verbose="详细信息"
+Verbose help@adv-astapi="调试信息。只读。 (已定义但未被使用。)"
+Command="命令"
+Command help@adv-astapi="允许运行的CLI命令。 只读。"
+Agent="代理"
+Agent help@adv-astapi="队列和代理信息以及添加队列成员到队列的能力。"
+User="用户"
+User help@adv-astapi="允许发送和接收用户事件。"
+Config="配置"
+Config help@adv-astapi="读写配置文件的能力。"
+DTMF="DTMF"
+DTMF help@adv-astapi="收取DTMF。只读。"
+Reporting="报告"
+Reporting help@adv-astapi="获取系统信息的能力。"
+;CDR="CDR"
+CDR help@adv-astapi="cdr_manager输出，如果加载。只读。"
+Dialplan="拨号方案"
+Dialplan help@adv-astapi="接收NewExten和VarSet事件。只读。"
+;Originate="Originate"
+Originate help@adv-astapi="允许发起新的呼叫。只读。"
+;All="全部"
+All help@adv-astapi="全选或者取消选定。"
+
+;Save="保存"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	adv-astcli.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[adv-astcli]
+;Asterisk CLI="Asterisk CLI"
+;Command="命令"
+Command help@adv-astcli="键入Asterisk控制台命令查看或调试网关。<br/>例如， 键入 \"help\" or \"?\" 你可以查看所有帮助信息."
+Output="输出"
+Execute="执行"
+execute failed="运行错误"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	adv-astfileediter.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[adv-astfileediter]
+Configuration Files="配置文件"
+File Name="文件名称"
+File Size="文件大小"
+New Configuration File="新配置文件"
+Reload Asterisk="重载Asterisk"
+Reload Asterisk confirm="确定要重载asterisk么?"
+
+Edit="编辑"
+;Save="保存"
+Save file name="请输入文件名!"
+Save file exist="文件已存在!"
+;Cancel="取消"
+Delete File="删除文件"
+Delete File confirm="确定要删除文件么?"
+reload asterisk tip="你确定要重启Asterisk吗？"
+file delete tip="你确定要删除这个文件吗？" 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	adv-cloud.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Cloud="云管理"
+Enable Cloud Service="开启云管理服务"
+Account="账号"
+cloud help@adv-account="用于登录云管理中心的账号"
+Password="密码"
+cloud help@adv-password="登录云管理中心账号的密码"
+Connection Status="连接状态"
+cloud help@adv-Connection Status="设备连接云管理中心的状态"
+Choose Service="选择服务器"
+Choose Service help="为当前设备选择一个将要去连接的远端服务器"
+China="中国"
+America="美国"
+Customize="自定义"
+cloud sign help="注册"
+cloud signmessage help="是否有云管理账号？"
+connected="已连接"
+no connected="未连接"
+Cloud Service Disconnected="云服务连接断开"
+Connection timed out="连接超时"
+Password error="密码错误"
+User does not exist="用户不存在"
+You have been blacklisted="您已被加入黑名单"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	adv-tr069.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[adv-tr069]
+TR069 Settings="TR069设置"
+Username="用户名"
+Username help="用户名"
+Server@tr069="服务器URL"
+Server@tr069 help="服务器URL"
+Provisioning code="服务商标识代码"
+Provisioning code help="服务商标识代码"
+Periodic inform enable="定期通知开关"
+Periodic inform enable help="定期通知开关"
+Periodic inform interval="定期通知间隔时长"
+Periodic inform interval help="范围：60-7200"
+Connection request URL="回连地址"
+Connection request URL help="回连地址"
+Connection request username="回连认证账号"
+Connection request username help="回连认证账号"
+Connection request password="回连认证密码"
+Connection request password help="回连认证密码"
+Second="秒"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	adv-snmp.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+SNMP Parameter="SNMP参数"
+SNMP Enable="开启SNMP"
+SNMP Enable Help="是否开启SNMP功能"
+System Contact="系统联系人"
+System Contact Help="系统联系人信息"
+System Location="地址"
+System Location Help="系统地理位置（城市）"
+Private Enterprise Number="私有企业节点"
+Private Enterprise Number Help="该节点专用于SNMP MIB库，由IANA分配。更多信息请访问：http://pen.iana.org/pen/PenApplication.page"
+Support SNMP Version="支持SNMP版本"
+Support SNMP Version help="选择开启SNMP的版本，默认V1，V2c和V3均开启。"
+SNMP Version="SNMP版本"
+SNMP Version help="设置选中的SNMP版本的参数"
+User Configuration="用户配置"
+AuthType="认证类型"
+AuthPassword="认证密码"
+PrivacyType="加密类型"
+PrivacyPassword="加密密码"
+Community Configuration="共同体设置"
+Security Name="安全名称"
+ViewName="视图名"
+ViewType="视图类型"
+ViewSubtree="视图子树"
+ViewMask="视图掩码"
+Access Configuration="访问配置"
+Group="分组"
+Read="读"
+Write="写"
+Notify="通知"
+sec.level="安全级别"
+Souce="IP地址范围"
+Community="共同体"
+Group Configuration="分组配置"
+View Configuration="视图配置"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	adv-autoprovision.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[自动配置]
+Auto Provision="自动配置"
+Auto Provision Settings="自动配置设置"
+DHCP Option 66="DHCP Option 66"
+DHCP Option 66 help="从选项66 dhcp获得asc服务器地址"
+Auto Config Server URL="自动配置服务器地址"
+Auto Config Server URL help="自动配置服务器域名或IP"
+Upgrade Mode="更新模式"
+Upgrade Mode help="选择升级模式。<br/>重启:重启后升级系统。<br/>立即:保存后将会立即升级系统。"
+Power On="重启"
+Immediately="立即"
+Power On confirm="您的设置需要重启后生效！"
+Immediately confirm="您的系统将会立即升级系统，确定吗？"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	log-settings.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[日志设置]
+Auto clean="自动清除"
+Auto clean help="选择打开: 当日志信息达到设置的最大值，<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 系统将删掉一半的文件，新的日志将会写进去。<br>选择关闭：日志将会保留且持续增加。 <br>"
+maxsize="最大值"
+
+;System Logs="System Logs"
+System Logs help="是否打开系统日志."
+Auto clean default@System Logs="默认开启， 默认大小=1MB。"
+
+;Asterisk Logs="Asterisk Logs"
+;Verbose="Verbose"
+Asterisk Logs Verbose help="Asterisk控制台信息。"
+Notice="注意"
+Asterisk Logs Notice help="Asterisk 控制台的注意信息。"
+Warning="告警"
+Asterisk Logs Warning help="Asterisk 控制台告警信息。"
+Debug="调试信息"
+Asterisk Logs Debug help="Asterisk 控制台调试信息。"
+Error="错误"
+Asterisk Logs Error help="Asterisk 控制台错误信息。"
+;DTMF="DTMF"
+Asterisk Logs DTMF help="Asterisk 控制台DTMF信息。"
+Auto clean default@Asterisk Logs="默认开启, 默认大小=100KB。"
+
+;SIP Logs="SIP Logs"
+SIP Logs help="是否开启SIP日志"
+Auto clean default@SIP Logs="默认开启，默认大小=100KB。"
+
+AT Commands Logs="AT Commands Logs"
+AT Commands Logs help="Displaying GSM module AT messages."
+Auto clean default@AT Commands Logs="default on, default size=100KB."
+DAHDI Logs="DAHDI日志"
+DAHDI Logs help="是否打开DAHDI日志"
+Auto clean default@DAHDI Logs="默认开启，默认大小=2MB。"
+
+Call Detail Record="通话记录"
+Call Detail Record help="每个通道通话的详细记录。"
+Append IMEI="Append IMEI"
+Append IMEI help="switch on : IMEI will be appended to the CDR gsm channel in 'From' or 'To'. <br> switch off : No appended IMEI. <br>  default off."
+Auto clean default@Call Detail Record="默认开启，默认大小=5MB。"
+
+;Save="Save"
+
+Syslog="远程日志同步"
+Local Syslog="本地Syslog"
+Local Syslog help="此功能需要在日志设置Asterisk日志级别，再开启本地Syslog才能生效"
+Server Address="服务器地址"
+Server Address help="服务器地址"
+Server Port="服务器端口"
+Server Port help="服务器端口"
+Syslog Level="Syslog级别"
+Syslog Level help="Syslog级别"
+Klog Level="内核日志等级"
+Klog Level help="内核日志等级"
+CDR Level="CDR日志等级"
+CDR Level help="CDR日志等级"
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	log-sys.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[系统日志]
+Refresh Rate="刷新速率"
+Refresh="刷新"
+;Clean Up="清除"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	log-ast.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[asterisk日志]
+clean up failed="清除日志失败"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	log-sip.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[SIP日志]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	log-debugat.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[log-debugat]
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	log-cdr.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+[通话记录日志]
+;Caller ID="Caller ID"
+Callee ID="被叫号码"
+;From="From"
+;To="To"
+Start Time="开始时间"
+Duration="持续时长"
+;Result="结果"
+
+DATABASE BUSY="数据库忙"
+NO RECORD="无通话记录"
+
+ANSWERED="接听"
+BUSY="忙"
+FAILED="失败"
+NO ANSWER="无应答"
+Total Records="共有记录："
+export failed="导出失败"
+
+[js_check]
+js check domain="无效的域名或者IP地址"
+js check diyname="允许的字符必须是[-_+.<>&0-9a-zA-Z]，1 - 32个字符"
+js check ssh_diyname="允许的字符必须是(?!-)(?!\+)(?!>)[-_+.<>&0-9a-zA-Z]{1,25}$，但首字符不能为‘-,+,<’，1 - 25个字符" 
+js check diypwd="允许的字符必须是[-_+.<>&0-9a-zA-Z]，4 - 32个字符"
+js check gsmvol="音量范围: 0-100。"
+js check gsmmic="音量范围: 0-15。"
+js check adcchipgain="增益范围:  -42 - 20。"
+js check dialprefix="必须是0-9 或者 +,*,#"
+js check gsmpin="必须是四位号码"
+js check email="请输入有效的邮箱地址"
+js check sipname="只允许数字或者英文字符，长度：1-32"
+js check networkport="请输入有效的端口号(1-65535)"
+js check smtpuser="请输入有效的STMP用户名"
+js check smtppwd="密码字符范围: 1-64"
+js check phonenum="请输入有效的电话号码！"
+js check ussd="请输入有效的USSD!"
+js check ip="请输入有效的IP地址"
+js check mac="请输入有效的MAC地址"
+js check pppoeuser="请输入有效的用户名"
+js check pppoepwd="请输入有效的密码"
+js check float="请输入浮点数"
+js check integer="请输入整数"
+js check busername="username需要设置一个编号"
+
+js check smail="必须设置一个邮箱地址。"
+
+js check dtmf float 1="请输入一个浮点数"
+js check dtmf float 2="输入必须小于100.0"
+js check dtmf integer 1="请输入整数"
+js check dtmf integer 2="输入必须小于100"
+
+js check digitgain="无效值!范围:从-20.0dB到6dB, 以0.1 dB增加."
+js check delay_reply_200ok_timer="无效值! 范围: 从1秒到90秒."
+limit character="只允许 1 - 31 个字符."
+
+page not found="404 您访问的资源不存在！"
+back="返回"
+resource error="资源请求错误，请咨询管理员"
+read failed="读取失败"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	set-info.php
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Set Information="设置信息"
+Switch@setinfo="开关"
+Switch help@setinfo="如果启用此开关，系统将使用以下参数信息。"
+Product Name="产品型号"
+Product Name help="产品型号"
+Contact Address help="联系地址"
+Tel help="电话"
+Fax help="传真"
+E-Mail help="邮箱"
+Web Site help="网站"
+Download Sample Images="下载案例图片"
+Download Sample Images help="下载案例图片，根据此图片大小进行修改。"
+Header Image help="头部背景图片，图片大小是1280x417，可下载案例图片查看"
+Footer Image help="底部背景图片，图片大小是1280x105，可下载案例图片查看"
+Slot Test="卡槽测试"
+Channel="通道"
+is in operation="正在运行中"
+Retry="重试"

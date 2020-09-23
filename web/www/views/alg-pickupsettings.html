@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+			<script type="text/javascript" src="../js/jquery.ibutton.js"></script>
+			<link type="text/css" href="../css/jquery.ibutton.css" rel="stylesheet" media="all" />
+			<script type="text/javascript" src="../js/float_btn.js"></script>
+			<script type="text/javascript" src="../js/check.js"></script>
+			<script type="text/javascript" src="../js/functions.js"></script>
+			
+			<h3 id="feed_back_tip"></h3>
+			
+			<div id="tab">
+					<li class="tb1">&nbsp;</li>
+					<li id="status_settings_li" class="tbg"></li>
+					<li class="tb2">&nbsp;</li>
+			</div>
+
+			<table width="100%" class="tedit">
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<div id="lang_enable" class='div_tab_text'></div>
+							<span id="lang_enable_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input class='enable' type='checkbox' id='pickupenable_sw' name='pickupenable_sw' onchange='enable_ami_change()' />
+					</td>
+				</tr>
+
+				<tr id='pickup_timeout' style='display:none;'>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_time_out"></span>:
+							<span id="lang_time_out_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input id='pickuptimeout' type='text' name='pickuptimeout' value=''  onkeyup=\"this.value=this.value.replace(/\\D/g,'')\" onafterpaste=\"this.value=this.value.replace(/\\D/g,'')\"  />
+						<span id='cpickuptimeout'  class="number_tip"></span>
+					</td>
+				</tr>
+					
+				<tr id='pickup_number' style = 'display:none;'>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_number"></span>:
+							<span id="lang_number_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<input id='pickupnumber' type='text' name='pickupnumber' value=''/>
+						<span id="cpickupnumber" class="number_tip"></span>
+					</td>
+				</tr>
+				<tbody id='board1' style='diaplay:none' ></tbody>
+			</table>
+
+			<br/>
+			
+			<table id="float_btn" class="float_btn">
+				<tr id="float_btn_tr" class="float_btn_tr">
+					<td>
+						<input type="button" class="save_input" value="" />
+						<img src="/images/loading1.gif" id="loading_image" style="margin-left:10px;vertical-align: middle;display:none;"/>
+					</td>
+				</tr>
+			</table>
+			<table id="float_btn2" style="border:none;" class="float_btn2">
+				<tr id="float_btn_tr2" class="float_btn_tr2" style="padding-left: 15px;">
+					<td style="width:51px;">
+						<input type="button" class="save_input" value="" />
+					</td>
+				</tr>
+			</table>
+				
+		</div>
+	
+	<script src="../js/page/alg-pickupsettings.js?v=1.1"></script>
+	</div>
+</body>
+</html>
+<div id="to_top"></div>
+<div id="float_btn1" class="sec_float_btn1">
+</div>
+<div  class="float_close" onclick="close_btn()" >
+</div>

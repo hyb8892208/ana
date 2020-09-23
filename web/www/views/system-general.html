@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+			<script type="text/javascript" src="../js/jquery-ui-1.10.2.custom.all.min.js"></script>
+			<div id="system_current_time"></div>
+			<script type="text/javascript" src="../js/jquery.ibutton.js"></script> 
+			<link type="text/css" href="../css/jquery.ibutton.css" rel="stylesheet" media="all" />
+			<script type="text/javascript" src="../js/functions.js"></script>
+		
+			<h3 id="feed_back_tip"></h3>
+			
+			<!-- Language Settings begin -->
+			<div id="tab" style="height:30px;">
+				<li class="tb1">&nbsp;</li>
+				<li id="language_settings_li" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			<div class="div_tab" width="100%" id="language_settings">
+				<div class='div_tab_show'>
+					<div class='div_tab_th'>
+						<div id="lang_language" class='div_tab_text'></div>
+					</div>
+				
+					<div id="lang_type_select" class='div_tab_td'></div>
+					
+					<div class='div_tab_th'>
+						<div id="lang_advanced" class='div_tab_text'></div>
+					</div>
+					
+					<div class='div_tab_td'>
+						<input type='checkbox' id='lang_adv_enable'/>
+					</div>
+				</div>
+				
+				<div class='div_tab_hide' id='lang_adv'>
+					<div class='div_tab_th'>
+						<div id="lang_language_debug" class='div_tab_text'></div>
+					</div>
+					
+					<div class='div_tab_td'>
+						<input type='button' id='lang_turn_on' class="save_input" value=""/>&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type='button' id='lang_turn_off' class="save_input" value=""/>
+					</div>
+					
+					<div class='div_tab_th'>
+						<div id="lang_download" class='div_tab_text'></div>
+					</div>
+					
+					<div class='div_tab_td'>
+						<div id="lang_language_download_help" class='div_tab_text' style='float:left'></div>
+						<div style='float:right'>
+							<form action='/service' method='post' enctype='multipart/form-data' >
+								<input type="hidden" name="action" value="download"/>
+								<input type='hidden' id="downloadfile_val" name='downloadfile' value="" />
+								<input type='hidden' name='page_name' value='system-general' />
+								<input type='submit' class="save_input" id='download' value="" />
+							</form>
+						</div>
+					</div>
+					
+					<div class='div_tab_th'>
+						<div id="lang_delete" class='div_tab_text'></div>
+					</div>
+					
+					<div class='div_tab_td'>
+						<div class='div_tab_text' id="lang_delete_language_help" style='float:left'></div>
+						<input type='submit' class="save_input" id='delete' style='float:right' value='' />
+					</div>
+					
+					<div class='div_tab_th'>
+						<div id="lang_add_new_language" class='div_tab_text'></div>
+					</div>
+					
+					<div class='div_tab_td'>
+						<form action='/service' method='post' enctype='multipart/form-data' >
+							<span id="lang_new_language_package"></span>:
+							<input type='file' name='uploadfile1' id='upload_lang_file' onchange='return checkFileChange(this)'/>
+							<input type="hidden" name="action" value="upload"/>
+							<input type='hidden' name='page_name' value='system-general' />
+							<input type='hidden' name='type' value='upload' />
+							<input type='submit' class="save_input" id='add' style='float:right' value='' onclick='return check_add_language()'/>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- Language Settings end -->
+
+			<div id="newline"></div>
+
+			<!-- Scheduled Reboot begin -->
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="scheduled_reboot_li" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			<table width="100%" class="tedit" id="scheduled_reboot">
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span class="lang_enable"></span>:
+							<span class='showhelp lang_enable_help'></span>
+						</div>
+					</th>
+					<td>
+						<input type='checkbox' id='reboot_sw' class='checkbox' name='reboot_sw' />
+					</td>
+				</tr>
+					
+				<tr>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_reboot_type"></span>:
+							<span id="lang_reboot_type_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td>
+						<select id="reboot_type" name="reboot_type" onchange="typechange()">
+							<option id="lang_by_day" value="by_day" ></option>
+							<option id="lang_by_week" value="by_week" ></option>
+							<option id="lang_by_month" value="by_month" ></option>
+							<option id="lang_by_running_time" value="by_run_time" ></option>
+						</select>
+					</td>
+				</tr>
+					
+				<tr id='by_day_time_table' style='display:none' >
+					<th>
+						<div class="lang_time"></div>
+					</th>
+					<td>
+						<table cellpadding='0' cellspacing='0' style='border:none;' >
+							<tr>
+								<td style='border:none;'>
+									<span class="lang_hour"></span>:
+									<span id="d_hour_selected"></span>
+									&nbsp;&nbsp;&nbsp;
+									<span class="lang_minute"></span>:
+									<span id="d_minute_selected"></span>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+					
+				<tr id='by_week_table' style='display:none'>
+					<th>
+						<div id="lang_week"></div>
+					</th>
+					<td>
+						<span id="w_week_selected"></span>
+					</td>
+				</tr>
+				
+				<tr id='by_week_time_table' style='display:none'>
+					<th>
+						<div class="lang_time"></div>
+					</th>
+					<td>
+						<table cellpadding='0' cellspacing='0' style='border:none;' >
+							<tr>
+								<td style='border:none;'>
+									<span class="lang_hour"></span>:
+									<span id="w_hour_selected"></span>
+									&nbsp;&nbsp;&nbsp;
+									<span class="lang_minute"></span>:
+									<span id="w_minute_selected"></span>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				
+				<tr id='by_month_table' style='display: none' >
+					<th>
+						<div id="lang_date"></div>
+					</th>
+					<td id="m_month_selected"></td>
+				</tr>
+				
+				<tr id='by_month_time_table' style='display:none'>
+					<th>
+						<div class="lang_time"></div>
+					</th>
+					<td>
+						<table cellpadding='0' cellspacing='0' style='border:none;'>
+							<tr>
+								<td style='border:none;'>
+									<span class="lang_hour"></span>:
+									<span id="m_hour_selected"></span>
+									&nbsp;&nbsp;&nbsp;
+									<span class="lang_minute"></span>:
+									<span id="m_minute_selected"></span>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				
+				<tr id='by_run_time_table' style='display: none' >
+					<th>
+						<div id="lang_running_time"></div>
+					</th>
+					<td>
+						<table cellpadding='0' cellspacing='0' style='border:none;' >
+							<tr>
+								<td style='border:none;'>
+									<span id="lang_day"></span>:
+									<span id="r_day_selected"></span>
+									&nbsp;&nbsp;&nbsp;
+									<span class="lang_hour"></span>:
+									<span id="r_hour_selected"></span>
+									&nbsp;&nbsp;&nbsp;
+									<span class="lang_minute"></span>:
+									<span id="r_minute_selected"></span>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<!-- Scheduled Reboot end -->
+
+			<div id="newline"></div>
+
+			<input type="button" id="general_save" class="save_input" value="" />
+			<img src="/images/loading1.gif" id="loading_image" style="margin-left:10px;vertical-align: middle;display:none;"/>
+		</div>
+		
+	<script src="../js/page/system-general.js?v=1.3"></script>
+	</div>
+</body>
+</html>

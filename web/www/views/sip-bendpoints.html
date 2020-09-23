@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+			<script type="text/javascript" src="../js/functions.js"></script>
+			<script type="text/javascript" src="../js/check.js"></script>
+			<script type="text/javascript" src="../js/float_btn.js"></script>
+			<script type="text/javascript" src="../js/layer/layer.min.js"></script>
+			<script type="text/javascript" src="../js/md5.min.js"></script>
+		
+			<h3 id="feed_back_tip"></h3>
+		
+			<div class="file_upload">
+				<span class="file_span"></span>
+				<a href="javascript:void();" class="upload" style="text-decoration:none;">
+					<input id="file_info" type="file" name="file_info" /><span id="file_name"></span>
+					<div class="file_import_tips"></div>
+				</a>
+				<button name="btn" value="submit" id="btnId" ></button><br> 
+				
+				<form action="/service" method="post">
+					<input type="hidden" name="action" value="download" />
+					<input type="hidden" name="page_name" value="sip-bendpoints" />
+					<input type="hidden" name="downloadfile" value="downloadfile" />
+					<button type="submit" class="file_sample"></button>
+					<div class="download_samples_tips"></div>
+				</form>
+				
+			</div>
+			
+			<div id="newline"></div>
+			
+			<table width="100%" class="tshow">
+				<tr>
+					<th style="width:03%" class="nosort">
+						<input type="checkbox" name="selall" class="selectall" />
+					</th>		
+					<th class="port_th"></th>
+					<th id="port_name_th"></th>
+					<th id="user_name_th"></th>
+					<th id="password_th"></th>
+					<th id="hostname_ip_th"></th>
+					<th class="port_th"></th>
+					<th id="vos_encryption"></th>
+					<th id="codec_priority"></th>
+					<th id="support_codec"></th>
+				</tr>
+				
+				<tr>
+					<td class="list_bg_color"></td>
+					<td class="list_bg_color"></td>
+					<td class="list_bg_color"></td>
+					<td class="list_bg_color">
+						<input type=text name='username0' id='username0' value='' style='width: 100px;' />
+					</td>
+					<td class="list_bg_color">
+						<input type=text name='passwd0' id='passwd0' value='' style='width: 100px;' />
+					</td>
+					<td class="list_bg_color">
+						<input type=text name='ipaddr0' id='ipaddr0' value='' style='width: 110px;' /> - 
+						<input type=text name='bipaddr0' id='bipaddr0' value='' style='width: 110px;' />
+					</td>
+					<td class="list_bg_color">
+						<input type=text name='port0' id='port0' value='' style='width: 100px;' />
+					</td>
+					<td class="list_bg_color">
+						<select size=1 name='vosenc0' id='vosenc0' >
+						  <option value=0>No</option>
+						  <option value=2>Yes</option>
+						</select>
+					</td>
+					<td class="list_bg_color">
+						 <select size=1 name='sip_codec_priority0' id='sip_codec_priority0' >
+							<option value="ulaw">G.711 u-law</option>
+							<option value="alaw">G.711 a-law</option>
+							<option value="g729">G.729</option>
+							<option value="g722">G.722</option>
+							<!-- <option value="g723">G.723</option> -->
+							<option value="ilbc">ILBC</option>
+						  </select>
+					</td>
+					<td class="list_bg_color">
+						 <select size=1 name='sip_codec_mode0' id='sip_codec_mode0' >
+							<option id="lang_all" value="all"></option>
+							<option id="lang_solo" value="solo"></option>
+						  </select>
+					</td>
+				</tr>
+				<tbody id="html_str"></tbody>
+			</table>
+			
+			<div id="newline"></div>
+			
+			<table id="float_btn" class="float_btn">
+				<tr id="float_btn_tr" class="float_btn_tr" style="">
+					<td>
+						<input type="button" class="save_input save_click" name="sendlabel" id="sendlabel" value="Save"/>
+					</td>
+					<td>
+						<input type="button" class="cancel_input" value="Cancel" onclick="location.reload()" />
+					</td>
+					<td>
+						<input type="button" class="setvalue_input save_input" value="Batch" />
+					</td>
+					<td>
+						<input type="checkbox" id="password_auto" class="password_auto_input" name="password_auto" checked=true/>
+						<span class="lang_autopassword"></span>
+						<img src="/images/loading1.gif" id="loading_image" style="margin-left:10px;vertical-align: middle;display:none;"/>
+					</td>
+				</tr>
+			</table>
+			<table id="float_btn2" style="border:none;" class="float_btn2">
+				<tr id="float_btn_tr2" class="float_btn_tr2" style="">
+					<td style="width:51px;">
+						<input type="button" id="float_button_1" class="float_short_button save_input save_click" value="" />
+					</td>
+					<td style="width:51px;">
+						<input type="button" id="float_button_2" class="float_short_button cancel_input" value="" onclick="location.reload()" />
+					</td>
+					<td style="width:51px;">
+						<input type="button" id="float_button_3" name="" class="float_short_button setvalue_input save_input" value="" />
+					</td>
+					<td id="float_button_4" >
+						<input type="checkbox" id="float_button_5" name="" class="float_short_button password_auto_input" onclick="lock_button();" checked />
+						<span class="lang_autopassword"></span>
+					</td>
+				</tr>
+			</table>
+		</div>
+	
+		<script src="../js/page/sip-bendpoints.js?v=1.3"></script>
+	</div>
+</body>
+<div id="to_top"></div>
+<div id="float_btn1" class="sec_float_btn1">
+</div>
+<div  class="float_close" onclick="close_btn()" >
+</div>
+</html>

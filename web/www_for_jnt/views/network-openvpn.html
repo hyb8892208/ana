@@ -1,0 +1,414 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<!--<link rel="icon" href="../images/logo.ico" type="image/x-icon" />-->
+<!--<link rel="shortcut icon" href="../images/logo.ico" type="image/x-icon" />-->
+<script src="../js/jquery.js"></script>
+<script src="../js/cxf-utils.js"></script>
+</head>
+<body>
+	<div id="bg">
+		<script>$("#bg").prepend('<script src="../js/header.js?v='+Math.random()+'"><\/script>');</script>
+		
+		<div id="lps">
+			<script type="text/javascript" src="../js/jquery.ibutton.js"></script> 
+			<link type="text/css" href="../css/jquery.ibutton.css" rel="stylesheet" media="all" />
+			<script type="text/javascript" src="../js/functions.js"></script>
+			<script type="text/javascript" src="../js/check.js"></script>
+
+			<h3 id="feed_back_tip"></h3>
+			
+			<div id="tab">
+				<li class="tb1">&nbsp;</li>
+				<li id="vpn_setting_li" class="tbg"></li>
+				<li class="tb2">&nbsp;</li>
+			</div>
+			
+			<!-- VPN Settings begin -->
+			<table width="100%" class="tedit" id="vpn_settings" >
+				<tr id='tr_vpn_type' style='display: block;'>
+					<th>
+						<div class='helptooltips'>
+							<span id="lang_vpntype"></span>:
+							<span id="lang_vpntype_help" class='showhelp'></span>
+						</div>
+					</th>
+					<td width='84%'>
+						<select id='vpn_type' name='vpn_type' onchange='vpntypechange()'>
+							<option id="lang_openvpn" value='openvpn' ></option>
+							<option id="lang_pptp_vpn" value='pptpvpn' ></option>
+							<option id="lang_zero_vpn" value='zerovpn' ></option>
+							<option id="lang_l2tp_vpn" value='l2tpvpn'></option>
+							<option id="lang_none" value='nonevpn' ></option>
+						</select>
+					</td>
+				</tr>
+			</table>
+			<!-- VPN Settings end -->
+			
+			<br>
+
+			<!-- OpenVPN Settings begin -->
+			<div id="div_openvpn">
+				<table width="100%" class="tedit">
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_openvpn_switch"></span>:
+								<span id="lang_openvpn_switch_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type='checkbox' name='openvpn_switch' id='openvpn_switch' value='' />
+							<span id='copenvpn_switch' class='number_tip'></span>
+						</td>
+					</tr>
+					
+					<tbody id="openvpn_show">
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_openvpn_account"></span>:
+								<span id="lang_openvpn_account_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type='text' name='openvpn_account' id='openvpn_account' value='' />
+							<span id='copenvpn_account' class='number_tip'></span>
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_openvpn_password"></span>:
+								<span id="lang_openvpn_password_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type='password' name='openvpn_password' id='openvpn_password' value='' />
+							<span style="vertical-align:middle;display:inline-block;"><input type="checkbox" id="show_openvpn_password" /></span>
+							<span id='copenvpn_password' class='number_tip'></span>
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_server_ip"></span>:
+								<span id="lang_server_ip_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type='text' name='server_ip' id='server_ip' value='' />
+							<span id='cserver_ip' class='number_tip'></span>
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_server_port"></span>:
+								<span id="lang_server_port_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type='text' name='server_port' id='server_port' value='' />
+							<span id='cserver_port' class='number_tip'></span>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+				
+				<h4 id="openvpn_settings_h4"></h4>
+				<form action='/service' method='post' enctype='multipart/form-data' >
+					<table width="100%" class="tctl" id="openvpn_settings">
+					<tr id='tr_upload_conf'>
+						<th>
+							<span id="lang_upload_configuration"></span>:
+							<input type='file' name='uploadfile1' onchange='return checkFileChange(this)' id='upload_cfg_file'/>
+						</th>
+						<td>
+							<input type='hidden' name='action' value='upload' />
+							<input type='hidden' name='page_name' value='network-openvpn' />
+							<input type='hidden' name='type' value='upload' />
+							<input type='submit' id="lang_file_upload" value="" onclick='return upload_cfg_file2()' />
+						</td>
+					</tr>
+					</table>
+				</form>
+				
+				<table width="100%" class="tctl" id="openvpn_settings_1">
+					<tr>
+						<th>
+							<textarea name='helpinfo' id='helpinfo' style='width:100%;font-size:12px;Line-height:1.5;background:#E8EFF7;border:none' clos='20' rows='5' readonly></textarea>
+						</th>
+						<td width='1px'></td>
+					</tr>
+				</table>
+				
+				<table width="100%" class="tctl" id="openvpn_settings_2">
+					<tr id='tr_download_samples'>
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_sample_configuration"></span>
+								<span id="lang_sample_configuration_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<form action='/service' method='post' >
+								<input type='hidden' name='action' value='download' />
+								<input type='hidden' name='page_name' value='network-openvpn' />
+								<input type='hidden' name='downloadfile' value='downloadfile' />
+								<input type='submit' id="lang_download_samples" value="" />
+							</form>
+						</td>
+					</tr>
+				</table>
+				
+				<br/>
+				
+				<table class="tedit" width="100%">
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span style="color:red">* &nbsp;</span>
+								<span class="lang_connection_status"></span>:
+							</div>
+						</th>
+						<td class="openvpn_connect">
+						
+						</td>
+					</tr>
+				</table>
+			</div>
+			<!-- OpenVPN Settings end -->
+
+			<!-- PPTP VPN Settings begin -->
+			<div id="div_pptpvpn_tab" style="list-style-type:none">
+				<h4 id="pptp_vpn_settings_h4"></h4>
+				
+				<table width="100%" class="tedit" id="tr_pptp" style="display: none;">
+					<tr id='tr_pptp_server' >
+						<th>
+							<div class='helptooltips'>
+								<span class="lang_server"></span>:
+								<span id="lang_pptp_vpn_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type='text' name='pptp_server' id='pptp_server' value='' />
+							<span id='cpptp_server' class='number_tip'></span>
+						</td>
+					</tr>
+						
+					<tr id='tr_pptp_account' >
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_account"></span>:
+								<span id="lang_account_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type='text' name='pptp_account' id='pptp_account' value='' />
+							<span id='cpptp_account' class='number_tip'></span>
+						</td>
+					</tr>
+						
+					<tr id='tr_pptp_password' >
+						<th>
+							<div class='helptooltips'>
+								<span class="lang_password"></span>:
+								<span class="lang_password_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type='password' name='pptp_password' id='pptp_password' onpaste='return false' oncopy='return false' value='' />
+							<span style="vertical-align:middle;display:inline-block;"><input type="checkbox" id="show_pptp_password" /></span>
+							<span id='cpptp_password' class='number_tip'></span>
+						</td>
+					</tr>
+						
+					<tr id='tr_pptp_domain' >
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_domain"></span>:
+								<span id="lang_domain_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type='text' name='pptp_domain' id='pptp_domain' value='' />
+							<span id='cpptp_domain' class='number_tip'></span>
+						</td>
+					</tr>
+						
+					<tr id='tr_pptp_mppe' >
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_use_mppe"></span>:
+								<span id="lang_use_mppe_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type='checkbox' id='pptp_mppe' name='pptp_mppe' />
+						</td>
+					</tr>
+					
+					<tr id="pptp_status">
+						<tr>
+							<th>
+								<div class="helptooltips">
+									<span style="color:red">* &nbsp;</span>
+									<span class="lang_connection_status"></span>:
+								</div>
+							</th>
+							<td class="pptpvpn_connect">
+							
+							</td>
+						</tr>
+					</tr>
+				</table>	
+			</div>
+			<!-- PPTP VPN Settings end -->
+			
+			<!-- ZERO VPN Settings begin -->
+			<div id="div_zerovpn_tab" style="list-style-type:none">
+				<h4 id="zero_vpn_settings_h4"></h4>
+				
+				<table width="100%" class="tedit">
+					<tr id='tr_zero_server' >
+						<th>
+							<div class='helptooltips'>
+								<span id="lang_ID"></span>:
+								<span id="lang_ID_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type='text' name='zero_id' id='zero_id' value='' />
+							<span id='czero_id'></span>
+						</td>
+					</tr>
+					<tr id="zero_status">
+						<tr>
+							<th>
+								<div class="helptooltips">
+									<span style="color:red">* &nbsp;</span>
+									<span class="lang_connection_status"></span>:
+								</div>
+							</th>
+							<td class="zerovpn_connect">
+							
+							</td>
+						</tr>
+					</tr>
+				</table>	
+			</div>
+			<!-- ZERO VPN Settings end -->
+			
+			<!-- L2TP VPN Settings begin -->
+			<div id="div_l2tpvpn_tab" style="list-style-type:none">
+				<h4 id="l2tp_vpn_settings_h4"></h4>
+				
+				<table width="100%" class="tedit">
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_enable"></span>:
+								<span id="lang_enable_help" class="showhelp"></span>
+							</div>
+						</th>
+						<td>
+							<input type='checkbox' name='l2tp_enable' id='l2tp_enable' />
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span class="lang_server"></span>:
+								<span id="lang_l2tp_server_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type='text' name='l2tp_server' id='l2tp_server' />
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_username"></span>:
+								<span id="lang_username_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type='text' name='l2tp_username' id='l2tp_username' />
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span class="lang_password"></span>:
+								<span id="lang_l2tp_password_help" class="showhelp"></span>
+							</div>
+						</th>
+						<td>
+							<input type="password" name="l2tp_password" id="l2tp_password" />
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_ipsec"></span>:
+								<span id="lang_ipsec_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type="checkbox" name="ipsec" id="ipsec" />
+						</td>
+					</tr>
+					
+					<tr>
+						<th>
+							<div class="helptooltips">
+								<span id="lang_ipsec_password"></span>:
+								<span id="lang_ipsec_password_help" class='showhelp'></span>
+							</div>
+						</th>
+						<td>
+							<input type="password" name="ipsec_password" id="ipsec_password" />
+						</td>
+					</tr>
+					
+					<tr id="l2tp_status">
+						<tr>
+							<th>
+								<div class="helptooltips">
+									<span style="color:red">* &nbsp;</span>
+									<span class="lang_connection_status"></span>:
+								</div>
+							</th>
+							<td class="l2tpvpn_connect">
+							
+							</td>
+						</tr>
+					</tr>
+				</table>
+			</div>
+			<!-- L2TP VPN Settings end -->
+			
+			<input type="button" class="save_input" value="Save" style="margin-top: 10px;" />
+			<img src="/images/loading1.gif" id="loading_image" style="margin-left:10px;vertical-align: middle;display:none;"/>
+			<br/>
+
+		</div>
+	
+		<script src="../js/page/network-openvpn.js?v=1.8"></script>
+	</div>
+</body>
+</html>
